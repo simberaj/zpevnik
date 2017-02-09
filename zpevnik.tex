@@ -48,7 +48,7 @@
 \renewcommand{\capo}[1]{\iftranscapos\transpose{#1}\else\musicnote{\sffamily{}Capo #1\normalfont}\fi}
 
 \newcommand{\musicblock}[1]{\ifchorded #1 \fi}
-%\newcommand{\ctabblock}[1]{\begin{textblock}{10}(5,-0.5)#1\end{textblock}}
+% \newcommand{\ctabblock}[1]{\begin{textblock}{10}(5,-0.5)#1\end{textblock}}
 
 \renewcommand{\idxtitlefont}{\small\normalfont}
 \renewcommand{\idxlyricfont}{\small\normalfont}
@@ -68,23 +68,23 @@
   \ifdim\wd\SB@box>\z@\unhbox\SB@box\par\fi%
 }
 
-\newcommand\textsubscript[1]{\@textsubscript{\selectfont#1}}
-\def\@textsubscript#1{{\m@th\ensuremath{_{\mbox{\fontsize\sf@size\z@#1}}}}}
-\newcommand\textbothscript[2]{%
-  \@textbothscript{\selectfont#1}{\selectfont#2}}
-\def\@textbothscript#1#2{%
-  {\m@th\ensuremath{%
-    ^{\mbox{\fontsize\sf@size\z@#1}}%
-    _{\mbox{\fontsize\sf@size\z@#2}}}}}
-\def\@super{^}\def\@sub{_}
+% \newcommand\textsubscript[1]{\@textsubscript{\selectfont#1}}
+% \def\@textsubscript#1{{\m@th\ensuremath{_{\mbox{\fontsize\sf@size\z@#1}}}}}
+% \newcommand\textbothscript[2]{%
+  % \@textbothscript{\selectfont#1}{\selectfont#2}}
+% \def\@textbothscript#1#2{%
+  % {\m@th\ensuremath{%
+    % ^{\mbox{\fontsize\sf@size\z@#1}}%
+    % _{\mbox{\fontsize\sf@size\z@#2}}}}}
+% \def\@super{^}\def\@sub{_}
 
-\catcode`^\active\catcode`_\active
-\def\@super@sub#1_#2{\textbothscript{#1}{#2}}
-\def\@sub@super#1^#2{\textbothscript{#2}{#1}}
-\def\@@super#1{\@ifnextchar_{\@super@sub{#1}}{\textsuperscript{#1}}}
-\def\@@sub#1{\@ifnextchar^{\@sub@super{#1}}{\textsubscript{#1}}}
-\def^{\let\@next\relax\ifmmode\@super\else\let\@next\@@super\fi\@next}
-\def_{\let\@next\relax\ifmmode\@sub\else\let\@next\@@sub\fi\@next}
+% \catcode`^\active\catcode`_\active
+% \def\@super@sub#1_#2{\textbothscript{#1}{#2}}
+% \def\@sub@super#1^#2{\textbothscript{#2}{#1}}
+% \def\@@super#1{\@ifnextchar_{\@super@sub{#1}}{\textsuperscript{#1}}}
+% \def\@@sub#1{\@ifnextchar^{\@sub@super{#1}}{\textsubscript{#1}}}
+% \def^{\let\@next\relax\ifmmode\@super\else\let\@next\@@super\fi\@next}
+% \def_{\let\@next\relax\ifmmode\@sub\else\let\@next\@@sub\fi\@next}
 
 \makeatother
 
@@ -133,7 +133,8 @@
 \Huge{}\textbf{Superzpěvník}\normalsize\\[5ex]
 cokoliv sebrané odkudkoliv\\[1ex]
 bez garance správnosti\\[1.5ex]
-\copyright~Jan Šimbera - Prófa, simbera.jan@gmail.com
+\copyright~Jan Šimbera - Prófa, simbera.jan@gmail.com\\[1.5ex]
+volně šiřitelné pod licencí Creative Commons BY-NC-SA
 \normalfont
 \end{center}
 \vspace{\stretch{2}}
@@ -724,7 +725,38 @@ Počítám nebe, pusy, co nedostanu\ldots
 \musicnote{\fadeout}
 \endsong
 
-\beginsong{Atlantida}[by={Miro Žbirka}]\label{song-16}
+\beginsong{Applaus Applaus}[by={Sportfreunde Stiller}]\label{song-16}
+\intro
+\cseq{\[G] \[D] \[Em]}\\
+\cl
+\chordsoff
+\num
+Ist meine Hand eine Faust, machst Du sie wieder auf
+und legst die Deine in meine
+Du flüsterst Sätze mit Bedacht durch all den Lärm
+als ob sie mein Sextant und Kompass wär’n
+\fin
+\chor
+\chordson
+\[C]Applaus, A\[Em]pplaus \[G] für \[D]Deine Worte
+\[C]Mein Herz geht \[Em]auf \[G] \[D]wenn Du \[C]lachst
+Applaus, A\[Em]pplaus für \[G]Deine Art mich \[D]{zu begei}\[C]stern
+Hör niemals damit \[Em]auf!
+Ich \[G]wünsch mir so sehr
+Du hörst \[D]niemals damit \[G]auf
+\cl
+\num
+Ist meine Erde eine Scheibe, machst Du sie wieder rund
+Zeigst mir auf leise Art und Weise, was Weitsicht heißt
+Will ich mal wieder mit dem Kopf durch die Wand
+Legst Du mir Helm und Hammer in die Hand
+\fin
+\repchorus{\emptyspace}
+\solo\emptyspace\\ \cl
+\repchorus{\emptyspace}
+\endsong
+
+\beginsong{Atlantida}[by={Miro Žbirka}]\label{song-17}
 \capo{2}
 \num
 Zem \[Am]pradávnych sĺnk v chladnom \[D]tieni tajomstiev
@@ -769,7 +801,7 @@ Nepovie nám však viac, čo mestá v ňom skrývajú
 \cl
 \endsong
 
-\beginsong{Až}[by={Tomáš Klus}]\label{song-17}
+\beginsong{Až}[by={Tomáš Klus}]\label{song-18}
 \transpose{7}
 \num
 Až \[Am]rozpustím \[D]dým a k tomu \[G]skončí další \[C]den, tak \[Hm]půjdem
@@ -808,7 +840,7 @@ Plyšový seladón
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Až se k nám právo vrátí}[by={Spirituál kvintet}]\label{song-18}
+\beginsong{Až se k nám právo vrátí}[by={Spirituál kvintet}]\label{song-19}
 \num
 Chci \[Em]sluncem být a ne planetou, \[H\hidx{7}]{až se} k nám právo \[Em]vrátí
 Chci setřást bázeň staletou, \[H\hidx{7}]{až se} k nám právo vr\[Em]átí
@@ -843,7 +875,7 @@ Své věci rozhodnu si sám, až se k nám právo vrátí
 \cl
 \endsong
 
-\beginsong{Babylon}[by={Jaromír Nohavica}]\label{song-19}
+\beginsong{Babylon}[by={Jaromír Nohavica}]\label{song-20}
 \num
 \[C]Jako dítě, které \[Am]mámě se ztratilo
 \[Dm]Stojím na kraji \[F]města jménem \[G]Babylon
@@ -906,7 +938,7 @@ Mávnu křídly a uletím všem!
 \cl
 \endsong
 
-\beginsong{Bagdád}[by={Divokej Bill}]\label{song-20}
+\beginsong{Bagdád}[by={Divokej Bill}]\label{song-21}
 \num
 \[Dm]Padaj bomby \[C]{na Bagdád}
 \[Dm]Padaj bomby \[C]{na Bagdád}
@@ -939,7 +971,7 @@ A ty tam umíraj
 \cl
 \endsong
 
-\beginsong{Balada}[by={Tomáš Klus}]\label{song-21}
+\beginsong{Balada}[by={Tomáš Klus}]\label{song-22}
 \emptyv
 \cseq{\[Em] \[C] \[G] \[D]}\\
 \cl
@@ -980,7 +1012,7 @@ A lepší zítra\ldots{}
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Barbarské pobřeží}[by={Asonance}]\label{song-22}
+\beginsong{Barbarské pobřeží}[by={Asonance}]\label{song-23}
 \musicnote{druhý a čtvrtý řádek opakovat ve všech slokách}
 \freev
 \[Em]Dvacet stupňů levobok a držte \[D]jižní \[Em]směr
@@ -1028,7 +1060,7 @@ Loď byla jejich rakví a moře jejich hrob\ldots{}
 \cl
 \endsong
 
-\beginsong{Barbie Army}[by={Dominik Zezula}]\label{song-23}
+\beginsong{Barbie Army}[by={Dominik Zezula}]\label{song-24}
 \freev
 \[C]Jedna \[C/H]jako \[Am]druhá, vyspa\[F\hidx{maj7}]{ly se} \[G]{do krá}\[C]sy
 \[C]První \[C/H]{už je} \[Am]tuhá z toho\[F\hidx{maj7}]{ laku} \[G]{na vla}\[C]sy
@@ -1080,7 +1112,7 @@ A tohle je značková Puma, tohle zas řetízek zlatej
 \cl
 \endsong
 
-\beginsong{Batalion}[by={Spirituál kvintet}]\label{song-24}
+\beginsong{Batalion}[by={Spirituál kvintet}]\label{song-25}
 \bridge
 \[Em]Víno \[G]máš a \[D]marky\[Em]tánku, \[G]dlouhá noc \[D]se \[Em]pro\[Hm]hý\[Em]ří
 Víno \[G]máš a \[D]chvilku \[Em]spánku, \[G]díky, dí\[D]ky, \[Em]ver\[Hm]bí\[Em]ři
@@ -1110,7 +1142,7 @@ Za královský hermelín padne každý rád
 \bridge\emptyspace\\ \cl
 \endsong
 
-\beginsong{Battledress}[by={Greenhorns}]\label{song-25}
+\beginsong{Battledress}[by={Greenhorns}]\label{song-26}
 \num
 \[E]Zapnu vzpomínkovou frézu \[G\shrp{}m]romantiky battledressů
 \[A]{A najednou} je mi šestnáct \[E]let
@@ -1161,7 +1193,7 @@ Resslovkou kráčím dolů ke smíchovskýmu nádraží
 \cl
 \endsong
 
-\beginsong{Běda poraženým (Vae victis)}[by={Klíč}]\label{song-26}
+\beginsong{Běda poraženým (Vae victis)}[by={Klíč}]\label{song-27}
 \num
 \[G]Běží krajem \[Hm]dlouhá cesta, \[C]{do svatého} \[D]města tě zavede
 \[G]Podél cesty \[Hm]kříže s těly, \[C]{s těly} těch, co \[D]neuspěli
@@ -1186,7 +1218,7 @@ Vae victis, amen, amen
 \repsec{1}{\emptyspace}
 \endsong
 
-\beginsong{Berousek}[by={Mňága a Žďorp}]\label{song-27}
+\beginsong{Berousek}[by={Mňága a Žďorp}]\label{song-28}
 \intro
 \cseq{\[C] \[F] \[Dm] \[C] \[G]}\\
 \cl
@@ -1216,7 +1248,7 @@ Střepy noci mě mají ve své moci
 \cl
 \endsong
 
-\beginsong{Bedna od whisky}[by={Hoboes}]\label{song-28}
+\beginsong{Bedna od whisky}[by={Hoboes}]\label{song-29}
 \num
 \[Am]Dneska už mi \[C]fóry nějak \[Am]nejdou přes py\[E]sky
 \[Am]Stojím s dlouhou \[C]kravatou na \[Am]bedně \[E]{od whis}\[Am]ky
@@ -1263,7 +1295,7 @@ Má to smutnej konec a whisky ani lok
 \cl
 \endsong
 
-\beginsong{Behind Blue Eyes}[by={Limp Bizkit}]\label{song-29}
+\beginsong{Behind Blue Eyes}[by={Limp Bizkit}]\label{song-30}
 \capo{3}
 \pick{PPPIAMAM (Em, G) / PAMIAMAM (D, C, A)}
 \num
@@ -1309,7 +1341,7 @@ That they're sorry and don't worry~-- I'm not telling lies
 \repsec{1}{\emptyspace}
 \endsong
 
-\beginsong{Bezpečné reggae}[by={Žamboši}]\label{song-30}
+\beginsong{Bezpečné reggae}[by={Žamboši}]\label{song-31}
 \num
 \[F\shrp{}m\hidx{7}]{U telky} s kusem žvance
 Koukám jak na Srí Lance \[E]jámy hloubí
@@ -1362,7 +1394,7 @@ Předplatím stáří, zaplatím, zaplatím\ldots{}
 \fin
 \endsong
 
-\beginsong{Black Velvet Band}[by={The Dubliners}]\label{song-31}
+\beginsong{Black Velvet Band}[by={The Dubliners}]\label{song-32}
 \num
 In a \[G]neat little town \[C]they call \[G]Belfast
 Apprentice to \[C]trade I was \[D]bound
@@ -1416,7 +1448,7 @@ You've landed in Van Diemen's Land
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Bláznova ukolébavka}[by={Pavel Dydovič}]\label{song-32}
+\beginsong{Bláznova ukolébavka}[by={Pavel Dydovič}]\label{song-33}
 \num
 \[D]Máš, má ovečko, \[A]dávno spát, už \[G]píseň ptáků \[D]končí
 Kvůli nám přestal i \[A]vítr vát, jen \[G]můra zírá \[D]zvenčí
@@ -1440,7 +1472,7 @@ Když tebe mám rád, když tebe tu mám
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Blowing in the wind}[by={Bob Dylan}]\label{song-33}
+\beginsong{Blowing in the wind}[by={Bob Dylan}]\label{song-34}
 \num
 \[C]How many \[F]roads must a \[C]man walk down
 Before you \[F]call him a \[G]man
@@ -1475,7 +1507,7 @@ That too many people have died
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Blues folsomské věznice}[by={Johnny Cash / Jan Vyčítal}]\label{song-34}
+\beginsong{Blues folsomské věznice}[by={Johnny Cash / Jan Vyčítal}]\label{song-35}
 \num
 \[G]Můj děda bejval blázen, texaskej ahasvér
 a na půdě nám po něm zůstal \[G\hidx{7}]ošoupanej kvér
@@ -1503,7 +1535,7 @@ A taky mi říkala~-- nehraj si s tou pistolkou
 \fin
 \endsong
 
-\beginsong{Blues o spolykaných slovech}[by={Michal Prokop}]\label{song-35}
+\beginsong{Blues o spolykaných slovech}[by={Michal Prokop}]\label{song-36}
 %\transpose{-2}
 %\musicnote{TRANSPOSE TO G (-2)}
 \num
@@ -1537,7 +1569,7 @@ Funeb\[G]ráci
 \cl
 \endsong
 
-\beginsong{Body in a Box}[by={City and Colour}]\label{song-36}
+\beginsong{Body in a Box}[by={City and Colour}]\label{song-37}
 \capo{2}
 \musicnote{D/F 200233}
 \emptyv
@@ -1575,7 +1607,7 @@ Out into the night sky
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Boli sme raz milovaní}[by={Pavol Habera}]\label{song-37}
+\beginsong{Boli sme raz milovaní}[by={Pavol Habera}]\label{song-38}
 \num
 \[C]Život náš je \[F]lacný hotel
 \[G]Iba chvíľu \[F]bývaš v \[C]ňom
@@ -1614,7 +1646,7 @@ Ten nepríde do pekla
 \cl
 \endsong
 
-\beginsong{Bon soir Mademoiselle Paris}[by={Olympic}]\label{song-38}
+\beginsong{Bon soir Mademoiselle Paris}[by={Olympic}]\label{song-39}
 \num
 \[Em]{Mám v} \[H\hidx{7}]kapse jeden \[Em]frank, jsem \[D\hidx{7}]nejbohatší z \[G]bank nad Sei\[H\hidx{7}]nou
 \chordsoff
@@ -1633,7 +1665,7 @@ Vím, jak zní z úst krásných žen ta slůvka: Car je t'aime, oh ma cher
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Boty proti lásce}[by={Yvonne Přenosilová}]\label{song-39}
+\beginsong{Boty proti lásce}[by={Yvonne Přenosilová}]\label{song-40}
 \num
 \[E\hidx{7}]{Zas mi} říkal, že má něco pro mě
 \chordsoff
@@ -1666,7 +1698,7 @@ A když v těch botách jdu, tak prej si šlapu po štěstí
 \cl
 \endsong
 
-\beginsong{Boulevard Of Broken Dreams}[by={Green Day}]\label{song-40}
+\beginsong{Boulevard Of Broken Dreams}[by={Green Day}]\label{song-41}
 \num
 \[Em]{I walk} a \[G]lonely road
 The \[D]only one that \[A]{I have} ever \[Em]known
@@ -1722,7 +1754,7 @@ And I'm the only one and I walk a-
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Bratříčku, zavírej vrátka}[by={Karel Kryl}]\label{song-41}
+\beginsong{Bratříčku, zavírej vrátka}[by={Karel Kryl}]\label{song-42}
 \num
 \[Am]Bratříčku, nevzlykej, to nejsou \[C]bubáci
 \[G]Vždyť už jsi velikej, to jsou jen \[E\hidx{7}]vojáci
@@ -1758,7 +1790,7 @@ Budeme klopýtat, zpátky už nemůžeme
 \cl
 \endsong
 
-\beginsong{Bright Side of Life}[by={Monty Python}]\label{song-42}
+\beginsong{Bright Side of Life}[by={Monty Python}]\label{song-43}
 \num
 Some \[Am]things in life are \[D]bad they can \[G]really make you \[Em]mad
 \[Am]Other things just \[D]make you swear and \[G]curse
@@ -1805,7 +1837,7 @@ Just remember that the last laugh is on you
 \cl
 \endsong
 
-\beginsong{Bruce Willis}[by={Kabát}]\label{song-43}
+\beginsong{Bruce Willis}[by={Kabát}]\label{song-44}
 \num
 \[E]Nejsem \[C\shrp{}m]žádnej \[H]Bruce Willis a neu\[F\shrp{}m]mím
 \[A]Skákat hlavou dolů
@@ -1850,7 +1882,7 @@ Nepřijde mi to nutný
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Buď můj salám}[by={Hm}]\label{song-44}
+\beginsong{Buď můj salám}[by={Hm}]\label{song-45}
 \begin{textblock}{5}(9,-0.5) \gtab{E\hidx{sus4}}{002200:001200} \end{textblock}
 \emptyv
 \[D]Nemohu dnes \[E\hidx{sus4}]usnout, neboť \[Em\hidx{7}]{raší ze mě} \[A\hidx{7}]den
@@ -1876,7 +1908,7 @@ mám \[B]cognac, mám \[A]tebe, mám \[B]salám
 \fin\ifchorded\chordsoff\fi
 \endsong
 
-\beginsong{Buď na mě hodná}[by={Wanastowi Vjecy}]\label{song-45}
+\beginsong{Buď na mě hodná}[by={Wanastowi Vjecy}]\label{song-46}
 \num
 \[C]Jestli tady budeš, nebo \[G]zůstanu sám
 Někomu \[Am]chce se tady brečet a \[F]smát \[G\shrp{}]
@@ -1919,7 +1951,7 @@ Buď na mě \[F]hodná, \[G\shrp{}]krásko \[B]nevidi\[C]telná
 \cl
 \endsong
 
-\beginsong{Can You Feel The Love Tonight}[by={Elton John}]\label{song-46}
+\beginsong{Can You Feel The Love Tonight}[by={Elton John}]\label{song-47}
 \intro
 \cseq{\[G] \[D/F\shrp{}] \[C] \[G/D] \[C] \[G/B] \[D/F\shrp{}] \[G] \[Am\hidx{7}] \[G/B]}\\
 \cl
@@ -1959,7 +1991,7 @@ Be\[Am]lieve \[G]the \[C]very \[G]best
 \cl
 \endsong
 
-\beginsong{Carpe diem}[by={AG Flek}]\label{song-47}
+\beginsong{Carpe diem}[by={AG Flek}]\label{song-48}
 \begin{textblock}{5}(9,-0.5) \gtab{G/F\shrp{}}{200033:100034} \end{textblock}
 \num
 \chordson
@@ -2005,7 +2037,7 @@ A nemám chuť snít, co by bylo dál
 \fin
 \endsong
 
-\beginsong{Cesta}[by={Kryštof feat. Tomáš Klus}]\label{song-48}
+\beginsong{Cesta}[by={Kryštof feat. Tomáš Klus}]\label{song-49}
 \emptyv
 \cseq{\[C] \[G] \[Am] \[F] \[G]}\\
 \cl
@@ -2047,7 +2079,7 @@ Přestat se zbytečně ptát
 \cl
 \endsong
 
-\beginsong{Cestou do Jenkovic}[by={Radůza}]\label{song-49}
+\beginsong{Cestou do Jenkovic}[by={Radůza}]\label{song-50}
 \musicnote{akordy na konci sloky}
 \num
 \[D]Můj děda z kola \[Hm]seskočil \[C]před prázdnou kašnou \[F]{na ná}\[G]{městí}
@@ -2072,7 +2104,7 @@ Teď právě začaly prázdniny, venku je teplo a všechno se daří
 \cl
 \endsong
 
-\beginsong{Cesty Páně}[by={Mňága a Žďorp}]\label{song-50}
+\beginsong{Cesty Páně}[by={Mňága a Žďorp}]\label{song-51}
 \emptyv
 \cseq{\[E] \[A] \[F\shrp{}m] \[H]}\\
 \cl
@@ -2112,7 +2144,7 @@ Slunce nám svítí, kdo by to byl v červenci řek~-- no já teda ne
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Cliché}[by={Support Lesbiens}]\label{song-51}
+\beginsong{Cliché}[by={Support Lesbiens}]\label{song-52}
 \capo{4}
 \begin{textblock}{5.8}(6,-1.5)
  \gtab{Em\hidx{7}}{022033:012034}
@@ -2164,7 +2196,7 @@ Nobody's \[C\hidx{maj7}]creature and \[A\didx{sus2}]{nobody fears}
 \repchorusi{\emptyspace}
 \endsong
 
-\beginsong{Co jste, hasiči}\label{song-52}
+\beginsong{Co jste, hasiči}\label{song-53}
 \num
 \[C]{Co ste} \[F]hasi\[C]či, co ste děla\[G\hidx{7}]li,
 [:\[G\hidx{7}]{ že ste} nám ten pívo, pívo, pívovárek
@@ -2185,7 +2217,7 @@ Za dva, za čtyři, už tu nebudem,
 \fin
 \endsong
 
-\beginsong{Co když}[by={Vlasta Redl}]\label{song-53}
+\beginsong{Co když}[by={Vlasta Redl}]\label{song-54}
 \num
 \chordson
 \[E]Ještě mě \[A]studí \[H]slzy \[E]na líci
@@ -2231,7 +2263,7 @@ Co když~-- se směje
 \fin
 \endsong
 
-\beginsong{Co nadělám}[by={Devítka}]\label{song-54}
+\beginsong{Co nadělám}[by={Devítka}]\label{song-55}
 \num
 Na první \[E]pohled špinavý od lásky
 Na omak \[F\shrp{}m]šťastný a neobratný
@@ -2265,7 +2297,7 @@ Co nadělám
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Co se to stalo, bratříčku}[by={Jaromír Nohavica}]\label{song-55}
+\beginsong{Co se to stalo, bratříčku}[by={Jaromír Nohavica}]\label{song-56}
 \pick{PI(MA)I}
 \begin{textblock}{5}(8,-0.5) \gtab{D\didx{sus4}}{XX0233:000134} \end{textblock}
 \intro
@@ -2305,7 +2337,7 @@ A oni mi ji vzali
 \fin
 \endsong
 
-\beginsong{Colorado}[by={Kabát}]\label{song-56}
+\beginsong{Colorado}[by={Kabát}]\label{song-57}
 \num
 Táta \[G]vždycky říkal: hochu, žádný \[C]strachy
 Jseš kovboj v \[G]Coloradu, můžeš krávy \[D]pást
@@ -2346,7 +2378,7 @@ A o tý \[G]zlatý žíle \[D]řeknu doma \[G]všem
 \cl
 \endsong
 
-\beginsong{Cukrářská bosanova}[by={Jaromír Nohavica}]\label{song-57}
+\beginsong{Cukrářská bosanova}[by={Jaromír Nohavica}]\label{song-58}
 \begin{textblock}{5}(8,-0.5) \gtab{C\hidx{maj7}}{032000:021000} \gtab{C\shrp{}\didx{dim}}{002323:001324} \end{textblock}
 \emptyv
 \cseq{\[C\hidx{maj7}] \[C\shrp{}\didx{dim}] \[Dm\hidx{7}] \[G\hidx{7}]}
@@ -2389,7 +2421,7 @@ a on jí bonpari, bon, bon, bon, bonpari.
 \repchorus{Sláva, \ldots}
 \endsong
 
-\beginsong{Cyklistika}[by={Jaromír Nohavica}]\label{song-58}
+\beginsong{Cyklistika}[by={Jaromír Nohavica}]\label{song-59}
 \capo{3}
 \num
 \[Am]Fangle, stuhy, praporečky, diváci u trati, \[Em]hohohoho\[Am]{ho}
@@ -2461,7 +2493,7 @@ Jó, někdy vyhrává, kdo se moc nemačká, ten, kdo je třetí vzadu
 \cl
 \endsong
 
-\beginsong{Čarodějnice z Amesbury}[by={Asonance}]\label{song-59}
+\beginsong{Čarodějnice z Amesbury}[by={Asonance}]\label{song-60}
 \num
 Zuzana \[Em]byla dívka, \[D]která žila v \[Em]Amesbury
 S jasnýma \[G]očima a \[D]řečmi pánům \[Em]navzdory
@@ -2507,7 +2539,7 @@ Zemřela tiše samotná pod letní oblohou
 \fin
 \endsong
 
-\beginsong{Čas}[by={Tomáš Klus}]\label{song-60}
+\beginsong{Čas}[by={Tomáš Klus}]\label{song-61}
 \emptyv
 \cseq{\[Hm] \[G] \[D] \[A]}\\
 \cl
@@ -2558,7 +2590,7 @@ Raděj' shořet než vyhasnout!
 \fin
 \endsong
 
-\beginsong{Černá díra}[by={Karel Plíhal}]\label{song-61}
+\beginsong{Černá díra}[by={Karel Plíhal}]\label{song-62}
 \num
 \[G]Mívali jsme \[D]dědečka, \[C]starého už \[G]pána
 Stalo se to v \[D]červenci \[C]jednou časně \[D]zrá\[G]na
@@ -2597,7 +2629,7 @@ Teď je naše \[E]písnička \[D]zralá pro re\[E]cen\[A]zi
 \fin
 \endsong
 
-\beginsong{Černej pasažér}[by={Traband}]\label{song-62}
+\beginsong{Černej pasažér}[by={Traband}]\label{song-63}
 \num
 Mám \[Dm]{kufr plnej} přebytečnejch \[A]krámů
 A mapu zabalenou do plá\[Dm]tna
@@ -2634,7 +2666,7 @@ Si nesu s sebou jako prokletí
 \repsec{1}{\emptyspace}
 \endsong
 
-\beginsong{Čert ví proč}[by={Zuzana Navarová}]\label{song-63}
+\beginsong{Čert ví proč}[by={Zuzana Navarová}]\label{song-64}
 \transpose{7}
 \num
 Kdo snídá \[C]špek a \[F]tlustě si ho krájí\[C]
@@ -2673,7 +2705,7 @@ Ten bude v pekle bubnovat
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Čtyři bytelný kola}[by={Greenhorns}]\label{song-64}
+\beginsong{Čtyři bytelný kola}[by={Greenhorns}]\label{song-65}
 \num
 \[C]Čtyři \[G]bytelný \[Am]kola \[F]{má náš} \[C]proklatej \[G]vůz\ldots{}
 \fin
@@ -2721,7 +2753,45 @@ INDIÁNI!!!
 \cl
 \endsong
 
-\beginsong{Dajána}[by={Paul Anka \& Zdeněk Borovec}]\label{song-65}
+\beginsong{Ďábel a syn}[by={Kabát}]\label{song-66}
+\num
+\[Dm]Sedím a koukám jak \[C]zvrácenej podzim
+\[Am]Stromům svlíká jejich \[G]šat
+\[Dm]Poslouchám ptáky a \[C]jenom tak kouřím
+\[Am]Malinko chce se mi \[G]spát
+\[Dm]{Padá mi} hlava pak \[C]cejtím, jak někdo
+\[Am]lehce mě za ruku \[G]vzal
+\[Dm]Blázen či voják jak \[C]maškara divná tam \[Am]stál
+Já pozval ho \[Dm]dál
+\fin
+\chordsoff
+\num
+Měl špinavej kabát a v ruce flétnu, oči jak z mrtvejch by vstal
+Na botách bahno snad celýho světa, tuhletu píseň mi hrál
+Tu píseň co zpívám a vůbec vám nevím, kde na ni akordy vzal
+Jak jsem tam seděl a koukal a kouřil, to já -- teprv ji psal
+\fin
+\num
+Povídá hochu, vracím se z flámu, hráli jsme karty, se zdá
+Partii pokera o budoucí vládu, dík bohu vyhrál jsem já
+Já měl z pekla štěstí a nebo pár trumfů v rukávu, podvod, já vím
+Chcete mě soudit tak dejte mě na kříž, jsem váš -- ďábel a syn
+\fin
+\num
+Pak pomalu mluvil a ničil mě silou, co od věků v sobě už má
+Drtil mě pravdou a pouštěl mi žilou a na závěr jen povídá
+Bůh stvořil lásku a žal, taky bolest a já jenom ubohej chtíč
+Fandím vám lidem, nevím, proč nemáš mě rád -- já poslal ho pryč
+\fin
+\num
+Sedím a koukám jak zvrácenej podzim stromům svlíká jejich šat
+Přemejšlím o tom co s náma bude a malinko chce se mi spát
+Padá mi hlava, pak cejtím, jak někdo lehce mě za ruku vzal
+Blázen či voják jak maškara divná tam stál -- tak pozvem ho dál
+\fin
+\endsong
+
+\beginsong{Dajána}[by={Paul Anka \& Zdeněk Borovec}]\label{song-67}
 \num
 \[C]Tam, kde leží \[Am]věčný sníh, \[Dm]{tam uslyšíš} \[G]dívčí smích
 \[C]tam, kde můžeš \[Am]jenom snít, \[Dm]věrnou lásku \[G]těžko mít
@@ -2754,7 +2824,7 @@ Krásná, bláhová Dajána
 \fin
 \endsong
 
-\beginsong{Dál, dál, dál}[by={Mňága a Žďorp}]\label{song-66}
+\beginsong{Dál, dál, dál}[by={Mňága a Žďorp}]\label{song-68}
 \capo{5}
 \emptyv
 \cseq{\[C] \[F\hidx{maj7}] \[G]}\\
@@ -2788,7 +2858,7 @@ Dál, dál, dál
 \cl
 \endsong
 
-\beginsong{Darmoděj}[by={Jaromír Nohavica}]\label{song-67}
+\beginsong{Darmoděj}[by={Jaromír Nohavica}]\label{song-69}
 \num
 \[Am]{Šel včera} městem \[Em]{muž a} šel po hlavní \[Am]třídě \[Em]    \[Am]
 Šel včera městem \[Em]{muž a} já ho z okna \[Am]viděl \[Em]
@@ -2846,7 +2916,7 @@ Když prodávám po domech jehly se slovníkem
 \cl
 \endsong
 
-\beginsong{David a Goliáš}[by={Jaroslav Ježek, Jiří Voskovec a Jan Werich}]\label{song-68}
+\beginsong{David a Goliáš}[by={Jaroslav Ježek, Jiří Voskovec a Jan Werich}]\label{song-70}
 \averse
 \[C]Lidi na li\[Am]{di jsou} jako \[F]saně \[G\hidx{7}]
 \[C]Člověk na člo\[Am]{věka jako} \[F]kat \[G\hidx{7}]
@@ -2881,7 +2951,7 @@ Když začínáš, no tak tu máš, byl jsi velkej, já měl kuráž
 \cl
 \endsong
 
-\beginsong{Dědečkovy hodiny}[by={Taxmeni}]\label{song-69}
+\beginsong{Dědečkovy hodiny}[by={Taxmeni}]\label{song-71}
 \num
 V naší \[G]malé kuchy\[D]{ni tloukly} \[G]staré hodi\[C]ny
 Dlouhých \[G]devadesát \[D]let na stě\[G]ně
@@ -2924,7 +2994,7 @@ Když se rozletí
 \cl
 \endsong
 
-\beginsong{Dej mi víc své lásky}[by={Olympic}]\label{song-70}
+\beginsong{Dej mi víc své lásky}[by={Olympic}]\label{song-72}
 \num
 \[Em]Vymyslel jsem spoustu nápa\[G]dů, aú
 Co \[Em]podporujou hloupou nála\[D\hidx{7}]{du, a}\[H\hidx{7}]{ú}
@@ -2955,7 +3025,7 @@ Zamknu si na sedm západů, aú
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Dělání}[by={Svěrák a Uhlíř}]\label{song-71}
+\beginsong{Dělání}[by={Svěrák a Uhlíř}]\label{song-73}
 \emptyv
 \cseq{\[G] \[C] \[G] \[C]}\\
 \cl
@@ -2981,7 +3051,7 @@ Upeč třeba chleba\ldots{}
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Demáček}[by={Buty}]\label{song-72}
+\beginsong{Demáček}[by={Buty}]\label{song-74}
 \intro
 \cseq{\[Am] \[F] \[C] \[Am] \[F] \[C]}\\
 \cl
@@ -3017,7 +3087,7 @@ Lá la\ldots{} \emph{(rec. předchozí)}
 \cl
 \endsong
 
-\beginsong{Dětské šaty}[by={Petr Kalandra}]\label{song-73}
+\beginsong{Dětské šaty}[by={Petr Kalandra}]\label{song-75}
 \intro
 \cseq{\[G] \[C] \[D] \[G] \[Em] \[C] \[D] \[G]}
 \cl\num
@@ -3033,7 +3103,7 @@ Má pestrost křídel a dívčích přání
 \cl
 \endsong
 
-\beginsong{Dezolát}[by={Vypsaná Fixa}]\label{song-74}
+\beginsong{Dezolát}[by={Vypsaná Fixa}]\label{song-76}
 \emptyv
 \cseq{\[Em] \[C] \[D] \[A]}\\
 \cl
@@ -3081,7 +3151,7 @@ Venku ten náš svět sledují kamery
 \cl
 \endsong
 
-\beginsong{Divoké koně}[by={Jaromír Nohavica}]\label{song-75}
+\beginsong{Divoké koně}[by={Jaromír Nohavica}]\label{song-77}
 \num
 \[Am]{Já viděl} \[Dm]divoké \[Am]koně, \[C]běželi \[Dm]soumra\[Am]kem
 \[Am]{Já viděl} \[Dm]divoké \[Am]koně, \[C]běželi \[Dm]soumra\[Am]kem
@@ -3107,7 +3177,7 @@ Já viděl divoké koně.
 \cl
 \endsong
 
-\beginsong{Divokej horskej tymián}[by={Pavel Lohonka Žalman}]\label{song-76}
+\beginsong{Divokej horskej tymián}[by={Pavel Lohonka Žalman}]\label{song-78}
 \capo{3}
 \num
 Dál za \[C]vozem \[F]spolu \[C]šlapem
@@ -3136,7 +3206,7 @@ z hor divokej tymián
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Dlouhej kouř}[by={Chinaski}]\label{song-77}
+\beginsong{Dlouhej kouř}[by={Chinaski}]\label{song-79}
 \emptyv
 \cseq{\[D] \[C] \[G]}
 \cl
@@ -3188,7 +3258,7 @@ a tak si říkám)}
 \repchorus{Vam tam tydam pams\ldots}
 \endsong
 
-\beginsong{Do nebe}[by={Tomáš Klus}]\label{song-78}
+\beginsong{Do nebe}[by={Tomáš Klus}]\label{song-80}
 \emptyv
 \cseq{\[G] \[D] \[Em] \[C]}\\
 \cl
@@ -3226,7 +3296,7 @@ Vždyť chci\ldots{}
 \cl
 \endsong
 
-\beginsong{Do posledního dechu}[by={Nerez}]\label{song-79}
+\beginsong{Do posledního dechu}[by={Nerez}]\label{song-81}
 \num
 \[C\hidx{9}]Slunce v ok\[F\hidx{maj7}]nech, \[Em]doktor v do\[Am]mě \[Am/G] \[Am/F\shrp{}]
 Jen ať \[G]svítí slunce \[C/H]{pro tebe} i \[Am]{pro mě}
@@ -3252,7 +3322,7 @@ Byli jsme-
 \repsec{1}{Slunce v oknech\ldots}
 \endsong
 
-\beginsong{Dobrák od kosti}[by={Chinaski}]\label{song-80}
+\beginsong{Dobrák od kosti}[by={Chinaski}]\label{song-82}
 \emptyv
 \cseq{\[D] \[A] \[G]}
 \cl
@@ -3293,7 +3363,7 @@ Jsem ten, kdo jednou tvý tělo zakryje
 \cl\ifchorded\chordsoff\fi
 \endsong
 
-\beginsong{Dokud se zpívá}[by={Jaromír Nohavica}]\label{song-81}
+\beginsong{Dokud se zpívá}[by={Jaromír Nohavica}]\label{song-83}
 \num
 \[C]{Z Těšína} \[Em]vyjíždí \[Dm]vlaky co \[F]čtvrthodi\[C]nu \[Em]   \[Dm]   \[G\hidx{7}]
 \[C]Včera jsem \[Em]nespal a \[Dm]{ani dnes} \[F]nespoči\[C]nu \[Em]   \[Dm]   \[G\hidx{7}]
@@ -3327,7 +3397,7 @@ A z veliké dálky do uší mi zaznělo
 \fin
 \endsong
 
-\beginsong{Don Quijote}[by={Jarret}]\label{song-82}
+\beginsong{Don Quijote}[by={Jarret}]\label{song-84}
 \num
 \[A]Probírám se tím, co \[E\hidx{6}]bylo dřív
 Cítím \[D\hidx{maj7}]{jizvy po} chvílích nikdy \[A]neproži\[E\hidx{6}]tých
@@ -3361,7 +3431,7 @@ A ty jsi větrnej mlýn
 \cl
 \endsong
 
-\beginsong{Don't Look Back in Anger}[by={Oasis}]\label{song-83}
+\beginsong{Don't Look Back in Anger}[by={Oasis}]\label{song-85}
 \intro
 \cseq{\[G] \[C] \[G] \[C]}\\
 \cl
@@ -3408,7 +3478,7 @@ I heard you \[G]say  \[D]  \[Em]   \[H]  \[C]  \[D]least not to\[G]day
 \cl
 \endsong
 
-\beginsong{Dopis}[by={Karel Plíhal}]\label{song-84}
+\beginsong{Dopis}[by={Karel Plíhal}]\label{song-86}
 \num
 \chordson
 \[D]Tak ti teda píšu v opilecké \[A]pýše
@@ -3463,7 +3533,7 @@ Dokud konec toho všeho Pámbu neod-
 \cl
 \endsong
 
-\beginsong{Dopis}[by={Tomáš Klus}]\label{song-85}
+\beginsong{Dopis}[by={Tomáš Klus}]\label{song-87}
 \num
 \[Am]Píšu ti, protože mě \[D]trápí spousta věcí
 A jen \[G]prázdný cesty domů a to \[C]věčný přemýšlení k tomu
@@ -3511,7 +3581,7 @@ To aby lépe se mi přemýšlelo, to abych věděl co psát
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Doprdele prace}[by={Jaromír Nohavica}]\label{song-86}
+\beginsong{Doprdele prace}[by={Jaromír Nohavica}]\label{song-88}
 \emptyv
 \cseq{\[Dm] \[G] \[B] \[A] \[Dm] \[A]}\\
 \cl
@@ -3563,7 +3633,7 @@ Přijdu tak kolem desíti.
 \cl
 \endsong
 
-\beginsong{Dračí song}[by={LJH Chemik}]\label{song-87}
+\beginsong{Dračí song}[by={LJH Chemik}]\label{song-89}
 \num
 \[Am]Seděl sám \[E]{na rohu} ulice, \[Am]{u nohou} \[E]ležela přilbice
 \[C]Byl to rytíř, \[G]{co žebral} \[Em]{na pivo}
@@ -3618,7 +3688,7 @@ A žili šťastně až do smrti\ldots{}
 \fin
 \endsong
 
-\beginsong{Drobná paralela}[by={Chinaski}]\label{song-88}
+\beginsong{Drobná paralela}[by={Chinaski}]\label{song-90}
 \num
 \chordson
 Ta \[C]stará \[G]dobrá hra je \[D]okoukaná
@@ -3664,7 +3734,7 @@ Co myslíš, ségra, je to hodně nebo málo?
 \fin\ifchorded\chordsoff\fi
 \endsong
 
-\beginsong{Duj duj duj}[by={Buty}]\label{song-89}
+\beginsong{Duj duj duj}[by={Buty}]\label{song-91}
 \freev
 \[C]Duj, \[G]duj, \[Am]duj, \[Dm]duši mi \[C]oča\[G]ruj
 \[C]Očaruj mi \[Dm]duši hej \[C]tó\[G]nem, \[C]oča\[G]ruj \[C]  \[F]  \[C]  \[F]
@@ -3694,7 +3764,7 @@ Ukaž mi \[Dm]sílu, kterou \[Am]{máš } \emph{(\[Dm]nor\[E\hidx{7}]male)}
 \cl
 \endsong
 
-\beginsong{Dva}[by={Zrní}]\label{song-90}
+\beginsong{Dva}[by={Zrní}]\label{song-92}
 \bridge
 \cseq{\[Am] \[Em] \[Am] \[Em] \[F] \[Am] \[F] \[Em] \[Am]}\\
 \cl
@@ -3729,7 +3799,7 @@ Vím jenom, že jsme my dva, spolu se držíme a držet se budeme
 \cl
 \endsong
 
-\beginsong{Dva havrani}[by={Asonance}]\label{song-91}
+\beginsong{Dva havrani}[by={Asonance}]\label{song-93}
 \num
 \chordson
 Když jsem se \[Dm]{z pole} \[C]vrace\[Dm]la
@@ -3764,7 +3834,7 @@ A až se masa nasytíme
 \fin\ifchorded\chordsoff\fi
 \endsong
 
-\beginsong{Dva roky prázdnin}[by={Karel Černoch}]\label{song-92}
+\beginsong{Dva roky prázdnin}[by={Karel Černoch}]\label{song-94}
 \averse
 \chordson
 \[Am]Vzhůru na palubu, \[Dm]dálky \[Am]volají
@@ -3809,7 +3879,7 @@ Staneš se jedním z nás
 \cl\ifchorded\chordsoff\fi
 \endsong
 
-\beginsong{Dvakrát}[by={Vlasta Redl}]\label{song-93}
+\beginsong{Dvakrát}[by={Vlasta Redl}]\label{song-95}
 \num
 \[A]Dvakrát dvě deci \[D]přede mě \[E]postavil \[A]pán
 Musel si přeci \[D]všimnout, \[E]že jsem tu \[A]sám
@@ -3851,7 +3921,7 @@ Pán si přál platit zvlášť nebo dohromady?
 \fin
 \endsong
 
-\beginsong{Dvě ryby}[by={Chemik}]\label{song-94}
+\beginsong{Dvě ryby}[by={Chemik}]\label{song-96}
 \chorusi
 Dvě \[Am]ryby, \[Dm]bezpochyby \[F]plavaly světem, aby \[G]poznaly svoje chyby
 \[C]Navzájem\ldots \[G] \[F] \[G] \[C]navzájem
@@ -3911,7 +3981,7 @@ Možná
 \cl
 \endsong
 
-\beginsong{Ej padá padá rosenka}[by={Blue Effect}]\label{song-95}
+\beginsong{Ej padá padá rosenka}[by={Blue Effect}]\label{song-97}
 \chordsoff
 \intro\emptyspace\\\cl
 \num
@@ -3931,7 +4001,7 @@ Pozdravuj milú nastokrát
 \repsec{1}{\emptyspace}
 \endsong
 
-\beginsong{El Condor Pasa}[by={Paul Simon \& Art Garfunkel}]\label{song-96}
+\beginsong{El Condor Pasa}[by={Paul Simon \& Art Garfunkel}]\label{song-98}
 \num
 I'd \[Em]rather be a sparrow than a \[G]snail, yes, I would
 If I could, I surely \[Em]would
@@ -3953,7 +4023,7 @@ If I only could, I surely would
 \repsec{2}{\emptyspace}
 \endsong
 
-\beginsong{Elektrický valčík}[by={Svěrák a Uhlíř}]\label{song-97}
+\beginsong{Elektrický valčík}[by={Svěrák a Uhlíř}]\label{song-99}
 \num
 \[Cm]Jednoho letního večera na návsi pod starou \[G\hidx{7}]lípou
 Hostinský Antonín Kučera vyvalil soudeček s \[Cm]pípou
@@ -4005,7 +4075,7 @@ Byl to ten slavný den\ldots{}
 \cl
 \endsong
 
-\beginsong{Emo}[by={Vobezdud}]\label{song-98}
+\beginsong{Emo}[by={Vobezdud}]\label{song-100}
 \chordsoff\emptyv\chordson
 \cseq{\[D] \[F] \[B] \[A]}
 \cl\num
@@ -4036,7 +4106,7 @@ Chci aby ses nezměnil~-- ale chci tě převychovat!
 \fin
 \endsong
 
-\beginsong{Ešče si já pohár vína zaplatím}[by={Moravská}]\label{song-99}
+\beginsong{Ešče si já pohár vína zaplatím}[by={Moravská}]\label{song-101}
 \num
 \[Dm]Ešče \[A]{si já,} \[Dm]ešče \[Gm]{si já} \[A\hidx{7}]pohár vína \[Dm]zaplatím
 \[Am]Potom \[E]{sa já,} \[Am]potom \[Dm]{sa já} \[E\hidx{7}]{k mojej} milej \[Am]navrátím
@@ -4052,7 +4122,7 @@ pijme, pijme dobré vínko z pohára}
 \fin
 \endsong
 
-\beginsong{Ešče som sa něoženil}[by={Lidová}]\label{song-100}
+\beginsong{Ešče som sa něoženil}[by={Lidová}]\label{song-102}
 \num
 \[Em]Ešče som sa něoženil, \[H\hidx{7}]{už ma} žena \[Em]bije
 \[Em]Proto som si narychtoval \[H\hidx{7}]{tri dubové} \[Em]kyje \[D]
@@ -4068,7 +4138,7 @@ Moja milá sa vydává, pojdzem na veselie}
 \fin
 \endsong
 
-\beginsong{Éterická}[by={UDG}]\label{song-101}
+\beginsong{Éterická}[by={UDG}]\label{song-103}
 \emptyv
 \cseq{\[Dm] \[B] \[Am]}\\
 \cl
@@ -4100,7 +4170,7 @@ Jsem jen prach, co nikdo nechce
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Ezop a brabenec}[by={Jaroslav Ježek, Jiří Voskovec a Jan Werich}]\label{song-102}
+\beginsong{Ezop a brabenec}[by={Jaroslav Ježek, Jiří Voskovec a Jan Werich}]\label{song-104}
 \freev
 \[C]Jednou \[Em]{z lesa} \[Am]{domů se} \[Am\hidx{7}]nesa \[F]mou\[G\hidx{7}]drý \[C]Ezop
 Potká \[Em]brabce, \[Am]který bra\[Am\hidx{7}]bence \[F]má\[G\hidx{7}]lem \[A\hidx{7}]sezob
@@ -4124,7 +4194,7 @@ Chech\[D\hidx{7}]{tej a} na svou \[G\shrp{}\hidx{7}]{bídu si} \[G\hidx{7}]nezar
 \cl
 \endsong
 
-\beginsong{Fajn džob}[by={Hop Trop}]\label{song-103}
+\beginsong{Fajn džob}[by={Hop Trop}]\label{song-105}
 \num
 Moje \[Gm]briga má \[F]jméno \[Gm]Ariel,
 řekl \[Gm]kapitán, \[F]když mě \[Gm]zval:
@@ -4157,7 +4227,7 @@ kdo je blázen a nemá šajn.}
 \repchorus{Celej den a celou noc \ldots}
 \endsong
 
-\beginsong{Falling Slowly}[by={Frames}]\label{song-104}
+\beginsong{Falling Slowly}[by={Frames}]\label{song-106}
 \capo{3}
 \num
 \[C]{I don't} know you, \[F]but I want you
@@ -4196,7 +4266,7 @@ I'll sing along
 \cl
 \endsong
 
-\beginsong{Feather on the Clyde}[by={Passenger}]\label{song-105}
+\beginsong{Feather on the Clyde}[by={Passenger}]\label{song-107}
 \capo{8}
 \pick{P(IM)}
 \begin{textblock}{5}(8.25,-1.5)\noindent 
@@ -4246,7 +4316,7 @@ in my restless heart
 \fin
 \endsong
 
-\beginsong{Fénix}[by={Nezmaři}]\label{song-106}
+\beginsong{Fénix}[by={Nezmaři}]\label{song-108}
 \num
 \[G]Vlak smutně \[D/F\shrp{}]zahoukal, čas \[C]{do klusu} se \[G]dává
 \[Am\hidx{7}]{Osud se} rozběhnul a \[D]{já to} nevě\[D\hidx{7}]děl
@@ -4277,7 +4347,7 @@ Ze svého popela jak Fénix posbírá
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Fields of Athenry}[by={The Dubliners}]\label{song-107}
+\beginsong{Fields of Athenry}[by={The Dubliners}]\label{song-109}
 \num
 By the \[G]lonely prison wall, I \[C]heard a young girl \[G]cal\[D]ling
 \[G]Michael they have \[C]taken you \[D]away
@@ -4314,7 +4384,7 @@ And it's so lonely round the fields of Athenry
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Fireflies}[by={Owl City}]\label{song-108}
+\beginsong{Fireflies}[by={Owl City}]\label{song-110}
 \capo{7}
 \num
 \[G]You would not be\[C]lieve your eyes
@@ -4363,7 +4433,7 @@ If my dreams get real bizarre
 \cl
 \endsong
 
-\beginsong{Fotbal}[by={Jaromír Nohavica}]\label{song-109}
+\beginsong{Fotbal}[by={Jaromír Nohavica}]\label{song-111}
 \num
 \[Am]{V neděli} v pět deset \[C]sraz u Baníku
 \[G]Desítka vleze se, \[Am]{pak ještě} \[E]jedna
@@ -4407,7 +4477,7 @@ Dobrý den, sportu zdar, fotbal je príma!
 \fin
 \endsong
 
-\beginsong{Fram}[by={Wabi Daněk}]\label{song-110}
+\beginsong{Fram}[by={Wabi Daněk}]\label{song-112}
 \capo{3}
 \num
 Zas mě to táhne o kus \[Em]dál, \[Em\hidx{6}] \[Em]{zas nemám} doma nikde \[A]stání
@@ -4440,7 +4510,7 @@ Tě za pár roků vyhle\[Em]dám \[Em\hidx{6}] \[Em]
 \cl
 \endsong
 
-\beginsong{Frankie Dlouhán}[by={Nedvědi}]\label{song-111}
+\beginsong{Frankie Dlouhán}[by={Nedvědi}]\label{song-113}
 \num
 Kolik je \[C]smutného, když \[F]mraky černé \[C]jdou
 Lidem nad hla\[G\hidx{7}]vou, \[F]smutnou dála\[C]vou
@@ -4472,7 +4542,7 @@ Farář píseň pěl, umíráček zněl
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{František}[by={Buty}]\label{song-112}
+\beginsong{František}[by={Buty}]\label{song-114}
 \intro
 \cseq{\[G] \[C] \[G] \[C]}\\
 \cl
@@ -4510,7 +4580,7 @@ Protože v něm vidí Františkovu babičku
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Gaudeamus igitur}[by={Jaromír Nohavica}]\label{song-113}
+\beginsong{Gaudeamus igitur}[by={Jaromír Nohavica}]\label{song-115}
 \num
 \[Am]{V čele} šly panny, celé \[C]bosé by\[G]{ly a} nesly \[Am]Moranu
 Za nimi chlapci, kvítka \[C]pod koši\[G]lí, klobouky \[Am]{na stranu}
@@ -4542,7 +4612,7 @@ Od úst šla pára, led o ledy břinkal a bylo Tří králů
 \cl
 \endsong
 
-\beginsong{Gorale}[by={Čechomor / Gentlemen Singers (lidová)}]\label{song-114}
+\beginsong{Gorale}[by={Čechomor / Gentlemen Singers (lidová)}]\label{song-116}
 \num
 \chordson
 \[D]Za lasami za \[G]gorami \[A]za dolina\[D]mi
@@ -4559,7 +4629,7 @@ ma góralka \[G]dwa warkocze, \[A]podzielita \[D]się}
 \fin
 \endsong
 
-\beginsong{Grónská písnička}[by={Jaromír Nohavica}]\label{song-115}
+\beginsong{Grónská písnička}[by={Jaromír Nohavica}]\label{song-117}
 \num
 \[D]Daleko \[Em]{na severu} \[A\hidx{7}]{je Grónská} \[D]zem
 \[D]Žije tam \[Em]Eskymačka s \[A\hidx{7}]Eskymá\[D]kem
@@ -4599,7 +4669,7 @@ neboť jsou doma a mezi svýma :]
 \fin
 \endsong
 
-\beginsong{Hallelujah}[by={Rufus Wainwright}]\label{song-116}
+\beginsong{Hallelujah}[by={Rufus Wainwright}]\label{song-118}
 \num
 \chordson
 I \[G]heard there was a \[Em]secret chord
@@ -4650,7 +4720,7 @@ It's cold and it's a broken Hallelujah
 \fin\ifchorded\chordsoff\fi
 \endsong
 
-\beginsong{Harfa}[by={Asonance}]\label{song-117}
+\beginsong{Harfa}[by={Asonance}]\label{song-119}
 \num
 Žil jeden s\[Dm]edlák blízko řeky Tw\[C]eed
 Harfa m\[Dm]{á tak} něžně zn\[Am]{í}
@@ -4708,7 +4778,7 @@ Nevěsta mrtvá k zemi padala
 \fin
 \endsong
 
-\beginsong{Heidi}[by={Kamelot}]\label{song-118}
+\beginsong{Heidi}[by={Kamelot}]\label{song-120}
 \num
 Toulal \[Em]jsem se v \[D]létě \[C]po \[D]kop\[C]cích
 Bez \[Em]kompa\[Hm]{sů a} \[C]map
@@ -4741,7 +4811,7 @@ To abych věděl, že i dobrem dá se žít
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Hej, člověče Boží}[by={Nezmaři}]\label{song-119}
+\beginsong{Hej, člověče Boží}[by={Nezmaři}]\label{song-121}
 \capo{3}
 \num
 \chordson
@@ -4778,7 +4848,7 @@ Cizí dítě porodí, mám o tebe strach
 \cl\ifchorded\chordsoff\fi
 \endsong
 
-\beginsong{Hej, lidi}[by={Devítka}]\label{song-120}
+\beginsong{Hej, lidi}[by={Devítka}]\label{song-122}
 \capo{3}
 \num
 Je zase \[G]mír, ten podivnej \[D/F\shrp{}]{čas}
@@ -4815,7 +4885,7 @@ Když královně hrál
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Hercegovina}\label{song-121}
+\beginsong{Hercegovina}\label{song-123}
 \num
 \reppart{\[C]Šel jsem šumným hájem, širou doli\[G]nou}
 \[C]Potkal jsem tam \[F]myslivečka, \[G]jak šel s mojí mi\[C]lou, ba jo
@@ -4852,7 +4922,7 @@ Císařpán je nerad vidí ve svý rodině
 \fin
 \endsong
 
-\beginsong{Here Comes The Sun}[by={Beatles}]\label{song-122}
+\beginsong{Here Comes The Sun}[by={Beatles}]\label{song-124}
 \num
 \[G]Little darling, it's been a \[C]long, cold, lonely \[D]winter
 \[G]Little darling, it feels like \[C]years since it's been \[D]here
@@ -4885,7 +4955,7 @@ Little darling, it feels like years since it's been clear
 \cl
 \endsong
 
-\beginsong{Hey Jude}[by={Beatles}]\label{song-123}
+\beginsong{Hey Jude}[by={Beatles}]\label{song-125}
 \num
 Hey \[C]Jude, don't make it \[G]bad
 Take \[C]a \[G\hidx{7}]sad \[G\hidx{7}\didx{sus4}]{song and} \[G\hidx{7}]make it \[C]better
@@ -4932,7 +5002,7 @@ And then you'll begin to make it better
 \cl
 \endsong
 
-\beginsong{Hezká holka}[by={Mňága a Ždorp}]\label{song-124}
+\beginsong{Hezká holka}[by={Mňága a Ždorp}]\label{song-126}
 \musicnote{akordy}
 \emptyv
 \cseq{\[Fm] \[C\shrp{}] \[G\shrp{}] \[E\flt{}]}\\
@@ -4966,7 +5036,7 @@ A nechtěla sand ani slyšet kecy o lásce
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Hlásná Třebáň}[by={Ivan Mládek}]\label{song-125}
+\beginsong{Hlásná Třebáň}[by={Ivan Mládek}]\label{song-127}
 \num
 \[A]Hlásná Třebáň je \[C\shrp{}m]krásná
 A proto \[Hm]{ke svý} Máně \[E\hidx{7}]{do Třebáně} \[A]často jezdit \[E\hidx{7}]hledím
@@ -4984,7 +5054,7 @@ U Máni \[Hm]{v Třebáni} si \[E\hidx{7}]prostě lebe\[A]dím
 \repsec{1}{\emptyspace}
 \endsong
 
-\beginsong{Hlídač krav}[by={Jaromír Nohavica}]\label{song-126}
+\beginsong{Hlídač krav}[by={Jaromír Nohavica}]\label{song-128}
 \emptyv
 \cseq{\[C] \[F] \[G]}\\
 \cl
@@ -5033,7 +5103,7 @@ Kde se mezi mraky honí moje strakaté krávy
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Hloupý a ztracený}[by={Mňága a Žďorp}]\label{song-127}
+\beginsong{Hloupý a ztracený}[by={Mňága a Žďorp}]\label{song-129}
 \num
 \[Dm]Jsem hloupý a ztrace\[G]ný \[B]   \[A]
 \[Dm]Necelé dva metry nad ze\[G]mí \[B]   \[A]
@@ -5059,7 +5129,7 @@ Bůhvíproč šťastní~-- no to jsme celí my
 \solo\emptyspace\\ \cl
 \endsong
 
-\beginsong{Hlupáku, najdu tě}[by={Svěrák \& Uhlíř}]\label{song-128}
+\beginsong{Hlupáku, najdu tě}[by={Svěrák \& Uhlíř}]\label{song-130}
 \num
 \[C]Někdo má hadry \[F]{na tě}\[C]le, \[C]někdo je nosí v \[G]hlavě
 \[C]Berme ten rozdíl \[F]vesele, \[G]berme ten rozdíl \[C]hravě
@@ -5088,7 +5158,7 @@ Jde s námi z časů do časů, dá se s tím vůbec hnout?
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Hodinový hotel}[by={Mňága a Žďorp}]\label{song-129}
+\beginsong{Hodinový hotel}[by={Mňága a Žďorp}]\label{song-131}
 \emptyv
 \cseq{\[C] \[Em] \[A] \[F] \[G]}
 \cl\chordsoff\num
@@ -5120,7 +5190,7 @@ Za oknem prší a déšť~-- stejně nic nesmyje
 \repchorus{A svět je\ldots}
 \endsong
 
-\beginsong{Holes}[by={Passenger}]\label{song-130}
+\beginsong{Holes}[by={Passenger}]\label{song-132}
 \capo{9}
 \num
 \[Em\hidx{7}]{I know} a \[D/F\shrp{}]{man with} \[G]nothing in his hands
@@ -5175,7 +5245,7 @@ Well we've got \[Am]holes, we've got \[C]holes but we carry \[G]{on }  \fadeout
 \cl
 \endsong
 
-\beginsong{Holubí dům}[by={Jiří Schelinger}]\label{song-131}
+\beginsong{Holubí dům}[by={Jiří Schelinger}]\label{song-133}
 \num
 \[Em]Zpí\[D]vám \[C\hidx{maj7}]{ptákům a} \[Hm\hidx{7}]zvlášť holu\[Em]bům
 Stá\[D]val \[C\hidx{maj7}]{v údolí} \[Hm\hidx{7}]{mém starý} \[Em]dům
@@ -5207,7 +5277,7 @@ Zpívám ptákům a zvlášť holubům, stával v údolí mém starý dům
 \cl
 \endsong
 
-\beginsong{Homo}[by={Tomáš Klus}]\label{song-132}
+\beginsong{Homo}[by={Tomáš Klus}]\label{song-134}
 \emptyv
 \cseq{\[A] \[C\shrp{}m] \[D] \[E]}\\
 \cl
@@ -5252,7 +5322,7 @@ A že je ti to jedno, tak to mě celkem sebralo
 \cl
 \endsong
 
-\beginsong{Honolulu}[by={Kamelot}]\label{song-133}
+\beginsong{Honolulu}[by={Kamelot}]\label{song-135}
 \num
 \[A]Letecká \[D]linka do rá\[E]je \[D]
 \[A]{K ostrovům} \[D]slunné Hava\[E]je
@@ -5290,7 +5360,7 @@ Tu náhle signál budíku vytáh mě z pláže rovníku
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{House of the Rising Sun}[by={Americká folková balada}]\label{song-134}
+\beginsong{House of the Rising Sun}[by={Americká folková balada}]\label{song-136}
 \capo{2}
 \num
 There \[Am]{is a} \[C]house in \[D]New Orleans \[F]
@@ -5321,7 +5391,7 @@ To wear that ball and chain
 \repsec{1}{There is a house\ldots}
 \endsong
 
-\beginsong{Hrobař}[by={Premiěr}]\label{song-135}
+\beginsong{Hrobař}[by={Premiěr}]\label{song-137}
 \num
 \[G]{V mládí} jsem se učil hrobařem
 \[Em]Jezdit s hlínou, jezdit s trakařem
@@ -5358,7 +5428,7 @@ Na na na\ldots{}
 \cl
 \endsong
 
-\beginsong{Hruška}[by={Čechomor}]\label{song-136}
+\beginsong{Hruška}[by={Čechomor}]\label{song-138}
 \num
 Sto\[D]{jí hruška} v ši\[A]rém poli, vr\[D]šek se jí \[G]zele\[A]ná
 \reppart{Pod \[D]ní se \[G]pase \[A]kůň vra\[D]ný, pase ho \[A]má mi\[D]lá}
@@ -5371,7 +5441,7 @@ Proč, má milá, dnes pasete z večera do rána?
 \fin
 \endsong
 
-\beginsong{Hudsonské šífy}[by={Wabi Daněk}]\label{song-137}
+\beginsong{Hudsonské šífy}[by={Wabi Daněk}]\label{song-139}
 \num
 Ten, kdo \[Am]nezná hukot vody lopat\[C]kama vířený
 Jako \[G]já, jako \[Am]{já}
@@ -5413,7 +5483,7 @@ Ať se na hudsonský šífy najmout dá, jo ho ho
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Hurt}[by={Johnny Cash}]\label{song-138}
+\beginsong{Hurt}[by={Johnny Cash}]\label{song-140}
 \num
 \[Am]{I  } \[C]hurt my\[D]self to\[Am]day, to \[C]see if \[D]{I still} \[Am]feel
 I \[C]focus \[D]{on the} \[Am]pain, the \[C]only \[D]thing that's \[Am]real
@@ -5445,7 +5515,7 @@ If \[C]{I could} \[D]start a\[Am]gain, a \[C]million \[D]miles a\[Am]way
 \cl
 \endsong
 
-\beginsong{Husličky}[by={Vlasta Redl}]\label{song-139}
+\beginsong{Husličky}[by={Vlasta Redl}]\label{song-141}
 \num
 \reppart{\[G]Čí že ste, husličky, \[C]či\[G]e, \[Am]kdo vás tu \[Em]zane\[D]chal}
 \[Am]{Na trávě} pová\[G]lané, \[Am]{na trávě} \[D]pová\[G]lané
@@ -5465,7 +5535,7 @@ Až sa tá bude trápit, která ho nechtěla
 \fin
 \endsong
 
-\beginsong{Hvězda na vrbě}[by={Olympic}]\label{song-140}
+\beginsong{Hvězda na vrbě}[by={Olympic}]\label{song-142}
 \num
 \[Em]Kdo \[G]se \[Am]večer \[Em]hájem \[Am]vrací, \[F]ten ať \[Em]klopí \[G\hidx{7}]zra\[C]ky \[Em]
 Ať \[G]je \[Am]nikdy \[Em]neo\[Am]brací \[Dm]{k  vr}\[G\hidx{7}]bě \[Em]křivola\[E]ký \[A]  \[C]  \[Em]
@@ -5489,7 +5559,7 @@ A pro ty, co kolem chodí, na tu větev zavěsí
 \repsec{2}{\emptyspace}
 \endsong
 
-\beginsong{Hvězdář}[by={UDG}]\label{song-141}
+\beginsong{Hvězdář}[by={UDG}]\label{song-143}
 \emptyv
 \cseq{\[G] \[D] \[Am] \[C]}
 \cl\chordsoff\num
@@ -5525,7 +5595,7 @@ Odpouštíš\ldots
 \fin
 \endsong
 
-\beginsong{Hvězdný Ursus}[by={Skokan a Koumák}]\label{song-142}
+\beginsong{Hvězdný Ursus}[by={Skokan a Koumák}]\label{song-144}
 \num
 \[Em]{Tam, kde} se rodí \[A]sen, kde hvězdy \[G]{na obloze} \[D]svítí
 \[Em]{Tam, kde} roste \[A]naděje \[D]nám
@@ -5554,7 +5624,7 @@ Z těch míst nikdy nechtělo se nám}
 \fin
 \endsong
 
-\beginsong{Hvězdy nad hlavou}[by={Chinaski}]\label{song-143}
+\beginsong{Hvězdy nad hlavou}[by={Chinaski}]\label{song-145}
 \num
 \[E]Hvězdy nad Prahou zpívaj \[H]píseň houpavou
 Noc se \[A]blíží, ale není tu čeho se \[E]bát \[H]
@@ -5595,7 +5665,7 @@ A tvý přání se ti vyplní najednou
 \cl
 \endsong
 
-\beginsong{Chacha}[by={Jaromír Nohavica}]\label{song-144}
+\beginsong{Chacha}[by={Jaromír Nohavica}]\label{song-146}
 \capo{3}
 \chor
 \[Am]{Cha cha\ldots{}} \[E\hidx{7}]   \[Am]    \[C]  \[G]  \[C]   \[C]  \[G]  \[E\hidx{7}]   \[Am]   \[E\hidx{7}]   \[Am]
@@ -5658,7 +5728,7 @@ Dělám si, co se mi zalíbí, mám pevné alibi~-- dementní diagnózu
 \cl
 \endsong
 
-\beginsong{Chci zas v tobě spát}[by={Lucie}]\label{song-145}
+\beginsong{Chci zas v tobě spát}[by={Lucie}]\label{song-147}
 \transpose{7}
 \intro
 \cseq{\[G] \[G\hidx{maj7}] \[C] \[G] \[G\hidx{7}] \[Em] \[C] \[D]}\\
@@ -5699,7 +5769,7 @@ Hledá a pravdu rodí, neví, nesvlíká se, lásko
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Chtít chytit vítr}[by={Mňága a Ždorp}]\label{song-146}
+\beginsong{Chtít chytit vítr}[by={Mňága a Ždorp}]\label{song-148}
 \capo{3}
 \freev
 \[Em]{Už dlouho} \[C]{se mi} \[G]zdá, že \[D\didx{sus2}]ztrácím ce\[Em]nu  \[C]  \[G]
@@ -5730,7 +5800,7 @@ A těm, které tu necháme, zbude vítr}
 \cl
 \endsong
 
-\beginsong{Chůze}[by={Bratři Ebenové}]\label{song-147}
+\beginsong{Chůze}[by={Bratři Ebenové}]\label{song-149}
 \num
 \[Dm\hidx{7}]Rupla se mnou moje \[G\hidx{6}]společenská příčka
 \[Dm\hidx{7}]{Je to mimo} jiné \[G\hidx{6}]pěkná slovní hříčka
@@ -5762,7 +5832,7 @@ Něco už jsem splatil, ostatní mi prominuly
 \repchorus{\rep{3} \fadeout}
 \endsong
 
-\beginsong{Chvíle}[by={Hop trop}]\label{song-148}
+\beginsong{Chvíle}[by={Hop trop}]\label{song-150}
 \num
 \[Em]Mám rád ty chvíle, kdy noc už pomalu \[Hm]končí
 \[Am]Chvíle, co patřej jen \[Hm]těm, co neusí\[Em]naj
@@ -5788,7 +5858,7 @@ A trápení jsou někde v dálce, a kolem je klid
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{I cesta může být cíl}[by={Mňága a Žďorp}]\label{song-149}
+\beginsong{I cesta může být cíl}[by={Mňága a Žďorp}]\label{song-151}
 \emptyv
 \cseq{\[F] \[C] \[B]}
 \cl\chordsoff\num
@@ -5813,7 +5883,7 @@ Jediným způsobem lásky
 \repchorus{\fadeout}
 \endsong
 
-\beginsong{I Like Birds}[by={Eels}]\label{song-150}
+\beginsong{I Like Birds}[by={Eels}]\label{song-152}
 \capo{2}
 \emptyv
 \cseq{\[D] \[C] \[G]}\\
@@ -5851,7 +5921,7 @@ I've got a feeder for you to perch on
 \cl
 \endsong
 
-\beginsong{Igelit}[by={Nedvědi}]\label{song-151}
+\beginsong{Igelit}[by={Nedvědi}]\label{song-153}
 \num
 \chordson
 \[G]Ukrytý v stínu lesa~-- \[D]igelit, to kdyby přišel \[C]{k ránu} \[G]déšť
@@ -5880,7 +5950,7 @@ Ta chvilka, co máš na život, ti uplyne jak od ohýnku dým
 \cl\ifchorded\chordsoff\fi
 \endsong
 
-\beginsong{Imagine}[by={John Lennon}]\label{song-152}
+\beginsong{Imagine}[by={John Lennon}]\label{song-154}
 \intro
 \cseq{\[C] \[C\hidx{maj7}] \[F]}\\
 \cl
@@ -5920,7 +5990,7 @@ Sharing all the world
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Injekce morfia}[by={KSV}]\label{song-153}
+\beginsong{Injekce morfia}[by={KSV}]\label{song-155}
 \emptyv
 \cseq{\[C] \[F]}\\
 \cl
@@ -5958,7 +6028,7 @@ Někdo slzy roní, ale my ji nezabili
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Inzerát}[by={Tomáš Klus}]\label{song-154}
+\beginsong{Inzerát}[by={Tomáš Klus}]\label{song-156}
 \emptyv
 \cseq{\[G] \[D] \[Em] \[C]}\\
 \cl
@@ -6006,7 +6076,7 @@ A na řadu přišlo~-- tělo
 \cl
 \endsong
 
-\beginsong{Já na tom dělám}[by={Bratři Ebenové}]\label{song-155}
+\beginsong{Já na tom dělám}[by={Bratři Ebenové}]\label{song-157}
 \num
 \[H]{Už to} mělo \[E]být, \[A]ono to \[H]není
 No \[G]{to je} nadělení, no \[A]{to je} nadělení
@@ -6048,7 +6118,7 @@ Jestli můžou dál~-- jenom na chvíli
 \cl
 \endsong
 
-\beginsong{Já neumím}[by={Jaromír Nohavica}]\label{song-156}
+\beginsong{Já neumím}[by={Jaromír Nohavica}]\label{song-158}
 %\transpose{-2}
 \num
 \[G]{Já neumím} psát velkou \[C]poezi\[G]i
@@ -6084,7 +6154,7 @@ Je jejich obuv suchá, moje mokrá, jak je třeba
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Já písnička}[by={Pavlína Jíšová}]\label{song-157}
+\beginsong{Já písnička}[by={Pavlína Jíšová}]\label{song-159}
 \num
 To \[Am]{já, zrozená} z nemoc\[G]ných básníků
 Z tichých \[Em]{vět po} nocích utka\[Am]{ná}
@@ -6116,7 +6186,7 @@ Kteří pro lásku smí o mě hrát
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Já s tebou žít nebudu}[by={Nerez}]\label{song-158}
+\beginsong{Já s tebou žít nebudu}[by={Nerez}]\label{song-160}
 \begin{textblock}{5}(9,-0.5) \gtab{E\didx{dim}}{002323:001324} \end{textblock}
 \num
 \[Em]Bylas jak poslední hlt \[F\shrp{}]vína
@@ -6148,7 +6218,7 @@ A my jsme v koncích čím dál blíž} \rep{3}
 \fin
 \endsong
 
-\beginsong{Jablkový sad}[by={Mňága a Žďorp}]\label{song-159}
+\beginsong{Jablkový sad}[by={Mňága a Žďorp}]\label{song-161}
 \emptyv
 \cseq{\[E] \[H] \[A] \[H]}\\
 \cl
@@ -6169,7 +6239,7 @@ Jablkový sad
 \cl
 \endsong
 
-\beginsong{Jabloně}[by={Zrní}]\label{song-160}
+\beginsong{Jabloně}[by={Zrní}]\label{song-162}
 \num
 \[C\shrp{}m]Padají, padají jako \[A]jabloně
 \[H]Lidi~-- jabloně, \[A]{s větvemi} k nebi, v sadě \[C\shrp{}m]
@@ -6192,7 +6262,52 @@ Kyrie eleison\ldots{}
 \fin
 \endsong
 
-\beginsong{Japonečka}\label{song-161}
+\beginsong{James Dean}[by={Jelen}]\label{song-163}
+\musicnote{{\ttfamily G |-{}-{}-{}0-{}-{}0-{}0-{}-{}-{}-{}-{}-{}0-{}-{}-{}-{}-{}0-{}-{}-{}0-{}}}
+\musicnote{{\ttfamily D |-{}-{}4-{}-{}4-{}4-{}4-{}-{}-{}-{}0-{}-{}-{}-{}-{}0-{}-{}-{}0-{}-{}}}
+\musicnote{{\ttfamily A |-{}5-{}-{}-{}-{}-{}-{}-{}-{}5-{}-{}1-{}-{}-{}1-{}2-{}-{}-{}3-{}-{}-{}}}
+\intro\emptyspace\\ \cl
+\chordsoff
+\num
+\chordson
+\[D]Čepicí \[B]skrývám pár \[G]vlasů, \[C]který \[D]mám
+Věci \[B]černý přes \[G]brejle \[C]nevnímám \[D]
+\[B]Ohooooo \[G]  \[C]
+\chordsoff
+Víš, já jsem rebel s příčinou a důvodem
+Jen už nevím, proti komu vlastně jdem
+Ohooooo
+\fin
+\chor
+\chordson
+\[D]Svět nás \[C]láme a ohý\[G]{bá jako} \[B]klobouky v \[C]páře
+\chordsoff
+Zbyl nám Bůh co nás nevnímá a my v potu tváře
+Jdeme vpřed, chceme změnit svět, jenže svět pak mění nás
+I aim straight and I shoot to win
+\cl
+\num
+Divnej svět, já chtěl vzplát jak zlatej bůh, ne vyhořet
+V čase ztracený slova nevrátěj se zpět
+Ohooooo
+Spoustu let tenhle divnej svět tak pěknej na pohled
+se na mě lepí jako med
+Tlačí do kolen a nechce abych se zas zved
+Ohooooo
+\fin
+\chor
+\ldots{}bejt tak jak James Dean
+\cl
+\bridge\emptyspace\\ \cl
+\chor
+\ldots{}tak jako James Dean!
+\cl
+\chor
+\ldots{}bejt tak jak James Dean
+\cl
+\endsong
+
+\beginsong{Japonečka}\label{song-164}
 \num
 \[G]{V Jokohamě} \[A]{v přístavu,} \[D\hidx{7}]{kde noc} vládne \[G]tmou
 Loučil se tam \[A]námořník \[D\hidx{7}]{se svou} díven\[G]kou
@@ -6216,7 +6331,7 @@ Co v každičkém přístavu z číše lásky pil
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Jarní tání}[by={Brontosauři}]\label{song-162}
+\beginsong{Jarní tání}[by={Brontosauři}]\label{song-165}
 \num
 Když první \[Hm]tání \[Em]cesty sněhu \[D]zkříží
 \[G]{A nad} le\[Em]{dem se} \[F\shrp{}]voda obje\[Hm]{ví}
@@ -6249,7 +6364,7 @@ Bude má země zdravá jako buk
 \cl
 \endsong
 
-\beginsong{Jaro}[by={Fešáci}]\label{song-163}
+\beginsong{Jaro}[by={Fešáci}]\label{song-166}
 \num
 \[Am]{My čekali} \[C]jaro, a \[G]zatím přišel \[Am]mráz
 Tak strašlivou \[C]zimu ne\[G]zažil nikdo z \[Am]nás
@@ -6287,7 +6402,7 @@ Krev nám tuhla v žilách nad tím obrazem, já klobouk sňal
 \cl
 \endsong
 
-\beginsong{Jarošovský pivovar}[by={Argema}]\label{song-164}
+\beginsong{Jarošovský pivovar}[by={Argema}]\label{song-167}
 \num
 \[G]Léta tam \[D]stál, \[C]stojí tam \[G]dál
 Pivovar \[D]{u cesty,} \[C]každý ho \[D]znal
@@ -6313,7 +6428,7 @@ Ten, kdo zná Jarošov, zná pivovar
 \cl
 \endsong
 
-\beginsong{Jasná zpráva}[by={Olympic}]\label{song-165}
+\beginsong{Jasná zpráva}[by={Olympic}]\label{song-168}
 \intro
 \cseq{\[G] \[Em] \[C] \[D] \[Am] \[C] \[G]}\\
 \cl
@@ -6354,7 +6469,7 @@ Jasná zpráva, rub, co nemá líc
 \cl
 \endsong
 
-\beginsong{Javor}[by={Nerez}]\label{song-166}
+\beginsong{Javor}[by={Nerez}]\label{song-169}
 \intro
 \[Em]Laj \[F\shrp{}\didx{dim}]laj \[G]laj\[C]{\ldots} \[Am] \[Em] \[H\hidx{7}] \[Em]
 \cl\num
@@ -6383,7 +6498,7 @@ Zpívám si baladu o naději
 \cl
 \endsong
 
-\beginsong{Jdem zpátky do lesů}[by={Pavel Lohonka Žalman}]\label{song-167}
+\beginsong{Jdem zpátky do lesů}[by={Pavel Lohonka Žalman}]\label{song-170}
 \num
 \[Am\hidx{7}]Sedím na kolejích, \[D\hidx{7}]které nikam neve\[G]dou, \[C] \[G]
 \[Am\hidx{7}]koukám na kopretinu, jak \[D\hidx{7}]miluje se s lebe\[G]dou. \[C] \[G]
@@ -6410,7 +6525,7 @@ v ráji není místa, možná v pekle se nás zastanou.
 \repchorus{Z ráje \ldots}
 \endsong
 
-\beginsong{Jdou po mně, jdou}[by={Jaromír Nohavica}]\label{song-168}
+\beginsong{Jdou po mně, jdou}[by={Jaromír Nohavica}]\label{song-171}
 \num
 Býval jsem \[D]chudý jak \[G]kostelní \[D]myš
 Na půdě \[F\shrp{}m]{půdy jsem} \[Hm]míval svou \[A]skrýš
@@ -6454,7 +6569,7 @@ Být pod pantoflí je hůř než v Sing-sing
 \cl
 \endsong
 
-\beginsong{Jean Reno}[by={Vobezdud}]\label{song-169}
+\beginsong{Jean Reno}[by={Vobezdud}]\label{song-172}
 \emptyv
 \cseq{\[Am] \[F] \[Dm] \[G]}
 \cl\chordsoff\num
@@ -6479,7 +6594,7 @@ Jean Reno!
 \fin
 \endsong
 
-\beginsong{Jednou budem dál}[by={Spirituál kvintet}]\label{song-170}
+\beginsong{Jednou budem dál}[by={Spirituál kvintet}]\label{song-173}
 \num
 \[C]Jednou \[F]budem \[C]dál, jednou \[F]budem \[C]dál
 Jednou \[F]bu\[G\hidx{7}]dem \[Am]dál, \[D]já \[G]vím \[F] \[G]
@@ -6501,7 +6616,97 @@ Jednou budem dál, já vím
 \fin
 \endsong
 
-\beginsong{Jesse James}\label{song-171}
+\beginsong{Jehnědy}[by={Jelen}]\label{song-174}
+\num
+\[G]Bejval jsem temnej jak \[C]bouřkovej \[G]mrak
+Rouhal se, válčil a \[D]pil
+\[Em]{V dešti} a vánici \[C]klopil jsem zrak
+Abych \[G]cestu neztra\[D]til
+\fin
+\chordsoff
+\num
+Pak jednou jsem svý oči od země zved,
+A zjistil, že křídla mám,
+Teď přes všechny úsměvy křivý jak šavle
+Se vracím domů k vám
+\fin
+\chor
+\chordson
+\[G]Slunce je vzhůru a \[C]tajou \[G]ledy, vítr sníh prohání \[C]nad jehně\[D]dy
+\[G]Začíná pohyb a \[C]končí \[G]klid, \[Em]bylo nám \[D]dobře a bude nám \[G]líp
+\cl
+\solo
+\chordson
+\cseq{\[G] \[C] \[G] \[D]}\\
+\cl
+\num
+Někdy bys rozdal svůj poslední dech
+A jindy zas radši pár ran
+Někdy jsi expertem na dlouhej běh
+Jindy pajdáš do všech stran
+\fin
+\num
+A občas se nemůžeš vystát, já vím
+A se vším bys skoncoval rád
+Ale hlavně když na konci dalšího dne
+Můžeš s čistým srdcem spát
+\fin
+\repchorus{\emptyspace}
+\cverse
+\chordson
+\[Em]Zlomený srdce tě \[C]nezabije
+\[D]Dokud to bolí, tak ještě bije
+\[Em]Dokud to bolí a \[C]{v plicích} máš dech
+\[G]Ještě jsi naživu, \[D]černá má pech
+\cl
+\chor
+\ldots{}Bylo nám dobře~-- a bude!
+\cl
+\repchorus{\emptyspace}
+\endsong
+
+\beginsong{Jelen}[by={Jelen}]\label{song-175}
+\num
+\[Dm]{Na jaře} se vrací \[C]{od podzima} li\[D]stí
+Mraky místo ptáků \[C]krouží nad Závi\[Dm]stí
+Kdyby jsi se někdy \[C]{ke mně} chtěla vrá\[Dm]tit
+Nesměla bys, lásko, \[C]moje srdce ztra\[G]tit
+\fin
+\chordsoff
+\chor
+\chordson
+\[Dm]Zabil jsem v lese \[C]jele\[F]na
+Bez nenávisti, \[C]bez jmé\[Dm]na
+Když přišel dolů k \[C]řece \[F]pít
+Krev teče do vody, \[C]{v srdci} \[Dm]klid
+\cl
+\emptyv
+\chordson
+\cseq{\[Dm] \[C] \[F] \[C]} \rep{2}
+\cl
+\num
+Voda teče k moři, po kamenech skáče
+Jednou hráze boří, jindy tiše pláče
+Někdy mám ten pocit, i když roky plynou
+Že vidím tvůj odraz dole pod hladinou
+\fin
+\repchorus{\emptyspace}
+\num
+Na jaře se vrací listí od podzima
+Čas se někam ztrácí, brzo bude zima
+Svět přikryje ticho, tečka za příběhem
+Kdo pozná, čí kosti zapadaly sněhem
+\fin
+\repchorus{\emptyspace}
+\emptyv
+Hej!
+\cl
+\chor
+\emph{(o půltón výše)}
+\cl
+\endsong
+
+\beginsong{Jesse James}\label{song-176}
 \num
 \[G]Jesse James chlapík byl, hodně \[C]lidí odpra\[G]vil
 Vlaky přepadával \[D\hidx{7}]rád
@@ -6532,7 +6737,7 @@ A on vám Jesse Jamese odpraví
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Jestli to nebude láska}[by={Zdeněk Svěrák a Jaromír Uhlíř}]\label{song-172}
+\beginsong{Jestli to nebude láska}[by={Zdeněk Svěrák a Jaromír Uhlíř}]\label{song-177}
 \num
 \[C]Tam kde je srdce, \[F]srdce a nejbližší \[C]okolí
 \[G]Něco mě \[Am]svírá, \[F]svírá a vůbec to \[G]nebolí
@@ -6545,7 +6750,7 @@ Já sama nevím, je to však příjemné dojetí
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Ještě jedno kafe}[by={Druhá tráva}]\label{song-173}
+\beginsong{Ještě jedno kafe}[by={Druhá tráva}]\label{song-178}
 \num
 \chordson
 Máš \[Em]sladkej dech a oči, kterejm \[D]patří svatozář
@@ -6577,7 +6782,7 @@ Jen tvý srdce je jak moře~-- samý tajemství a tma
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Ještě mi scházíš}[by={Jaromír Nohavica}]\label{song-174}
+\beginsong{Ještě mi scházíš}[by={Jaromír Nohavica}]\label{song-179}
 \begin{textblock}{5}(9,-0.5) \gtab{Am/G}{302210:402310} \end{textblock}
 \num
 \chordson
@@ -6605,7 +6810,7 @@ Ještě jsi ve všech věcech
 \repchorus{Ještě mi scházíš\ldots}
 \endsong
 
-\beginsong{Jízda králů}[by={Ulrychovi}]\label{song-175}
+\beginsong{Jízda králů}[by={Ulrychovi}]\label{song-180}
 \averse
 \[D]Ještě ohník \[E]hoří \[D]ma\[A]li\[D]čko
 Však ty se k nám vrá\[E]tíš \[D]br\[A]zi\[D]čko
@@ -6658,7 +6863,7 @@ Jedou k nám, jedou k nám lidi, jízdou králů jedou k nám
 \cl
 \endsong
 
-\beginsong{Jižní kříž}[by={Nedvědi}]\label{song-176}
+\beginsong{Jižní kříž}[by={Nedvědi}]\label{song-181}
 \capo{2}
 \num
 \[C]Spí Jižní kříž, jak \[Am]říkali jsme hvězdám kdysi \[G]{v mládí}
@@ -6683,7 +6888,7 @@ To když, naplněnej smutkem, jsi plakal, plakal nebo snil
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Jolly Roving Tar}[by={The Irish Rovers}]\label{song-177}
+\beginsong{Jolly Roving Tar}[by={The Irish Rovers}]\label{song-182}
 \intro
 \cseq{\[G] \[D] \[Em] \[G] \[D] \[G] \[Em] \[A] \[D]}
 \cl
@@ -6720,7 +6925,7 @@ He'll leave you in the morning with a daughter or a son
 \repchorus{\rep{2}}
 \endsong
 
-\beginsong{Jožin z bažin}[by={Ivan Mládek}]\label{song-178}
+\beginsong{Jožin z bažin}[by={Ivan Mládek}]\label{song-183}
 \num
 \[Am]{Jedu takhle} tábořit \[E]Škodou 100 na \[Am]Oravu
 Spěchám, proto riskuji, \[E]projíždím přes \[Am]Moravu
@@ -6760,7 +6965,7 @@ Každá kačka dobrá, prodám já ho do ZOO
 \cl
 \endsong
 
-\beginsong{Kapr}[by={Jaromír Nohavica}]\label{song-179}
+\beginsong{Kapr}[by={Jaromír Nohavica}]\label{song-184}
 \num
 Na rybní\[C]{ce jsou} velké \[Dm]vlny, dělají \[G\hidx{7}]{se od} příro\[C]dy
 Kapr, ten je opatr\[Dm]{ný, nevystr}\[G\hidx{7}]{čí čumák} z vo\[C]dy
@@ -6780,7 +6985,7 @@ chlupy vodě se naježily a mohl by ses utopiti
 \cl
 \endsong
 
-\beginsong{Karavana mraků}[by={Karel Kryl}]\label{song-180}
+\beginsong{Karavana mraků}[by={Karel Kryl}]\label{song-185}
 \num
 \[D]Slunce je zlatou skobou \[Hm]{na obloze} přibitý,
 \[G]pod sluncem \[A]sedlo kože\[D]ný,  \[A\hidx{7}]
@@ -6816,7 +7021,7 @@ a nechat zapomenout srdce bolavý.}
 \cl
 \endsong
 
-\beginsong{Kde jsou}[by={Karel Plíhal}]\label{song-181}
+\beginsong{Kde jsou}[by={Karel Plíhal}]\label{song-186}
 \capo{5}
 \chorusi
 \[C]Kde jsou, kdepak \[F]jsou naše \[C]velko\[Am]lepý \[G]plá\[C]ny\[G]
@@ -6835,7 +7040,7 @@ Kde jsou, kdepak jsou naše velkolepý plány
 \fin
 \endsong
 
-\beginsong{Kde trubka zní}[by={Petr Nejedlý}]\label{song-182}
+\beginsong{Kde trubka zní}[by={Petr Nejedlý}]\label{song-187}
 \num
 Kde \[C]trub\[G]ka \[C]zní a \[Am]koně víří \[G]prach
 Kde \[Dm]hr\[C]dlo \[G]láh\[C]vi \[G]utí\[C]nám
@@ -6879,7 +7084,7 @@ Dnes večer budu usínat
 \cl
 \endsong
 
-\beginsong{Kdo vám tak zcuchal tmavé vlasy}[by={Hm}]\label{song-183}
+\beginsong{Kdo vám tak zcuchal tmavé vlasy}[by={Hm}]\label{song-188}
 \emptyv
 \cseq{\[D] \[F] \[B] \[C]}\\
 \cl
@@ -6921,7 +7126,7 @@ Kdo vám tak zcuchal tmavé vlasy?
 \cl
 \endsong
 
-\beginsong{Kdyby}[by={Jaromír Nohavica}]\label{song-184}
+\beginsong{Kdyby}[by={Jaromír Nohavica}]\label{song-189}
 \num
 \[E]Kdybych měl peněz, jak má pan Rotschild
 \[H\hidx{7}]Koupil bych ženě \[A]mixér a \[E]pračku
@@ -6959,7 +7164,7 @@ A porozdával, co komu dlužím
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Kdyby se v komnatách}[by={Zdeněk Svěrák a Jaromír Uhlíř}]\label{song-185}
+\beginsong{Kdyby se v komnatách}[by={Zdeněk Svěrák a Jaromír Uhlíř}]\label{song-190}
 \num
 \[C]K životu na zámku \[Gm]mám jednu poznámku 
 \[F]Je tu neveselo, je tu \[C]truchlivo
@@ -6979,7 +7184,7 @@ Není neveselo, žádné truchlivo
 \repchorus{Kdyby se v komnatách\ldots}  
 \endsong
 
-\beginsong{Kdyby tady byla taková panenka}[by={Lidová / Jaroslav Lohonka Žalman}]\label{song-186}
+\beginsong{Kdyby tady byla taková panenka}[by={Lidová / Jaroslav Lohonka Žalman}]\label{song-191}
 \num
 \reppart{\[C]Kdyby tady byla taková panenka, \[G\hidx{7}]která by mě \[C]chtěla}
 \reppart{\[F]Která by mě chtěla, \[C]syna vychovala, \[G\hidx{7}]přitom pannou \[C]byla}
@@ -7003,7 +7208,7 @@ Není neveselo, žádné truchlivo
 \fin
 \endsong
 
-\beginsong{Když je v Praze hic}[by={Ivan Mládek}]\label{song-187}
+\beginsong{Když je v Praze hic}[by={Ivan Mládek}]\label{song-192}
 \num
 \[C]Když je v Praze abnormální hic
 Chodím k vodě až do Měche\[A\hidx{7}]nic
@@ -7028,7 +7233,7 @@ Chleba s máslem ukousnout mi dá
 \repsec{1}{\emptyspace}
 \endsong
 
-\beginsong{Když mě brali za vojáka}[by={Jaromír Nohavica}]\label{song-188}
+\beginsong{Když mě brali za vojáka}[by={Jaromír Nohavica}]\label{song-193}
 \num
 \[Am]{Když mě} brali za vo\[C]jáka, \[G]stříhali mě doho\[C]la
 \[Dm]Vypadal jsem jako \[Am]blbec \[E]jak ti všichni doko\[F]la
@@ -7068,7 +7273,7 @@ La, la, la, no nic moc extra nebyla
 \fin
 \endsong
 
-\beginsong{Když náš táta hrál}[by={Greenhorns}]\label{song-189}
+\beginsong{Když náš táta hrál}[by={Greenhorns}]\label{song-194}
 \num
 Když \[G]jsem byl chlapec malej, tak metr nad zemí
 \[C]Scházeli se farmáři tam \[G]{u nás} v přízemí
@@ -7103,7 +7308,7 @@ Zase jeho píseň slyšel hrát
 \fin
 \endsong
 
-\beginsong{Kláda}[by={Hop trop}]\label{song-190}
+\beginsong{Kláda}[by={Hop trop}]\label{song-195}
 \num
 \[Hm]{Celý roky} prachy jsem si skládal, \[D]nikdy svýho \[A]floka nepro\[Hm]pil
 Od lopaty měl ohnutý záda, \[D]paty od baráku j\[A]sem neodle\[Hm]pil
@@ -7128,7 +7333,7 @@ A k tomu můžem říct jen, že nemáme nic, jen kus práce nedodělaný
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Klára}[by={Chinaski}]\label{song-191}
+\beginsong{Klára}[by={Chinaski}]\label{song-196}
 \bridge
 \[E]{Ná nana\ldots{}} \[C\shrp{}m]    \[A]  \[Am]
 \cl
@@ -7186,7 +7391,7 @@ Počkám, až usneš~-- a budu se ti zdát
 \cl
 \endsong
 
-\beginsong{Klobouk ve křoví}[by={Voskovec a Werich}]\label{song-192}
+\beginsong{Klobouk ve křoví}[by={Voskovec a Werich}]\label{song-197}
 \num
 \[C]Vítr \[B\didx{add9}]vane \[C]pouští, \[G\hidx{7/5+}] \[C]{po písku} \[B\didx{add9}]žene klo\[C]bouk \[C\hidx{7}]
 \[Fm]Zahnal \[G\shrp{}\hidx{7}]ho \[G\hidx{7}]do \[C]houští, \[Am] \[Fm]starý a \[G\shrp{}\hidx{7}]čer\[G\hidx{7}]{ný klo}\[C]bouk \[G\hidx{7}]
@@ -7209,7 +7414,7 @@ Počkám, až usneš~-- a budu se ti zdát
 \fin
 \endsong
 
-\beginsong{Kluziště}[by={Karel Plíhal}]\label{song-193}
+\beginsong{Kluziště}[by={Karel Plíhal}]\label{song-198}
 \pick{PIMA}
 \num
 \chordson
@@ -7241,7 +7446,7 @@ do kalhot si čistí dlaně umazané od sazí.
 \repchorus{Zatím tři\ldots}
 \endsong
 
-\beginsong{Knockin' on Heaven's Door}[by={Bob Dylan}]\label{song-194}
+\beginsong{Knockin' on Heaven's Door}[by={Bob Dylan}]\label{song-199}
 \emptyv
 \cseq{\[G] \[D] \[Am] \[G] \[D] \[C]}
 \cl\chordsoff\num
@@ -7262,7 +7467,7 @@ Feels like I'm knockin' on heaven's door
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Kočka na okně}[by={Jiří Suchý}]\label{song-195}
+\beginsong{Kočka na okně}[by={Jiří Suchý}]\label{song-200}
 \chor
 \[C]{La la} la \[C\shrp{}\didx{dim}]{lá la lá\ldots{}} \[G]  \[E\hidx{7}]   \[Am]    \[D\hidx{7}]   \[G]
 \cl
@@ -7286,7 +7491,7 @@ Na \[Am]okně \[E]seděla \[Am]kočka a \[D\hidx{7}]venku štěkal \[G]pes
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Kočky}[by={Nerez}]\label{song-196}
+\beginsong{Kočky}[by={Nerez}]\label{song-201}
 \capo{2}
 \begin{textblock}{5}(7,-1) \gtab{A\hidx{maj7}}{002120:002130} \gtab{E\hidx{4}}{022200:012300} \end{textblock}
 \intro
@@ -7321,7 +7526,44 @@ O hó\ldots
 \repchorus{Pili jsme na zimu\ldots}
 \endsong
 
-\beginsong{Kolej Yesterday}[by={Framus 5}]\label{song-197}
+\beginsong{Kohout}[by={Jan Nedvěd}]\label{song-202}
+\num
+\[A]{S podvečerem} tady u nás začnou ptáci zpívat
+A \[E]nad krajinou nebe vzlítne kamsi, kde je řád
+A \[Hm]{do řeky} se světla z oken budou chvilku dívat
+A pak si \[D]unavený lásky půjdou lehnout, budou \[E]spát
+\fin
+\chordsoff
+\num
+V tu dobu zavírám už oči abych tě měl něžná lásko
+V soukromí tak tiše jako voda tečky hvězd
+Nádhernou a bílou jak svý ruce ke mě vzpínáš
+Jak často nechávám se tebou do ztracena něhy vést
+\fin
+\chor
+\chordson
+Zvony zvoní jen \[A]chvíli, ruce budou se třást
+a pak zmlknou, má \[E]lásko
+To \[Hm]kohout je umlčí \[D]{k ránu,} když mě opou\[A]štíš  \[E]
+Zvony zvoní jen \[A]chvíli, jen než přijde den, proto krásně a \[E]blízko
+A pak \[Hm]ztichnou, abych slyšel, jak mi tajný \[D]přání mý odpou\[A]štíš
+\cl
+\num
+S podvečerem tady u nás začnou ptáci zpívat
+A nad krajinou nebe vzlétne kamsi, kde je řád
+To já se chodím do tvých očí v noci lásko dívat
+A kdyby do očí, jo to bys koukala, kam už jsem spad
+\fin
+\num
+Na záda ti nehty napíšu miláčku jméno
+A podepíšu na čas rozloučení věrný slib
+Že kameny se k nebi spíš než moje láska zvednou
+Že jsi moje štěstí, s tebou je mi vždycky trochu líp
+\fin
+\repchorus{\emptyspace}
+\endsong
+
+\beginsong{Kolej Yesterday}[by={Framus 5}]\label{song-203}
 \num
 \[Am]{To bejvávaly} \[G]na koleji \[Am]časy, už ráno \[G]začal večí\[C]rek
 \[B]Někdo dal dvacet, někdo \[Am]stovku \[B]{a stavěli} jsme Eiffe\[Am]lovku
@@ -7356,7 +7598,7 @@ Oh, I believe in yesterday\ldots
 \cl
 \endsong
 
-\beginsong{Kometa}[by={Jaromír Nohavica}]\label{song-198}
+\beginsong{Kometa}[by={Jaromír Nohavica}]\label{song-204}
 \num
 \[Am]Spatřil jsem kometu, oblohou letěla
 \chordsoff
@@ -7407,7 +7649,34 @@ Já už tu nebudu, ale jiný jí zazpívá
 \cl
 \endsong
 
-\beginsong{Kozel}[by={Jaromír Nohavica}]\label{song-199}
+\beginsong{Koulí}[by={Cop}]\label{song-205}
+\num
+Když\[G] únava tě provází a hledáš nalezené
+A \[Em]míváš sny špatný, tak dej se k nám
+Dej se k \[C]nám, na na \[D]{na na} na \[G]na
+\fin
+\chordsoff
+\num
+Že máš všechno za sebou a znáš tisíc tajů
+To myslel by si blázen, zůstaň tu stát
+Zůstaň stát, na na na na na na
+\fin
+\chor
+\chordson
+\reppart{\[D]Koulí, svět se \[C]koulí, my pijem \[G]bowli \[D]{a jedem} \[G]dál}
+\cl
+\solo\emptyspace\\ \cl
+\num
+Jó, my chceme žít nadoraz a dávat a brát
+A umět i prohrávat a vo všechno hrát
+Chceme hrát, na na na, jenom hrát
+\fin
+\chor
+\rep{3}
+\cl
+\endsong
+
+\beginsong{Kozel}[by={Jaromír Nohavica}]\label{song-206}
 \num
 Byl jeden \[G]pán, ten kozla \[C]měl
 Velice \[D\hidx{7}]{si s} ním rozu\[G]měl
@@ -7432,7 +7701,7 @@ Ná ná ná na\ldots{}
 \fin
 \endsong
 
-\beginsong{Krajina posedlá tmou}[by={Jiří Suchý a Jiří Šlitr}]\label{song-200}
+\beginsong{Krajina posedlá tmou}[by={Jiří Suchý a Jiří Šlitr}]\label{song-207}
 \num
 \[G]Krajina \[C]posedlá \[G]tmou \emph{(krajina \[C]posedlá \[G]tmou)}
 Vzpomínky \[C]{do sedla} \[G]zvou \emph{(vzpomínky \[C]{do sedla} \[G]zvou)}
@@ -7459,7 +7728,7 @@ Jedno však musím se ptát, proč jsem se vracel tak rád?
 \fin
 \endsong
 
-\beginsong{Královna z Dundrum Bay}[by={Nedvědi}]\label{song-201}
+\beginsong{Královna z Dundrum Bay}[by={Nedvědi}]\label{song-208}
 \num
 Kdo ji \[Em]prvně zřel, ten k ní \[G]zaho\[D]řel
 Možná \[G]obdivem, \[Em]možná \[D]víc
@@ -7496,7 +7765,7 @@ Zase královnu z Dundrum Bay
 \cl
 \endsong
 
-\beginsong{Krambambule}[by={Evropská studentská píseň, česky Aiva s Koblihou}]\label{song-202}
+\beginsong{Krambambule}[by={Evropská studentská píseň, česky Aiva s Koblihou}]\label{song-209}
 \chordsoff\num
 Krambambuli jsme vždycky pili, schůzky byly veselé
 Tradice, kterou podědili ještě naši otcové
@@ -7518,7 +7787,7 @@ Nejlépe však si pochutnáme, když přinesou nám pivo!
 \repchorus{Ej, juli\ldots \rep{2}}
 \endsong
 
-\beginsong{Kristián}[by={o5 and Radeček}]\label{song-203}
+\beginsong{Kristián}[by={o5 and Radeček}]\label{song-210}
 \num
 \[Em]{Už to} \[Hm]{ví a} proto \[C]musí jít
 \chordsoff
@@ -7552,7 +7821,7 @@ Pan Kristián
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Kristínka}[by={Peter Nagy}]\label{song-204}
+\beginsong{Kristínka}[by={Peter Nagy}]\label{song-211}
 \num
 \[Em]Kristínka by mala \[C]dnes už \[D]{o dva} roky dlhšie \[C]vlasy
 \[Em]{A plač} mi skáče do slov \[C]vieš, keď \[D]zas a znova premie\[C]tam si
@@ -7586,7 +7855,7 @@ Nikto nezachytí tvoje laná, keď sa rútiš z kolmých skál
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Kristy Are You Doing Okay}[by={The Offspring}]\label{song-205}
+\beginsong{Kristy Are You Doing Okay}[by={The Offspring}]\label{song-212}
 \intro
 \cseq{\[C] \[F] \[G]}\\
 \cl
@@ -7637,7 +7906,7 @@ To get back what was taken away
 \cl
 \endsong
 
-\beginsong{Krtek}[by={Buty}]\label{song-206}
+\beginsong{Krtek}[by={Buty}]\label{song-213}
 \averse
 V zemi se narodil \[Am]krtek
 T\[D]{am svoje} mléko \[F\hidx{maj7}]{sál}
@@ -7675,7 +7944,7 @@ Všichni až na krtka~-- FAJ-RONT!
 \cl
 \endsong
 
-\beginsong{Kryštof}[by={Kryštof}]\label{song-207}
+\beginsong{Kryštof}[by={Kryštof}]\label{song-214}
 \num
 \[G]Malej Kryštof \[Am]byl
 \[C]{V popelnici} už od \[D]svýho zrodu
@@ -7705,7 +7974,7 @@ V řece, která měla stovky břehů
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Kryštof}[by={Minikapela UMSKUP}]\label{song-208}
+\beginsong{Kryštof}[by={Minikapela UMSKUP}]\label{song-215}
 \capo{5}
 \intro
 \cseq{\[C] \[G] \[Am] \[F]}\\
@@ -7741,7 +8010,7 @@ Na novou střechu spadlý strom, přehlednost serveru titulky.com
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Kurtizána}[by={UDG}]\label{song-209}
+\beginsong{Kurtizána}[by={UDG}]\label{song-216}
 \averse
 \[Em]{Jsi jenom} člověk, co se \[C]narodí
 V těle, kde \[D]tělo duši ruší
@@ -7784,7 +8053,7 @@ sejdem se u kasína
 \repchorus{\rep{3}\\ \fadeout}
 \endsong
 
-\beginsong{Kutil}[by={Chinaski}]\label{song-210}
+\beginsong{Kutil}[by={Chinaski}]\label{song-217}
 \emptyv
 \cseq{\[E] \[F\shrp{}m] \[A] \[E]}
 \cl\chordsoff\num
@@ -7811,7 +8080,7 @@ Co by chtěla kluka s dílnou
 \repsec{\nsolo}{\emptyspace}
 \endsong
 
-\beginsong{Kým pri mne spíš}[by={Pavol Habera}]\label{song-211}
+\beginsong{Kým pri mne spíš}[by={Pavol Habera}]\label{song-218}
 \num
 Kým tu \[C]spíš, môžeš dnes byť celkom \[F]pokojná
 Kristus nesie svoj \[C]kríž, chlapci zomierajú \[E]{vo vojná}\[F]ch
@@ -7850,7 +8119,7 @@ Láska svieti viac než na Južný kríž~-- kým pri mne spíš
 \cl
 \endsong
 
-\beginsong{Kytka}[by={Brontosauři}]\label{song-212}
+\beginsong{Kytka}[by={Brontosauři}]\label{song-219}
 \num
 Otvírám \[G]lásku na stránce \[D]rád
 Přišel jsem \[A\hidx{7}]milá má něco ti \[D]dát
@@ -7876,7 +8145,7 @@ Ze všech je nejhezčí~-- tiše, už dost
 \cl
 \endsong
 
-\beginsong{Laciný víno}[by={Jaroslav Samson Lenk}]\label{song-213}
+\beginsong{Laciný víno}[by={Jaroslav Samson Lenk}]\label{song-220}
 \num
 \[C]Po noci \[C/H]krátké a \[Am]{po milo}\[Am\hidx{7}/G]vání \[Am\hidx{7}/F\shrp{}]{zbylo mi málo}
 Jen hlava v dlaních, co \[C]bolí, \[G\hidx{7}]{to je to} laciný \[C]ví\[G]no\[G\hidx{7}]
@@ -7903,7 +8172,7 @@ To bolí, to je to laciný víno
 \repchorus{\ldots}
 \endsong
 
-\beginsong{Lachtani}[by={Jaromír Nohavica}]\label{song-214}
+\beginsong{Lachtani}[by={Jaromír Nohavica}]\label{song-221}
 \chorusi
 [: \[C]Lach lach, \[F]hm, \[C]hm, \[Am]lach lach, \[G]hm, \[C]{hm :]}
 \cl
@@ -7948,7 +8217,7 @@ Nedivte se té lachtaní rodině
 \cl
 \endsong
 
-\beginsong{Land Down Under}[by={Men At Work}]\label{song-215}
+\beginsong{Land Down Under}[by={Men At Work}]\label{song-222}
 \num
 \[Hm]Travelling in a \[A]fried out kom\[Hm]bie \[G]  \[A]
 \[Hm]{On a} hippy \[A]trail head full of \[Hm]zombie \[G]  \[A]
@@ -7986,7 +8255,39 @@ Because I come from the land of plenty~-- and he said
 \cl
 \endsong
 
-\beginsong{Lásko}[by={Karel Kryl}]\label{song-216}
+\beginsong{Láska moja}[by={Elán}]\label{song-223}
+\num
+Sme \[Dm]{rana} a nôž, sme \[B]pravda a lož
+\[C]{My sme} dvaja psi, \[A]Abrahám a syn
+Ja sa \[Dm]polepším, ty sa \[B]polepši
+Tisíc \[C]dôvodov na sto \[A]rozchodov
+A \[B]poslednýkrát pokus \[A]{o návrat}
+\fin
+\chordsoff
+\num
+Pýtaj si, čo chceš, všetko dostaneš
+Nik nás nepozná, nikto nevie viac
+Ako s bláznom žiť, prázdno je náš byt
+Iba ty to vieš a ja to viem tiež
+Iba ty to vieš a ja to viem tiež
+\fin
+\chor
+\chordson
+Najhoršie \[Dm]výčitky sú tie \[B]nemé
+Prečo sa \[Dm]súčasne milu\[B]jeme a zraňu\[Gm]jeme?
+Všetko \[C]vieme, prečo sa \[Gm]chápeme, nechápe\[A]me
+Je zázrak, \[Dm]{ako sa} rany \[B]hoja
+Tak už mi \[Dm]zavolaj, láska \[B]moja
+Nikto ťa \[Gm]{nemá rád} tak ako \[C]ja
+Tak už sa \[Gm]nehnevaj, láska \[A]moja
+\cl
+\repsec{1}{\emptyspace}
+\repchorus{\emptyspace}
+\solo\emptyspace\\ \cl
+\repchorus{\emptyspace}
+\endsong
+
+\beginsong{Lásko}[by={Karel Kryl}]\label{song-224}
 \num
 \chordson
 \[Am]Pár zbytků pro krysy na misce od guláše
@@ -8016,7 +8317,7 @@ Nežli se zchlastaní svalíme na kavalce
 \repchorus{\ldots}
 \endsong
 
-\beginsong{Learning To Fly}[by={Tom Petty}]\label{song-217}
+\beginsong{Learning To Fly}[by={Tom Petty}]\label{song-225}
 \begin{textblock}{1.5}(10.5,2)\noindent 
 \gtab{F\didx{add9}}{X03213:003214} \gtab{C\hidx{+}}{032013:032014} \gtab{Am\hidx{7}}{X02213:002314} \gtab{G\didx{add11}}{320013:320014} \\[2ex] \end{textblock}
 \freev
@@ -8055,7 +8356,7 @@ Coming down is the hardest thing
 \cl
 \endsong
 
-\beginsong{Leaving on a Jet Plane}[by={John Denver}]\label{song-218}
+\beginsong{Leaving on a Jet Plane}[by={John Denver}]\label{song-226}
 \num
 All my \[G]bags are packed~-- I'\[C]{m ready} to go
 I'm \[G]standing here out\[C]side your door
@@ -8098,7 +8399,7 @@ I'm leaving\ldots{}
 \cl
 \endsong
 
-\beginsong{Lenka}[by={Tomáš Klus}]\label{song-219}
+\beginsong{Lenka}[by={Tomáš Klus}]\label{song-227}
 \num
 \[C\shrp{}m]{Já budu} tím, kdo se \[E]{v posledních} řadách brání
 \[A]Hromadným shromážděním, \[G\shrp{}]podrážděný vším tím hemžením
@@ -8140,7 +8441,7 @@ Tím končí píseň
 \cl
 \endsong
 
-\beginsong{Let Her Go}[by={Passenger}]\label{song-220}
+\beginsong{Let Her Go}[by={Passenger}]\label{song-228}
 \capo{7}
 \emptyv
 \cseq{\[F] \[C] \[G] \[Am] \[F] \[C] \[G]}\\
@@ -8190,7 +8491,7 @@ Because you looked up too much and dived too deep
 \cl
 \endsong
 
-\beginsong{Let It Be}[by={Beatles}]\label{song-221}
+\beginsong{Let It Be}[by={Beatles}]\label{song-229}
 \num
 When I \[G]find myself in \[D]times of trouble
 \[Em]Mother Mary \[C]comes to me
@@ -8230,7 +8531,7 @@ Speaking words of wisdom~-- let it be
 \repchorusi{\emptyspace}
 \endsong
 
-\beginsong{Life's for the Living}[by={Passenger}]\label{song-222}
+\beginsong{Life's for the Living}[by={Passenger}]\label{song-230}
 \chordsoff
 \num
 \chordson
@@ -8286,7 +8587,7 @@ And I stitched the words into my heart with a needle and thread
 \cl
 \endsong
 
-\beginsong{Lilie skautská}[by={Taxmeni}]\label{song-223}
+\beginsong{Lilie skautská}[by={Taxmeni}]\label{song-231}
 \num
 Na léta \[D]klukovský si \[A]často vzpomí\[G]nám,
 Na první \[D]skautskej slib, na jeho krásný \[A]slova  \[A\hidx{7}]
@@ -8329,7 +8630,7 @@ Před sebou uran na osm let dolovat
 \repchorus{Lilie skautská\ldots \rep{2}}
 \endsong
 
-\beginsong{Linda}[by={Ivan Mládek}]\label{song-224}
+\beginsong{Linda}[by={Ivan Mládek}]\label{song-232}
 \freev
 \[F]Linda a \[A\hidx{7}]Linda a \[D\hidx{7}]Linda
 Nejradši \[G\hidx{7}]marmeládu \[C\hidx{7}]{ze všech} jídel \[F]má  \[F\didx{dim}]     \[Gm]
@@ -8343,7 +8644,7 @@ Co dělat, \[G\hidx{7}]marmeládu \[C\hidx{7}]prostě ráda \[F]má \[B]  \[F]
 \chordsoff
 \endsong
 
-\beginsong{Little Lion Man}[by={Mumford and Sons}]\label{song-225}
+\beginsong{Little Lion Man}[by={Mumford and Sons}]\label{song-233}
 \capo{5}
 \begin{textblock}{1.5}(10.5,-1)\noindent 
   \gtab{Am\hidx{7}\didx{add11}}{X00010:000010}
@@ -8399,7 +8700,7 @@ spend your days biting your own neck
 \repchorus{\rep{2}}
 \endsong
 
-\beginsong{Loď John B}\label{song-226}
+\beginsong{Loď John B}\label{song-234}
 \num
 \reppart{\[E]{Už vyplouvá} loď John B}
 Okamžik malý jen, než poplujem \[H\hidx{7}]dál
@@ -8422,7 +8723,7 @@ Moji svobodu vzal mi šerif John Stone
 \cl
 \endsong
 
-\beginsong{Lodníkův lament}[by={Hop trop}]\label{song-227}
+\beginsong{Lodníkův lament}[by={Hop trop}]\label{song-235}
 \num
 \[Em]{Já snad} \[G]hned, když jsem se \[D]narodil, na \[G]bludnej \[D]kámen \[G]šláp
 A do školy moc \[D]nechodil, i \[Em]{tak je} \[D]{ze mě} \[Em]chlap
@@ -8464,7 +8765,7 @@ Teď lituju a vzpomínám, jak jen jsem se moh mít
 \fin
 \endsong
 
-\beginsong{Louisiana}[by={Hop trop}]\label{song-228}
+\beginsong{Louisiana}[by={Hop trop}]\label{song-236}
 \num
 Ten, \[Em]{kdo by} jednou chtěl bejt vopravdickej chlap
 a na \[G]šífu křížit \[D]svět ho nele\[Em]{ká}
@@ -8497,7 +8798,7 @@ Co je hrobem jeho obětí
 \fin
 \endsong
 
-\beginsong{Love Is All Around}[by={Wet Wet Wet}]\label{song-229}
+\beginsong{Love Is All Around}[by={Wet Wet Wet}]\label{song-237}
 \num
 I \[F]feel it in my \[Gm]fingers
 \[B]{I feel} it \[C]{in my} \[F]toes  \[Gm]   \[B]  \[C]
@@ -8535,7 +8836,7 @@ Oh, yes I do
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Lovec Amorů}[by={Epy de Mye}]\label{song-230}
+\beginsong{Lovec Amorů}[by={Epy de Mye}]\label{song-238}
 \capo{2}
 \num
 \[G]Pokud se vám u ženských \[D]dnes a denně neda\[Em]ří \[C]  \[D]
@@ -8570,7 +8871,58 @@ A vyléčí tě lovec Amorů
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Made in Valmez}[by={Mňága a Žďorp}]\label{song-231}
+\beginsong{Luka}[by={Suzanne Vega}]\label{song-239}
+\intro
+\cseq{\[G] \[D] \[C] \[D] \[Em] \[D] \[Em] \[D] \[C] \[D] \[C] \[D]}\\
+\cl
+\chordsoff
+\num
+\chordson
+\[G]{My name} is \[D]Luka         \[C]
+I live on the \[D]second floor      \[G]
+I live up\[D]stairs from you       \[C]
+Yes I think \[D]you've seen me before      \[Em]
+\fin
+\chorusi
+\chordson
+If you hear \[D]something late at night \[Em]
+Some kind of \[D]trouble, some kind of \[C]fight
+\reppart{Just don't \[D]ask me what it \[C]was}
+Just don't ask \[D]{me what} it was
+\cl
+\num
+I think it's because I'm clumsy
+I try not to talk too loud
+Maybe it's because I'm crazy
+I try not to act too proud
+\fin
+\chorusii
+They only hit you until you cry
+And after that you don't ask why
+\reppart{You just don't argue anymore} \rep{3}
+\cl
+\solo
+\chordson
+\cseq{\[G] \[D] \[C] \[D] \[G] \[D] \[C] \[D]}\\
+\cl
+\num
+Yes I think I'm OK
+I walked into the door again
+Well, if you ask that's what I'll say
+And it's not your business anyway
+\fin
+\chor
+I guess I'd like to be alone
+With nothing broken, nothing thrown
+\reppart{Just don't ask me how I am} \rep{3}
+\cl
+\repsec{1}{\emptyspace}
+\repchorusi{\emptyspace}
+\repchorusii{\emptyspace}
+\solo\emptyspace\\ \cl
+\endsong
+
+\beginsong{Made in Valmez}[by={Mňága a Žďorp}]\label{song-240}
 \begin{textblock}{5}(9,-0.5) \gtab{G\hidx{maj7}}{320002:210003} \end{textblock}
 \emptyv
 \cseq{\[D] \[G\hidx{maj7}] \[Em] \[A]}
@@ -8600,7 +8952,50 @@ Zkouším se prokopat ven  (zkouší se prokopat ven!)
 \cl
 \endsong
 
-\beginsong{Malování}[by={Divokej Bill}]\label{song-232}
+\beginsong{Magdaléna}[by={Jelen}]\label{song-241}
+\num
+\[A]Zapal ten oheň ve mně, \[D]čeho se bojíš
+\[A]Zápalkou škrtni \[D]jemně
+\[A]Zapal ten oheň ve mně, \[D]čeho se bojíš
+\[A]Zimou se celá třeseš, \[D]proč venku stojíš
+Pojď \[A]dál, prosím tě, nenech se prosit se d\[A]ál
+\[D]Nenech se!
+\fin
+\chordsoff
+\emptyv
+\chordson
+\[A]Óó\[D]{ó\ldots}
+\cl
+\num
+Sedíme na pavlači, přichází ráno, tobě se lesknou oči
+Sedíme na pavlači, přichází ráno a mně se hlava točí
+Pojď dál, prosímtě, nenech se prosit se dál
+Nenech se!
+\fin
+\chorusi
+\chordson
+\[F\shrp{}m]Hodiny se zastaví a v \[E]devět třicet v pondělí
+\[A]Magdaléno, tvoje vlasy
+\[F\shrp{}m]{Leží pod} mou postelí a i \[E]když jsme to nechtěli
+\[A]Oblíkáš se, pročpak asi
+\ldots{}\[F\shrp{}m]Hodiny se zastaví a v \[E]devět třicet v pondělí jsem \[A]sám
+\cl
+\num
+Stojíme na rozcestí a zvony zvoní, daleko od bolestí
+Stojíme na rozcestí a zvony zvoní, možná nás čeká štěstí
+Pojď dál, prosím tě, nenech se prosit se dál
+Nenech se!
+\fin
+\repchorusi{\rep{2}}
+\chorusii
+\ldots{}Hodiny se zastaví a v devět třicet v pondělí
+Máš těžký srdce a mokrý řasy
+Když vycházíš ze dveří, tak sama tomu nevěříš
+Nenech se!
+\cl
+\endsong
+
+\beginsong{Malování}[by={Divokej Bill}]\label{song-242}
 \intro
 \cseq{\[Dm] \[B] \[C] \[Dm] \[B] \[C] \[Dm] \[B] \[Gm] \[Am]}\\
 \cl
@@ -8636,7 +9031,7 @@ Noci dlouhý \[B]jsou, plný \[C]touhy a \[Dm]lásky nás tří
 \cl
 \endsong
 
-\beginsong{Mám jizvu na rtu}[by={Jaromír Nohavica}]\label{song-233}
+\beginsong{Mám jizvu na rtu}[by={Jaromír Nohavica}]\label{song-243}
 \num
 \[C]Jsem příliš starý na to, abych věřil v revoluci
 \[G]{A svoji} velkou hlavu těžko skryju pod kapucí
@@ -8688,7 +9083,7 @@ On při mně stál
 \cl
 \endsong
 
-\beginsong{Mamutí křik}[by={Nezmaři}]\label{song-234}
+\beginsong{Mamutí křik}[by={Nezmaři}]\label{song-244}
 \num
 Přišel \[D]pravěk zas o něco \[D\hidx{7}]dříve a s ním \[G]vítr přines mamu\[D]ty
 Jejich \[Hm]dusot už je slyšet z \[F\shrp{}m]dálky, bude \[G]žrádlo na tu\[D]ty
@@ -8715,7 +9110,7 @@ Mastný brady tiše svítí šerem a já toužím zase po hladu
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Margita}[by={Jaromír Nohavica}]\label{song-235}
+\beginsong{Margita}[by={Jaromír Nohavica}]\label{song-245}
 \num
 \[Em]{Točí se} točí \[Am]kolo \[Em]dokola a až nás \[Hm]smrtka \[C]zavolá
 Tak vytá\[G]hneme \[Em]rance
@@ -8760,7 +9155,7 @@ A vše se točí dokola
 \cl
 \endsong
 
-\beginsong{Marie}[by={Tomáš Klus}]\label{song-236}
+\beginsong{Marie}[by={Tomáš Klus}]\label{song-246}
 \emptyv
 \cseq{\[C] \[E] \[F] \[G]}
 \cl\chordsoff\num
@@ -8800,7 +9195,7 @@ Na na na\ldots
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Marie}[by={Zuzana Navarová}]\label{song-237}
+\beginsong{Marie}[by={Zuzana Navarová}]\label{song-247}
 \num
 Marie \[Am]{má se} vracet~-- ta, co tu bydlí
 Marie má se vracet, tak postav \[Dm]židli
@@ -8843,7 +9238,7 @@ Marie \[H\hidx{7}]blýskavice, krasavice, \[E\hidx{7}]ech~-- Rosice, Pardubice
 \chordsoff
 \endsong
 
-\beginsong{Marsyas a Apollón}[by={Marsyas}]\label{song-238}
+\beginsong{Marsyas a Apollón}[by={Marsyas}]\label{song-248}
 \num
 \chordson
 \[G]Ta krásná dívka, \[Am]{co se bojí} \[D]{o svoji krásu}
@@ -8891,7 +9286,7 @@ Ty dy dy\ldots
 \cl\ifchorded\chordsoff\fi
 \endsong
 
-\beginsong{Mařenka}[by={Jaromír Nohavica}]\label{song-239}
+\beginsong{Mařenka}[by={Jaromír Nohavica}]\label{song-249}
 \freev
 \[Hm]Neplakej, Mařenko, \[D]počkej na mě,
 \[A]chtěl jsem ti nabídnout \[Hm]svoje rámě
@@ -8940,7 +9335,7 @@ Hmm\ldots{}
 \cl
 \endsong
 
-\beginsong{Mávátka}[by={Jaromír Nohavica}]\label{song-240}
+\beginsong{Mávátka}[by={Jaromír Nohavica}]\label{song-250}
 \num
 \[Am]{Už třicet} let chodím po světě
 \[Dm]{a ten} svět \[G]furt a \[C]furt se stejně \[E]točí
@@ -8998,7 +9393,7 @@ Není tak zle, ovšem musíte pochopiti
 \cl
 \endsong
 
-\beginsong{Mercy Me}[by={Alkaline Trio}]\label{song-241}
+\beginsong{Mercy Me}[by={Alkaline Trio}]\label{song-251}
 \emptyv
 \cseq{\[C] \[Am] \[F]}\\
 \cl
@@ -9042,7 +9437,30 @@ Drive yourself insane tonight\ldots{}
 \cl
 \endsong
 
-\beginsong{Metro pro krtky}[by={Jaromír Nohavica}]\label{song-242}
+\beginsong{Měsíc}[by={Mňága a Žďorp}]\label{song-252}
+\num
+\[Em]Děkuju ti za to, \[D]žes mi \[G]ještě zavo\[C]lala  \[G]  \[D]
+\chordsoff
+Moje duše černá už to ani nečekala
+Jenže, moje drahá, je to všechno trochu na nic
+Já už jsem se rozhod, zítra budu znovu panic
+\fin
+\chordsoff
+\num
+Děkuju ti za to, žes to rovnou nepoložil
+že jsi nezapomněl, co jsi se mnou všechno prožil
+Teď, když svítí měsíc pro každýho zvlášť, je mi to líto
+Jenže už je konec, však víš to
+Vím to
+\fin
+\num
+\reppart{Měsíc, svítí měsíc} \rep{3}
+\chordson
+\[Em]Měsíc
+\fin
+\endsong
+
+\beginsong{Metro pro krtky}[by={Jaromír Nohavica}]\label{song-253}
 \num
 \[G]Prvá, druhá, \[C]třetí, \[D]čtvrtá \[G]  \[C]  \[D]
 \[G]{Na zahradě} \[C]krtek \[D]vrtá \[G]  \[C]  \[D]
@@ -9067,7 +9485,7 @@ Vrtá metro pro krtky, ohoho
 \fin
 \endsong
 
-\beginsong{Mezi horami}[by={Čechomor}]\label{song-243}
+\beginsong{Mezi horami}[by={Čechomor}]\label{song-254}
 \num
 \reppart{\[Am]Mezi \[G]hora\[Am]mi \[C]lipka \[G]zele\[C]ná}
 \reppart{\[C]Zabili Janka, \[G]Janíčka, \[Am]Janka, \[Am]miesto \[Em]jele\[Am]ňa}
@@ -9084,7 +9502,7 @@ Vrtá metro pro krtky, ohoho
 \fin\ifchorded\chordsoff\fi
 \endsong
 
-\beginsong{Mikymauz}[by={Jaromír Nohavica}]\label{song-244}
+\beginsong{Mikymauz}[by={Jaromír Nohavica}]\label{song-255}
 \pick{PIMAMIAM}
 \num
 \[Am]Ráno mě probouzí \[G]tma, sahám si na zápě\[F]stí
@@ -9160,7 +9578,7 @@ Zdali to \[E]ještě tluče, \[Dm]zdali mám \[E]ještě štěstí\ldots} \fadeo
 \cl
 \endsong
 
-\beginsong{Milenci v texaskách}[by={Starci na chmelu}]\label{song-245}
+\beginsong{Milenci v texaskách}[by={Starci na chmelu}]\label{song-256}
 \num
 \[D]Chodili spolu z čisté \[Hm]lásky \[G]{a sedmnáct} jim bylo \[Hm]let \[A\hidx{7}]
 \[D]{A do} té lásky bez nad\[Hm]sázky \[G]{se vešel} celý širý \[Hm]svět
@@ -9183,7 +9601,7 @@ Kéž na trati se neztratí
 \fin
 \endsong
 
-\beginsong{Mistr Mississippi}[by={KTO}]\label{song-246}
+\beginsong{Mistr Mississippi}[by={KTO}]\label{song-257}
 \num
 On \[C]jak ta želva \[Am]stará se v \[F]chůzi kolé\[C]bal
 a \[C]jak ta Missi\[Am]ssippi se \[Dm]kupředu vždy \[G]bral
@@ -9211,7 +9629,7 @@ a Mistr Mississippi, tam dál už není nic :]
 \fin
 \endsong
 
-\beginsong{Mladičká básnířka}[by={Jaromír Nohavica}]\label{song-247}
+\beginsong{Mladičká básnířka}[by={Jaromír Nohavica}]\label{song-258}
 \num
 \[G]Mladičká básnířka \[Hm]{s korálky} nad kotní\[Em]ky \[D]
 \[G]Bouchala na dvířka \[Hm]paláce poeti\[Em]ky \[D]
@@ -9246,7 +9664,7 @@ Tak o tom napsala sonet~-- a ten byl ze života\ldots
 \cl
 \endsong
 
-\beginsong{Mlýny}[by={Spirituál kvintet}]\label{song-248}
+\beginsong{Mlýny}[by={Spirituál kvintet}]\label{song-259}
 \chor
 \reppart{\[G]Slyším boží mlýny, jak se otáčí
 \[C]Slyším boží mlýny, jak se otá\[G]čí
@@ -9276,7 +9694,7 @@ Až zazní jeden lidský hlas~-- no tak už melte, je čas!
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Montér blues}[by={Vlasta Redl}]\label{song-249}
+\beginsong{Montér blues}[by={Vlasta Redl}]\label{song-260}
 \num
 \[Am]{Jó, taky} jsem hrával tyhle \[D]výškové práce
 \[C]To není \[E]žádná ope\[Am]ra \[E]
@@ -9317,7 +9735,7 @@ Když nepomáhá vodka ani džus-
 \cl
 \endsong
 
-\beginsong{Moonlight Shadow}[by={Mike Oldfield}]\label{song-250}
+\beginsong{Moonlight Shadow}[by={Mike Oldfield}]\label{song-261}
 \transpose{7}
 \num
 The \[Am]last that ever she \[F]saw him
@@ -9367,9 +9785,9 @@ But she \[Am]couldn't find \[F]how to push \[G]through
 \cl
 \endsong
 
-\beginsong{Morče za volantem}[by={Peshata}]\label{song-251}
+\beginsong{Morče za volantem}[by={Peshata}]\label{song-262}
 \emptyv
-\cseq{\[Am] \[C] \[F] \[G]}\\
+\cseq{\[Am] \[F] \[C] \[G]}\\
 \cl
 \chordsoff
 \num
@@ -9402,7 +9820,7 @@ Jen málo očí ubrání se dojetí
 \cl
 \endsong
 
-\beginsong{Morituri te salutant}[by={Karel Kryl}]\label{song-252}
+\beginsong{Morituri te salutant}[by={Karel Kryl}]\label{song-263}
 \num
 Cesta je \[Am]prach a \[G]štěrk a \[Dm]udusaná \[Am]hlína
 \[C]{A šedé} \[F]šmouhy \[G\hidx{7}]kreslí do vla\[C]sů
@@ -9439,7 +9857,7 @@ Mosazná včelka od vlkodlaka
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Mravenčí ukolébavka}[by={Svěrák a Uhlíř}]\label{song-253}
+\beginsong{Mravenčí ukolébavka}[by={Svěrák a Uhlíř}]\label{song-264}
 \num
 \[C]Slunce šlo \[G]spát \[F]{za hromádku} \[G]klád
 \[C]{Na nebi} \[Am]hvězdy klí\[G]čí
@@ -9466,7 +9884,48 @@ La la\ldots{}
 \repsec{2}{\emptyspace}
 \endsong
 
-\beginsong{Muchomůrky bílé}[by={Milan Mejla Hlavsa}]\label{song-254}
+\beginsong{Mrs. Robinson}[by={Simon \& Garfunkel}]\label{song-265}
+\intro
+\[E\hidx{7}]{De de} \[A]{de de}\[D] de d\[G]{e de} \[C]{de de}\[Am]{ de de}\[E\hidx{7}]{ de de}\[D]
+\cl
+\chordsoff
+\chorusi
+\chordson
+\[D]And here's to \[G]you Mrs. \[Em]Robinson
+\[G]Jesus loves you \[Em]more than you will \[C]know, \[Am]{wo wo} wo\[D]
+\[D]God bless you \[G]please Mrs. \[Em]Robinson
+\[G]Heaven holds a \[Em]place for those who \[C]pray, \[Am]{hey hey} hey
+\cl
+\num
+\chordson
+\[E\hidx{7}]We'd like to know a little bit about you for our files
+\[A]We'd like to help you learn to help yourself
+\[D]Look around you \[G]all you see are \[C]sympathetic \[Am]eyes
+\[E\hidx{7}]Stroll around the grounds un\[D]til you feel at home
+\fin
+\repchorusi{\emptyspace}
+\num
+Hide it in a hiding place where no one ever goes
+Put it in your pantry with your cupcakes
+It's a little secret just the Robinsons' afair
+Most of all you've got to hide it from the kids
+\fin
+\repchorusi{\emptyspace}
+\num
+Sitting on a sofa on a Sunday afternoon
+Going to the candidates debate
+Laugh about it shout about it when you've got to choose
+Any way you look at it you lose
+\fin
+\chorusii
+Where have you gone Joe DiMaggio
+A nation turns its lonely eyes to you, woo woo woo
+What's that you say Mrs. Robinson
+Joltin' Joe has left and gone away, hey hey hey, hey hey hey
+\cl
+\endsong
+
+\beginsong{Muchomůrky bílé}[by={Milan Mejla Hlavsa}]\label{song-266}
 \num
 \[C]Člověk ze zoufalství \[F]snadno pomate se
 \[C]Muchomůrky bílé \[F]budu sbírat \[Dm]{v lese}
@@ -9483,7 +9942,7 @@ Muchomůrky bílé budu sbírat v létě
 \fin
 \endsong
 
-\beginsong{Můj pes}[by={Jaromír Nohavica}]\label{song-255}
+\beginsong{Můj pes}[by={Jaromír Nohavica}]\label{song-267}
 \intro
 \cseq{\[G] \[D] \[Em] \[D] \[C] \[D] \[G]}\\
 \cl
@@ -9532,7 +9991,7 @@ M\[G]{y d}\[D]{og is} d\[Em]og \[D]number one~-- \[G]yeah
 \cl
 \endsong
 
-\beginsong{Mumie}[by={Slávek Janoušek}]\label{song-256}
+\beginsong{Mumie}[by={Slávek Janoušek}]\label{song-268}
 \averse
 \[C]Tak už je to tady, kůže se mi \[F\hidx{maj7}]scvrkává
 Divné \[G]skvrny kolem brady a neustálá \[C]únava \[F\hidx{maj7}] \[G]
@@ -9583,7 +10042,7 @@ Cítím, jak ožívám
 \cl
 \endsong
 
-\beginsong{Muzeum}[by={Jaromír Nohavica}]\label{song-257}
+\beginsong{Muzeum}[by={Jaromír Nohavica}]\label{song-269}
 \num
 \[C]Ve Slezském muzeu \[G]{v oddělení} \[Am]třetihor
 je bílý \[F]krokodýl a \[C]medvěd a liška a \[G\hidx{7}]kamenní \[C]trilobiti \[G\hidx{7}]
@@ -9630,7 +10089,7 @@ podívat se na vitrínu, kterou tam pro tebe už mají
 \fin\repchorus{\emptyspace}
 \endsong
 
-\beginsong{Můžem si za to oba}[by={Luboš Pospíšil}]\label{song-258}
+\beginsong{Můžem si za to oba}[by={Luboš Pospíšil}]\label{song-270}
 \num
 \[E]Někdy mi trvá \[A]celý ja\[E]ro, \[F\shrp{}m]{než se} tak \[E]trochu \[H]rozja\[E]řím
 \chordsoff
@@ -9662,7 +10121,7 @@ Někdo si prostě musí počkat na mráz, než ho zamrazí
 \fin
 \endsong
 
-\beginsong{My Bonnie Lies Over the Ocean}\label{song-259}
+\beginsong{My Bonnie Lies Over the Ocean}\label{song-271}
 \num
 My \[G]Bonnie lies \[C]over the \[G]ocean
 My \[G]Bonnie lies \[A\hidx{7}]over the \[D]sea \[D\hidx{7}]
@@ -9709,7 +10168,7 @@ In the morning the neighbors were dead
 \fin
 \endsong
 
-\beginsong{Myš}[by={Jaroslav Hutka}]\label{song-260}
+\beginsong{Myš}[by={Jaroslav Hutka}]\label{song-272}
 \num
 V \[C]kuchyni se \[G]řízek \[C]smažil,
 \[F]kuchař okolo něj \[C]tan\[G]čil,
@@ -9765,7 +10224,7 @@ a město vyčistily, docela šťastný byly,
 \fin
 \endsong
 
-\beginsong{Myš na konci léta}[by={Jaromír Nohavica}]\label{song-261}
+\beginsong{Myš na konci léta}[by={Jaromír Nohavica}]\label{song-273}
 \capo{3}
 \num
 Všichni už \[Am]{spí, jenom} \[E]{my dva} jsme \[Am]vzhůru
@@ -9802,7 +10261,7 @@ Je konec léta a mně přišlo líto
 \fin
 \endsong
 
-\beginsong{Na kameni kámen}[by={Jan Nedvěd}]\label{song-262}
+\beginsong{Na kameni kámen}[by={Jan Nedvěd}]\label{song-274}
 \num
 Jako \[C]suchej, starej strom, jako \[F\hidx{maj7}]všeničící hrom, jak v poli \[C]tráva
 Připadá mi ten náš svět, plnej \[F\hidx{maj7}]{řečí, a} tím \[Am]{víc, čím} \[G]líp se \[C]mám
@@ -9831,7 +10290,7 @@ Jaký bude, nevím sám, taky jsem si zvyk na všechno kolem nás
 \cl
 \endsong
 
-\beginsong{Na kolena}[by={Ivan Hlas}]\label{song-263}
+\beginsong{Na kolena}[by={Ivan Hlas}]\label{song-275}
 \num
 Táhněte \[C]{do háje~-} všichni \[Am]pryč
 Chtěl jsem jít \[C]{do ráje} a nemám \[Am]klíč
@@ -9866,7 +10325,7 @@ Sere mě Tichej Don a ten váš tupej dav
 \cl
 \endsong
 
-\beginsong{Na konečnou}[by={Mňága a Žďorp}]\label{song-264}
+\beginsong{Na konečnou}[by={Mňága a Žďorp}]\label{song-276}
 \capo{3}
 \averse
 \[G]{V bledém} světle půlnočního měsíce
@@ -9916,7 +10375,7 @@ Já pro tebe a ty pro mě
 \cl
 \endsong
 
-\beginsong{Na ptáky jsme krátký}[by={Janek Ledecký}]\label{song-265}
+\beginsong{Na ptáky jsme krátký}[by={Janek Ledecký}]\label{song-277}
 \chor
 \[G]{Na ptáky} jsme \[D]krátký
 \[Em]{Na ptáky} jsme \[C]malý páky
@@ -9952,7 +10411,7 @@ Na letním nebi ukážu ti Polárku
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Na sever}[by={Kabát}]\label{song-266}
+\beginsong{Na sever}[by={Kabát}]\label{song-278}
 \num
 \[G]{No tak} mi \[Em]zatancuj, ať \[D]náladu \[G]mám
 \[G]{A dej} mi \[Em]celou noc, já \[D]nechci bejt \[G]sám
@@ -9996,7 +10455,7 @@ Dojdu k řece \[F\shrp{}m]{plný ryb} až \[E]tam na se\[A]ver :]
 \cl
 \endsong
 
-\beginsong{Na stanici polární}[by={Mňága a Žďorp}]\label{song-267}
+\beginsong{Na stanici polární}[by={Mňága a Žďorp}]\label{song-279}
 \capo{3}
 \averse
 \[F]Dlouhých \[G]čtyřicet \[C]let
@@ -10054,7 +10513,7 @@ Milé \[F]děti, jen \[G]láska má takovou \[F]moc
 \repchorusii{\emptyspace}
 \endsong
 
-\beginsong{Na Španělských schodech}[by={Druhá tráva}]\label{song-268}
+\beginsong{Na Španělských schodech}[by={Druhá tráva}]\label{song-280}
 \capo{3}
 \num
 Na \[C]Španělských \[G]schodech se \[F]stmívá
@@ -10098,7 +10557,7 @@ Připozdí\[C]vá
 \cl
 \endsong
 
-\beginsong{Nad stádem koní}[by={Buty}]\label{song-269}
+\beginsong{Nad stádem koní}[by={Buty}]\label{song-281}
 \emptyv
 \cseq{\[D] \[A] \[Em] \[G]}
 \cl\chordsoff\num
@@ -10135,7 +10594,7 @@ Vyhasnul \[D]kotel a \[A]náhoda \[Em]{je štěstí} od podko\[G]vy
 \repsec{\ncverse}{\fadeout}
 \endsong
 
-\beginsong{Nagasaki Hirošima}[by={Mňága a Žďorp}]\label{song-270}
+\beginsong{Nagasaki Hirošima}[by={Mňága a Žďorp}]\label{song-282}
 \num
 \[G]Tramvají \[D]dvojkou \[C]jezdíval \[D]jsem do Žide\[G]nic \[D] \[C] \[D]
 \[G]Z takový \[D]lásky \[C]většinou \[D]nezbyde \[Em]nic
@@ -10156,7 +10615,7 @@ Jó, dvě spálený srdce~-- Nagasaki Hirošima
 \reppart{A dvě spálený srdce~-- Nagasaki Hirošima} \rep{3}}
 \endsong
 
-\beginsong{Nahá v dešti}[by={Luboš Odháněl}]\label{song-271}
+\beginsong{Nahá v dešti}[by={Luboš Odháněl}]\label{song-283}
 \num
 \[D]Tou\[A]lám se \[G]Prahou,\[A] \[D] v kalužích \[A]vidím \[G]svět \[A]
 \[D]Potkal jsem \[A]holku \[G]nahou a mám \[D]náladu \[A]lepší \[D]hned\[A]
@@ -10191,7 +10650,7 @@ No tak, hlavu vzhůru a aspoň šáhnout mě, holka, nech
 \repsec{\nbridge}{Já jenom chtěl si vzít\ldots}
 \endsong
 
-\beginsong{Náchodský zámeček}[by={Lidová}]\label{song-272}
+\beginsong{Náchodský zámeček}[by={Lidová}]\label{song-284}
 \num
 \reppart{\[C]Náchodský \[C\hidx{maj7}]zámeček \[C\hidx{7}]vrš\[A\hidx{7}]ku \[Dm]kulatý\[G\hidx{7}]{ho}}
 \reppart{\[Dm]{A už} mě, \[G\hidx{7}]{má milá,} \[C]ve\[A\hidx{7}]zou, \[Dm]vezou \[G\hidx{7}]{z ně}\[C]{ho}}
@@ -10207,7 +10666,7 @@ No tak, hlavu vzhůru a aspoň šáhnout mě, holka, nech
 \fin
 \endsong
 
-\beginsong{Námořnická}[by={Karel Plíhal}]\label{song-273}
+\beginsong{Námořnická}[by={Karel Plíhal}]\label{song-285}
 \num
 \[D]Maličký námořník \[G]{v krabičce} od mýdla \[D]vydal se \[A\hidx{7}]napříč \[D]vanou
 Bez mapy, buzoly, \[G]vesel a kormidla \[D]pluje za \[A\hidx{7}]krásnou \[D]Janou
@@ -10230,7 +10689,7 @@ Maličký námořník i študák z koleje mají cíl na dosah ruky
 \cl
 \endsong
 
-\beginsong{Nebe}[by={Anna K}]\label{song-274}
+\beginsong{Nebe}[by={Anna K}]\label{song-286}
 %\transpose{2}
 % \capo{2}
 % \musicnote{TRANSPOSE TO C (2)}
@@ -10270,7 +10729,7 @@ Nám\ldots{}
 \cl
 \endsong
 
-\beginsong{Nebe na zemi}[by={Jiří Voskovec, Jan Werich a Jaroslav Ježek}]\label{song-275}
+\beginsong{Nebe na zemi}[by={Jiří Voskovec, Jan Werich a Jaroslav Ježek}]\label{song-287}
 \begin{textblock}{5}(8,-1) \gtab{A\hidx{7/5+}}{002021} \gtab{E\hidx{7}\didx{sus4}}{002430} \end{textblock}
 \emptyv
 \[D]Na Nirvanu, na Olymp, na \[Hm]nebe nevě\[E\hidx{7}]řím,
@@ -10287,7 +10746,7 @@ kdy pro \[E\hidx{7}]nás začne \[A\hidx{7}]nebe \[A\hidx{9/4}]{na ze}\[D]mi.
 \cl
 \endsong
 
-\beginsong{Nebezpečný síly}[by={Neřež}]\label{song-276}
+\beginsong{Nebezpečný síly}[by={Neřež}]\label{song-288}
 \intro
 \cseq{\reppart{\[Gm] \[A] \[Dm] \[G] \[G\shrp{}\didx{dim}] \[A] \[Dm]}}
 \cl\num
@@ -10321,7 +10780,7 @@ Jako vždycky - malej smrad, línej hajzl - malej smrad
 \cl
 \endsong
 
-\beginsong{Něco na léto}[by={Žamboši}]\label{song-277}
+\beginsong{Něco na léto}[by={Žamboši}]\label{song-289}
 \num
 \[F\hidx{maj7}]Nemůže \[C]usnout, zavře \[G]víka, hned ho \[Am]bodá
 \chordsoff
@@ -10374,7 +10833,7 @@ Krev zdivočí srdce lačné} \fadeout
 \cl
 \endsong
 
-\beginsong{Něco za něco}[by={Nezmaři}]\label{song-278}
+\beginsong{Něco za něco}[by={Nezmaři}]\label{song-290}
 \capo{2}
 \intro
 \cseq{\[Em] \[Hm] \[Am\hidx{7}] \[Em] \[Hm] \[C]}
@@ -10412,7 +10871,7 @@ Pozdravit se s někým jenom tak
 \repsec{1}{\fadeout}
 \endsong
 
-\beginsong{Nedávno}[by={Jarret}]\label{song-279}
+\beginsong{Nedávno}[by={Jarret}]\label{song-291}
 \num
 \[Hm]{Není to} tak \[D]dávno
 Co jsi špatně \[Em]spala, svýho \[G]těla jsi bála\[A\didx{sus4}]      \[A]
@@ -10440,7 +10899,7 @@ Naděje neumírá, že spravedlnost není slepá pokladní
 \cl
 \endsong
 
-\beginsong{Něgdy}[by={Mňága a Žďorp}]\label{song-280}
+\beginsong{Něgdy}[by={Mňága a Žďorp}]\label{song-292}
 \num
 \[Dm]Někdy nejdu \[B]spát a \[Dm]motám se \[A]městem
 \chordsoff
@@ -10477,7 +10936,7 @@ Než každý ráno zkoušet to znova a znova
 \bridge\emptyspace\\ \cl
 \endsong
 
-\beginsong{Nehrálo se o ceny}[by={Hop trop}]\label{song-281}
+\beginsong{Nehrálo se o ceny}[by={Hop trop}]\label{song-293}
 \num
 \[F\shrp{}m]{Měli jsme} bundy zele\[C\shrp{}m]{ný}, \[D]někomu občas lezly \[A]krkem
 \[Hm]Kdekdo si o nás myslel \[E\hidx{7}]svý, \[Hm]{jako by} nebyl nikdy \[E\hidx{7}]klukem
@@ -10507,7 +10966,7 @@ Těžko by asi zapomněl na partu dobrejch kama\[A]rádů
 \fin
 \endsong
 
-\beginsong{Nech mě spát}[by={Mňága a Žďorp}]\label{song-282}
+\beginsong{Nech mě spát}[by={Mňága a Žďorp}]\label{song-294}
 \emptyv
 \cseq{\[D] \[G] \[F] \[C] \[B]}\\
 \cl
@@ -10547,7 +11006,7 @@ Nechej mě radši spát!
 \fin
 \endsong
 
-\beginsong{Nechte nás}[by={Jaroslav Samson Lenk}]\label{song-283}
+\beginsong{Nechte nás}[by={Jaroslav Samson Lenk}]\label{song-295}
 \capo{3}
 \intro
 \cseq{\[Am] \[Em] \[Am] \[F] \[G] \[C] \[G]}\\
@@ -10590,7 +11049,7 @@ Aby se líp domů kráčelo
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Nejlíp jim bylo}[by={Mňága a Žďorp}]\label{song-284}
+\beginsong{Nejlíp jim bylo}[by={Mňága a Žďorp}]\label{song-296}
 \capo{3}
 \emptyv
 \cseq{\[C] \[F\hidx{maj7}] \[C] \[F\hidx{maj7}]}
@@ -10630,7 +11089,7 @@ Chvíli spolu, chvíli vedle sebe
 \cl
 \endsong
 
-\beginsong{Nejvíc se Klára těší na neděli}[by={Mňága a Žďorp}]\label{song-285}
+\beginsong{Nejvíc se Klára těší na neděli}[by={Mňága a Žďorp}]\label{song-297}
 \intro\cseq{\[Em] \[E\hidx{sus4}]}
 \cl
 \num
@@ -10676,7 +11135,7 @@ Jsou vidět vršky stromů a nebe\ldots{}
 \cl
 \endsong
 
-\beginsong{Neklid}[by={Tomáš Klus}]\label{song-286}
+\beginsong{Neklid}[by={Tomáš Klus}]\label{song-298}
 \emptyv
 \cseq{\[C] \[E] \[Am] \[F]}
 \cl\chordsoff\num
@@ -10718,7 +11177,7 @@ Klidné, klidné, klidné
 \cl
 \endsong
 
-\beginsong{Některé otázky už si prostě nekladu}[by={Mňága a Žďorp}]\label{song-287}
+\beginsong{Některé otázky už si prostě nekladu}[by={Mňága a Žďorp}]\label{song-299}
 \capo{1}
 \averse
 \[C]Některé otázky \[F]{už si} prostě nekladu
@@ -10767,7 +11226,7 @@ kdo ví, kolikátá je tohle procházka
 \cl
 \endsong
 
-\beginsong{Nenávratná}[by={Tomáš Klus}]\label{song-288}
+\beginsong{Nenávratná}[by={Tomáš Klus}]\label{song-300}
 \emptyv
 \cseq{\[G] \[D] \[C] \[Em] \[D]}\\
 \cl
@@ -10812,7 +11271,7 @@ Zadumán sám si zůstaň~-- srabe
 \cl
 \endsong
 
-\beginsong{Nevermore}[by={Jaromír Nohavica}]\label{song-289}
+\beginsong{Nevermore}[by={Jaromír Nohavica}]\label{song-301}
 \num
 \[G]Seděl jsem za stolem a \[C]básně \[G]čet', rádio \[C]hr\[G]álo \[C]  \[G]
 Vtom slyším ťukání \[C]{na para}\[G]pet
@@ -10860,7 +11319,7 @@ A havran na rameni skřehotá: \[C]Nevermore, never\[Am]more\[C], \[G]never\[Am]
 \fin
 \endsong
 
-\beginsong{Nezacházej slunce}[by={Moravská lidová}]\label{song-290}
+\beginsong{Nezacházej slunce}[by={Moravská lidová}]\label{song-302}
 \num
 \[G]Nezacházej slunce, neza\[Am]cházej ještě
 \[D]Já mám potěšení \[C]na da\[D]lekej cestě
@@ -10880,7 +11339,7 @@ Skřivánci zpívali, můj milý nepřišel
 \fin
 \endsong
 
-\beginsong{Nikdo to nebere}[by={Bratři Ebenové}]\label{song-291}
+\beginsong{Nikdo to nebere}[by={Bratři Ebenové}]\label{song-303}
 \emptyv
 \cseq{\[Em\hidx{7}] \[A]}\\
 \cl
@@ -10922,7 +11381,7 @@ Volaná srdce jsou dočasně nedostupná
 \fin
 \endsong
 
-\beginsong{Nikdy nic nebylo}[by={Sto zvířat}]\label{song-292}
+\beginsong{Nikdy nic nebylo}[by={Sto zvířat}]\label{song-304}
 \emptyv
 \cseq{\[Am] \[F] \[D] \[G]}
 \cl\chordsoff\num
@@ -10966,7 +11425,7 @@ Jen jsme šli na biják, co nikdo nenatočil
 \repchorus{\fadeout}
 \endsong
 
-\beginsong{Nina}[by={Tomáš Klus}]\label{song-293}
+\beginsong{Nina}[by={Tomáš Klus}]\label{song-305}
 \emptyv
 \cseq{\[D] \[Hm] \[G] \[A]}\\
 \cl
@@ -11021,7 +11480,7 @@ Srdečních nepokojů, cos pozoroval z dálky
 \cl
 \endsong
 
-\beginsong{Nosorožec}[by={Karel Plíhal}]\label{song-294}
+\beginsong{Nosorožec}[by={Karel Plíhal}]\label{song-306}
 \num
 \[Am]Přivedl jsem domů Božce \[Dm]nádhernýho \[Am]nosorožce,
 \[Dm]originál \[Am]tlustokožce, \[D\shrp{}\didx{dim}]{koupil jsem ho} v \[E\hidx{7}]hospodě.
@@ -11048,7 +11507,7 @@ a zamčela a trucuje, tak si to taky slízli.
 \fin
 \endsong
 
-\beginsong{O malém rytíři}[by={Traband}]\label{song-295}
+\beginsong{O malém rytíři}[by={Traband}]\label{song-307}
 \chor
 \[Hm]Jede jede rytíř, \[D]jede do kraje
 \[A]Nové dobrodružství \[Hm]{v dálce} hledaje
@@ -11099,7 +11558,7 @@ Zůstává rytířem~-- ve svém srdci
 \fin
 \endsong
 
-\beginsong{O znakoplavkách a tak}[by={Žamboši}]\label{song-296}
+\beginsong{O znakoplavkách a tak}[by={Žamboši}]\label{song-308}
 \num
 \[D]Znakoplavka Lů \[A]zakopla v kalu
 \[G]Chtěla na túru, \[A]teď má fraktúru
@@ -11143,7 +11602,7 @@ Chenen es taržes a évs ymélborp is šeřyv udazdo
 \cl
 \endsong
 
-\beginsong{Odpočiň si, Sáro}[by={Druhá tráva}]\label{song-297}
+\beginsong{Odpočiň si, Sáro}[by={Druhá tráva}]\label{song-309}
 \num
 Odpo\[Am]čiň si,\[F] Sá\[C]ro, obrať \[Am]{list a} vzdej se \[Em]mi \[Dm]
 Pro všechno na ze\[Am]{mi u tvých} nohou\[F], Sá\[C]ro
@@ -11165,7 +11624,7 @@ Kněžno, ztrácím nit, můj Bože, chtěl bych mít jeho záda, Sáro
 \cl
 \endsong
 
-\beginsong{Oh Freedom}[by={Spirituál kvintet}]\label{song-298}
+\beginsong{Oh Freedom}[by={Spirituál kvintet}]\label{song-310}
 \num
 \[F]Oh, freedom, \[C]oh, \[F]freed\[B]om \[C]
 \[F]Oh, \[Dm]freedom over\[G\hidx{7}]{ me}\[C]
@@ -11196,7 +11655,7 @@ O to blíž v dobách zlých při ní stůj!
 \cl
 \endsong
 
-\beginsong{Okno mé lásky}[by={Olympic}]\label{song-299}
+\beginsong{Okno mé lásky}[by={Olympic}]\label{song-311}
 \num
 \[A]Kdo tě líbá, když ne \[D]já, \[A]kdo tě hlídá, když ne \[D]já
 \[A]Okno v přízemí je \[G]zavřené i \[D]dnes, lásko \[A]má
@@ -11229,7 +11688,7 @@ Kdo tě zradí, když ne já
 \cl
 \endsong
 
-\beginsong{Omnia vincit Amor}[by={Klíč}]\label{song-300}
+\beginsong{Omnia vincit Amor}[by={Klíč}]\label{song-312}
 \num
 \[Dm]{Šel pocestný} kol \[C]hospodských \[Dm]zdí
 \[F]Přisedl k nám a \[C]lokálem \[F]zní
@@ -11276,7 +11735,7 @@ Každého zdravím tou větou všech vět
 \fin
 \endsong
 
-\beginsong{One of Us}[by={Joan Osborne}]\label{song-301}
+\beginsong{One of Us}[by={Joan Osborne}]\label{song-313}
 \capo{2}
 \emptyv
 \cseq{\[Em] \[C] \[G] \[D]}\\
@@ -11328,7 +11787,7 @@ Nobody calling on the phone
 \cl
 \endsong
 
-\beginsong{Only You}[by={Flying Pickets}]\label{song-302}
+\beginsong{Only You}[by={Flying Pickets}]\label{song-314}
 \bridge
 \[G]Padadada\[D]\ldots{} \[Em]   \[C]
 \cl
@@ -11364,7 +11823,7 @@ Behind the closed door
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Ooh La}[by={The Kooks}]\label{song-303}
+\beginsong{Ooh La}[by={The Kooks}]\label{song-315}
 \emptyv
 \cseq{\[Am] \[F] \[Dm]}\\
 \cl
@@ -11409,7 +11868,7 @@ In all situations
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Opatrujte vaše děti}\label{song-304}
+\beginsong{Opatrujte vaše děti}\label{song-316}
 \emptyv
 \cseq{\[Em] \[C] \[Am] \[D]}\\
 \cl
@@ -11438,7 +11897,7 @@ Kolik sil to ještě stát nás bude, než živým to, co zbýt má, vskutku zbu
 \cl
 \endsong
 
-\beginsong{Outsider waltz}[by={Wabi Daněk}]\label{song-305}
+\beginsong{Outsider waltz}[by={Wabi Daněk}]\label{song-317}
 \num
 Dnes \[C]ráno, když bylo půl, při \[Em]pravidelný hygieně
 \[Dm]Poklesls' hodně v ceně, když jsi \[F]zahlíd svůj \[G]zjev
@@ -11469,7 +11928,7 @@ Už nemáš, čím bys platil, no tak se sbal a šlapej dál
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Paměť stromů}[by={Bedřich Ludvík}]\label{song-306}
+\beginsong{Paměť stromů}[by={Bedřich Ludvík}]\label{song-318}
 \num
 \[Dm]{Být jako} \[F]on, ne\[C]myslet na dě\[Gm]jiny
 \[Dm]{Být jako} \[F]on, jen \[C]vrů\[Gm]{stat do} kra\[Dm]jiny
@@ -11497,7 +11956,7 @@ Obejmi jej a strom ti dá svou spásu
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Panenka}[by={Poutníci}]\label{song-307}
+\beginsong{Panenka}[by={Poutníci}]\label{song-319}
 \num
 Co \[G]skrýváš za \[C]víčky a \[G]plameny \[C]svíčky
 Snad \[G]houf bílých holubic nebo jen \[D]žal
@@ -11519,7 +11978,7 @@ A na bílou kůži ti napíšu tuší
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Panenka}[by={Tomáš Klus}]\label{song-308}
+\beginsong{Panenka}[by={Tomáš Klus}]\label{song-320}
 \capo{3}
 \num
 \[Am]Stanu se \[F]myšlen\[C]kou a budu \[G]{v tobě}
@@ -11553,7 +12012,7 @@ Bože, jsi krásná
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Papírové řetězy}[by={Wabi Daněk}]\label{song-309}
+\beginsong{Papírové řetězy}[by={Wabi Daněk}]\label{song-321}
 \capo{3}
 \num
 \[A]Slepuje očko do očka, \[Hm]řetězy z papíru
@@ -11588,7 +12047,7 @@ A na řetězech jako vždycky přibývá kroužek po kroužku
 \cl
 \endsong
 
-\beginsong{Pár minut}[by={Cop}]\label{song-310}
+\beginsong{Pár minut}[by={Cop}]\label{song-322}
 \chorusi
 Tv\[G]ých pár m\[D]inut si př\[Am]ipíchnout jak k\[C]ytku na kab\[G]át
 Mávnout kř\[D]ídly a p\[Am]lný kapsy tv\[C]ojí lásky m\[D]ít
@@ -11610,7 +12069,7 @@ Zatřást dnem a sebrat spadlej čas, co není zlej, není zlej, hej
 \repchorusii{\fadeout}
 \endsong
 
-\beginsong{Patient Love}[by={Passenger}]\label{song-311}
+\beginsong{Patient Love}[by={Passenger}]\label{song-323}
 \capo{6}
 \emptyv
 \cseq{\[Am] \[F] \[C] \[G]}\\
@@ -11652,7 +12111,7 @@ Screaming at the top of my lungs again
 \repsec{1}{\emptyspace}
 \endsong
 
-\beginsong{Perfect Day}[by={Lou Reed}]\label{song-312}
+\beginsong{Perfect Day}[by={Lou Reed}]\label{song-324}
 \num
 \[Am]Just a \[D]perfect day
 \[G]Drink sangr\[C]{ia in} the park
@@ -11694,7 +12153,7 @@ Someone good
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Petěrburg}[by={Jaromír Nohavica}]\label{song-313}
+\beginsong{Petěrburg}[by={Jaromír Nohavica}]\label{song-325}
 \num
 \[Am]Když se snáší noc na střechy Petěrburgu, \[F]padá \[E]na mě \[Am]žal
 Zatoulaný pes nevzal si ani kůrku \[F]chleba, kterou \[E]jsem mu \[Am]dal
@@ -11714,7 +12173,7 @@ Až mě zítra najdou s dírou ve spánku}
 \cl
 \endsong
 
-\beginsong{Pijte vodu}[by={Jaromír Nohavica}]\label{song-314}
+\beginsong{Pijte vodu}[by={Jaromír Nohavica}]\label{song-326}
 \chor
 [: \[C]Pijte vodu, pijte pitnou vodu, pijte vodu a \[G]nepijte \[C]rum! :]
 \cl
@@ -11744,7 +12203,7 @@ Vypila na ex rum a poblila jim Bílý dům
 \fin
 \endsong
 
-\beginsong{Ping-pong}[by={Wabi Daněk}]\label{song-315}
+\beginsong{Ping-pong}[by={Wabi Daněk}]\label{song-327}
 \num
 \[C]Jako pinpongovej míček \[F]{si občas} trochu připa\[C]dám
 Od rána do večera \[Em]lítám \[F]{a nevím} odkud ani \[C]kam
@@ -11760,7 +12219,7 @@ Kašlu vám na zelený stoly, než dělat míček, raděj' nic
 \fin
 \endsong
 
-\beginsong{Písek}[by={Nezmaři}]\label{song-316}
+\beginsong{Písek}[by={Nezmaři}]\label{song-328}
 \num
 Jako \[Am]pí\[D]sek \[G]přesíváš mě \[E\hidx{7}]mezi prsty
 \[Dm]Stejně ti \[E\hidx{7}]dlaně prázdný \[Am]zůs\[G]ta\[C]nou
@@ -11795,7 +12254,7 @@ Já nejsem z těch, co po těžký ráně nevstanou
 \fin
 \endsong
 
-\beginsong{Píseň lásky}[by={Chemik}]\label{song-317}
+\beginsong{Píseň lásky}[by={Chemik}]\label{song-329}
 \intro
 \cseq{\[C] \[G] \[C] \[C] \[G]}\\
 \cl
@@ -11827,7 +12286,7 @@ Dobrou noc.
 \cl
 \endsong
 
-\beginsong{Píseň malých pěšáků}[by={Pavel Lohonka Žalman}]\label{song-318}
+\beginsong{Píseň malých pěšáků}[by={Pavel Lohonka Žalman}]\label{song-330}
 \num
 \[G]{Je nás} \[C]víc než \[D]loni
 \[G]Oby\[C]čejnejch pěšá\[D]ků
@@ -11869,7 +12328,7 @@ Tichou dálnicí, tichou dálnicí půjdem dál\ldots{}
 \fin
 \endsong
 
-\beginsong{Píseň pro malou Lenku}[by={Jaromír Nohavica}]\label{song-319}
+\beginsong{Píseň pro malou Lenku}[by={Jaromír Nohavica}]\label{song-331}
 \begin{textblock}{5}(10,-0.5) \gtab{G/F\shrp{}}{200033:100034} \end{textblock}
 \capo{2}
 \num
@@ -11907,7 +12366,7 @@ Tú tú tú \ldots
 \cl
 \endsong
 
-\beginsong{Píseň zhrzeného trampa}[by={Jaromír Nohavica}]\label{song-320}
+\beginsong{Píseň zhrzeného trampa}[by={Jaromír Nohavica}]\label{song-332}
 \num
 \[C]Poněvadž nemám \[G]kanady a \[F]neznám písně z \[C]pamp
 \[F]Hóhó\[C]hó, a \[G]neznám písně z \[C]pamp \[G]
@@ -11965,7 +12424,7 @@ Hóhóhó, a zase bude líp
 \cl
 \endsong
 
-\beginsong{Píseň, co mě učil listopad}[by={Wabi Daněk}]\label{song-321}
+\beginsong{Píseň, co mě učil listopad}[by={Wabi Daněk}]\label{song-333}
 \num
 \[C]Málo jím a \[F]málo spím a \[C]málokdy tě \[F]vídám
 \[C]Málokdy si \[Em]nechám něco \[Dm]zdát  \[G]
@@ -11993,7 +12452,7 @@ Píseň, co mě učil listopad
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Pískající cikán}[by={Spirituál Kvintet}]\label{song-322}
+\beginsong{Pískající cikán}[by={Spirituál Kvintet}]\label{song-334}
 \num
 \[G]Dívka \[Am]loudá se \[G]vini\[D\hidx{7}]cí, \[G]tam, kde \[Am]zídka je \[Hm]níz\[D\hidx{7}]ká
 \[G]Tam, kde \[Am]stráň končí \[Hm]voní\[C]cí, si \[G]písni\[C]čku někdo \[G]pí\[C]sk\[D]á
@@ -12025,7 +12484,7 @@ Peníze často nejsou nic, má víc, kdo po svém si píská
 \fin
 \endsong
 
-\beginsong{Písnička pro tebe}[by={Mňága a Žďorp}]\label{song-323}
+\beginsong{Písnička pro tebe}[by={Mňága a Žďorp}]\label{song-335}
 \num
 \[F]To je ta \[C]písnič\[G]ka pro te\[C]be \[F] \[C]{z autobu}\[G]sá\[C]ku
 Mrazi\[F]vé a \[C]modra\[G]vé obry\[C]sy mra\[F]ků, ptá\[C]ků a pane\[G]lá\[C]ků
@@ -12046,7 +12505,7 @@ Pro tebe, pro tebe, pro tebe\ldots
 \cl
 \endsong
 
-\beginsong{Pocity}[by={Tomáš Klus}]\label{song-324}
+\beginsong{Pocity}[by={Tomáš Klus}]\label{song-336}
 \emptyv
 \cseq{\[G] \[D] \[Em] \[C]}\\
 \cl
@@ -12100,7 +12559,7 @@ Ale vrať se na zem
 \cl
 \endsong
 
-\beginsong{Pod dubem}[by={Zdeněk Svěrák a Jaromír Uhlíř}]\label{song-325}
+\beginsong{Pod dubem}[by={Zdeněk Svěrák a Jaromír Uhlíř}]\label{song-337}
 \chor
 \[Am]Pod dubem, za dubem, tam si na tě počíháme
 \[E]Pod dubem, za dubem, tam tě ošku\[Am]bem \[G]
@@ -12120,7 +12579,7 @@ Co šlohne, to nevydá, jelikož je nelida
 \repchorus{Pod dubem\ldots}
 \endsong
 
-\beginsong{Podvod}[by={Jan Nedvěd}]\label{song-326}
+\beginsong{Podvod}[by={Jan Nedvěd}]\label{song-338}
 \capo{3}
 \num
 \[Em]{Na dlani} jednu z tvých řas do tmy se \[Am]koukám
@@ -12146,7 +12605,7 @@ Je skoro půlnoc\ldots
 \repchorus{\rep{2}}
 \endsong
 
-\beginsong{Pohádka}[by={Karel Plíhal}]\label{song-327}
+\beginsong{Pohádka}[by={Karel Plíhal}]\label{song-339}
 \intro
 \[G] \[C] \[G] \[Am] \[G] \[D] \[G] \[C] \[G] \[Am] \[G] \[Em]
 \cl
@@ -12196,7 +12655,7 @@ a pak mi po očku do ucha zazpíval
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Pohár a kalich}[by={Klíč}]\label{song-328}
+\beginsong{Pohár a kalich}[by={Klíč}]\label{song-340}
 \num
 \[Em]Zvedněte poháry, \[D]pánové, už jen \[G]poslední \[D]přípitek \[Em]zbývá
 Pohleďte, nad polem \[D]Špitálským \[G]vrcholek \[D]roubení \[G]skrývá
@@ -12242,7 +12701,7 @@ Prostež od Boha pomoci a úfajte v něho
 \cl
 \endsong
 
-\beginsong{Pohoda}[by={Kabát}]\label{song-329}
+\beginsong{Pohoda}[by={Kabát}]\label{song-341}
 \intro
 \cseq{\[D] \[A] \[E] \[Hm]}\\
 \cl
@@ -12287,7 +12746,7 @@ Schovej sirky, ať je neviděj
 \repchorus{\rep{2}}
 \endsong
 
-\beginsong{Pochod marodů}[by={Jaromír Nohavica}]\label{song-330}
+\beginsong{Pochod marodů}[by={Jaromír Nohavica}]\label{song-342}
 \num
 Kra\[Am]bička cigaret a \[C]do kafe \[G]rum, \[F]rum, \[Am]rum
 Dvě vodky a fer\[C]neta, teď, \[G]dokto\[F]re, \[Am]čum, čum, čum
@@ -12328,7 +12787,7 @@ Byli slabí na těle, ale silní na duchu
 \cl
 \endsong
 
-\beginsong{Popel žhne}[by={Mňága a Žďorp}]\label{song-331}
+\beginsong{Popel žhne}[by={Mňága a Žďorp}]\label{song-343}
 \capo{3}
 \num
 \[Am]Proplou\[F]váme nená\[C]padně kolem \[D\didx{sus2}]{sebe  } \[F]  \[C]
@@ -12366,7 +12825,7 @@ A popel žhne
 \fin
 \endsong
 
-\beginsong{Pořád ta samá}[by={Tomáš Klus}]\label{song-332}
+\beginsong{Pořád ta samá}[by={Tomáš Klus}]\label{song-344}
 \averse
 \[F\shrp{}m]{Po noci} na zemi mám \[H]bolavý záda
 To \[C\shrp{}m]{tím, jak,} zdá se mi, \[A]zima se vkrádá
@@ -12416,7 +12875,7 @@ Citový úplatkáři
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Poutník a dívka (Ráchel)}[by={Spirituál Kvintet}]\label{song-333}
+\beginsong{Poutník a dívka (Ráchel)}[by={Spirituál Kvintet}]\label{song-345}
 \num
 Kr\[A]áčel krajem poutník, šel sám,
 kr\[D]áčel krajem poutník, šel s\[A]ám,
@@ -12457,7 +12916,7 @@ ač byl \[H]chudý, nepo\[E]znán, přece byl \[A]král.
 \fin
 \endsong
 
-\beginsong{Pramínek vlasů}[by={Jiří Suchý a Jiří Šlitr}]\label{song-334}
+\beginsong{Pramínek vlasů}[by={Jiří Suchý a Jiří Šlitr}]\label{song-346}
 \num
 \[A\hidx{7}]Když měsíc \[D]rozlije \[Hm]světlo své \[Em]{po kraji} \[A\hidx{7}]
 A hvězdy \[D]řeknou, \[Hm]{že čas} je jít \[Em]spát \[A\hidx{7}]
@@ -12490,7 +12949,7 @@ Je totiž neděle a mám dost času
 \cl
 \endsong
 
-\beginsong{Pražce}[by={Pavel Dobeš}]\label{song-335}
+\beginsong{Pražce}[by={Pavel Dobeš}]\label{song-347}
 \num
 \[C]Házím tornu na svý záda, feldflašku a \[G\hidx{7}]sumky
 \chordsoff
@@ -12552,7 +13011,7 @@ Lítaly vlaštovky a zelenal se háj
 \cl
 \endsong
 
-\beginsong{Proklínám}[by={Janek Ledecký}]\label{song-336}
+\beginsong{Proklínám}[by={Janek Ledecký}]\label{song-348}
 \num
 \[Em]Prázdnej byt je jako \[C]past, kde \[Am]růže uvad\[G]no\[D]u
 \[Em]Potisící \[C]čtu tvuj dopis \[Am]{na rozlouče}\[D]nou
@@ -12589,7 +13048,7 @@ Ať do smrti jseš sám
 \cl
 \endsong
 
-\beginsong{Prolog života}[by={ČP 8}]\label{song-337}
+\beginsong{Prolog života}[by={ČP 8}]\label{song-349}
 \emptyv
 \cseq{\[Em] \[D] \[Em] \[D]}\\
 \cl
@@ -12627,7 +13086,7 @@ To je daň
 \fin
 \endsong
 
-\beginsong{Proměny}[by={Čechomor}]\label{song-338}
+\beginsong{Proměny}[by={Čechomor}]\label{song-350}
 \num
 \[Am]Darmo sa ty trápíš \[G]můj milý sy\[C]nečku
 Nenosím já tebe, \[E]nenosím v sr\[Am]déčku
@@ -12671,7 +13130,7 @@ A ty musíš býti má lebo mi tě Pán Bůh dá
 \fin
 \endsong
 
-\beginsong{Proutníci kluci}[by={Jaromír Nohavica}]\label{song-339}
+\beginsong{Proutníci kluci}[by={Jaromír Nohavica}]\label{song-351}
 \num
 \[Gm]Proutníci kluci jdou \[Cm]{na věc} \[D\hidx{7}]úplně \[Gm]jinak \[Cm]   \[D\hidx{7}]
 \[Gm]{V hlavě} pod kapucí jim \[Cm]tiká \[D\hidx{7}]časovaná \[Gm]mina \[Cm]   \[D\hidx{7}]
@@ -12710,7 +13169,7 @@ Mám doma super desku od Mišíka~-- já jsem Jura
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Prší}[by={Karel Plíhal}]\label{song-340}
+\beginsong{Prší}[by={Karel Plíhal}]\label{song-352}
 \chor
 \[C]Pr\[C/H]{ší a} \[Dm]hvězdy \[G]{na plakátech} \[C]blednou \[C/H]
 \[Dm]Zpívám si \[E]spolu s repro\[Am]bednou \[Am/G]
@@ -12736,7 +13195,7 @@ Stejně na čísle blázince je věčně někdo na lince
 \fin
 \endsong
 
-\beginsong{První signální}[by={Chinaski}]\label{song-341}
+\beginsong{První signální}[by={Chinaski}]\label{song-353}
 \num
 \[Em]{Až si} \[G]zejtra ráno \[C]řeknu zase \[Em]jednou provždy dost
 \[G]Právem se mi \[C]budeš tiše \[Em]smát
@@ -12765,7 +13224,7 @@ Jak jsem si to uďál, tak to mám
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Předměstí}[by={UDG}]\label{song-342}
+\beginsong{Předměstí}[by={UDG}]\label{song-354}
 \emptyv
 \cseq{\[E] \[A]}\\
 \cl
@@ -12803,7 +13262,7 @@ Budeš mým městem, já tvým předměstím
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Přičichnutí alergikovo}[by={Tomáš Klus}]\label{song-343}
+\beginsong{Přičichnutí alergikovo}[by={Tomáš Klus}]\label{song-355}
 \averse
 \[Am]{V nose} mě šimrá \[Dm]alergie, \[F]jak se tak šourám \[E]alejemi
 Ale \[Am]{je mi} fajn, \[Dm]dobře se tu žije, v mé \[F]rozkvéta\[E]jící \[Am]zemi
@@ -12861,7 +13320,7 @@ Pak opustím taky svou milou zemi, čo zabudla, že mala Kryla
 \cl
 \endsong
 
-\beginsong{Přítel}[by={Jaromír Nohavica}]\label{song-344}
+\beginsong{Přítel}[by={Jaromír Nohavica}]\label{song-356}
 \begin{textblock}{5}(9,-0.5) \gtab{D/F\shrp{}}{200232:500132} \end{textblock}
 \num
 Jestlipak \[G]vzpomínáš si ještě na ten \[D/F\shrp{}]čas,
@@ -12913,7 +13372,7 @@ společný slunko nesvítí.
 \repchorus{\ldots jsem tady sám}
 \endsong
 
-\beginsong{Ptáčata}[by={Brontosauři}]\label{song-345}
+\beginsong{Ptáčata}[by={Brontosauři}]\label{song-357}
 \num
 \[G]{Na kolejích} stála, za uchem květ, vlasy trávou zavázaný
 S \[C]kytarou na zádech, st\[G]run už jen pět, \[D\hidx{7}]hezký oči uplaka\[G]ný
@@ -12938,7 +13397,7 @@ O potocích v trávě a o znamení, co lidi uměj ze zloby dát
 \repsec{1}{\emptyspace}
 \endsong
 
-\beginsong{Raci v práci}[by={Kabát}]\label{song-346}
+\beginsong{Raci v práci}[by={Kabát}]\label{song-358}
 \begin{textblock}{5}(9,-0.5) \gtab{A\hidx{7+}}{002023:001023} \end{textblock}
 \num
 \[A]{Na našem} \[A\hidx{maj7}]rybníku, tam \[A\hidx{7}]{v ráji} řas a \[A\hidx{7+}]vodníků
@@ -12980,7 +13439,7 @@ mám \[E]dojem, že to dobře neskon\[E\hidx{7}]čí
 \cl
 \endsong
 
-\beginsong{Ráda se miluje}[by={Karel Plíhal}]\label{song-347}
+\beginsong{Ráda se miluje}[by={Karel Plíhal}]\label{song-359}
 \chor
 \[Am]Ráda se miluje, \[G]ráda \[C]jí, \[F]ráda si \[Em]jenom tak \[Am]zpívá
 Vrabci se na plotě \[G]háda\[C]jí, \[F]kolikže \[Em]času jí \[Am]zbývá
@@ -13001,7 +13460,7 @@ sedí šnek ve šneku pro šneky~-- snad její podoba příští
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Rakety}[by={Jaromír Nohavica}]\label{song-348}
+\beginsong{Rakety}[by={Jaromír Nohavica}]\label{song-360}
 \begin{textblock}{5}(8,-1) \gtab{G\didx{1}}{X02013:002013} \gtab{G\didx{2}}{X04035:002013}\\
 \gtab{A\hidx{sus4}}{002230:002340} \gtab{A\hidx{sus2}}{002200:002300} \end{textblock}
 \intro
@@ -13060,7 +13519,7 @@ Asi návštěvníci z vesmíru a přikryjí nás kamením
 \cl
 \endsong
 
-\beginsong{Rána v trávě}[by={Pavel Lohonka Žalman}]\label{song-349}
+\beginsong{Rána v trávě}[by={Pavel Lohonka Žalman}]\label{song-361}
 \chor
 \[Am]Každý ráno boty \[G]zouval, \[Am]orosil si nohy v \[G]trávě
 \[Am]{Že se lidi} mají rádi, \[G]doufal~-- \[Am]{a pro}\[Em]citli \[Am]právě
@@ -13082,7 +13541,7 @@ Abych já ti pravdu řekla~-- měl ses jindy narodit
 Před sebou sta sáhů}
 \endsong
 
-\beginsong{Ráno bylo stejný}[by={Nezmaři}]\label{song-350}
+\beginsong{Ráno bylo stejný}[by={Nezmaři}]\label{song-362}
 \num
 \[G]Stál na zastávce s vypůj\[Hm]čenou kyta\[D]rou
 \[Am]{V druhý} ruce holku, \[D]{to zavazadlo} \[G]svý
@@ -13112,7 +13571,7 @@ Až omrzí nás dálky, budem jak dvě smutný koleje na silnici
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Rocket Man}[by={Elton John}]\label{song-351}
+\beginsong{Rocket Man}[by={Elton John}]\label{song-363}
 \num
 \[Em\hidx{7}]{She packed} my bags last night pre-\[A]flight \[A\didx{sus4}]
 \[Em\hidx{7}]{Zero hour,} nine A\[A]M  \[A\didx{sus4}]
@@ -13145,7 +13604,7 @@ A rocket man, a rocket man
 \cl
 \endsong
 
-\beginsong{Rodné lány}[by={Mňága a Žďorp}]\label{song-352}
+\beginsong{Rodné lány}[by={Mňága a Žďorp}]\label{song-364}
 \num
 \chordsoff
 Rodné lány dávno rozorány
@@ -13189,7 +13648,7 @@ Zamrzli jsme\ldots{}
 \cl
 \endsong
 
-\beginsong{Rosa na kolejích}[by={Wabi Daněk}]\label{song-353}
+\beginsong{Rosa na kolejích}[by={Wabi Daněk}]\label{song-365}
 \begin{textblock}{1.5}(10.5,0)\noindent \gtab{F\hidx{6}}{003231} \gtab{F\shrp{}\hidx{6}}{XX4342} \gtab{G\hidx{6}}{3:003231} \end{textblock}
 \num
 \[C]Tak jako jazyk \[F\hidx{6}]stále \[F\shrp{}\hidx{6}]nará\[G\hidx{6}]{ží na} vylomený \[C]zub,
@@ -13214,7 +13673,7 @@ Nohama stíráš rosu na kolejích.
 \cl
 \endsong
 
-\beginsong{Ruby}[by={Pavel Bobek}]\label{song-354}
+\beginsong{Ruby}[by={Pavel Bobek}]\label{song-366}
 \num
 Mám \[C]naději, že uslyším tvé \[F]tiché volá\[G\hidx{7}]ní \[Dm]
 \[C]Stín už padá na zdi bílé, \[F]nic mu nebrá\[G]ní
@@ -13245,7 +13704,7 @@ Jen ruku vztáhnu za tebou, když nemůžu už vstát
 \cl
 \endsong
 
-\beginsong{Runaway}[by={The Kooks}]\label{song-355}
+\beginsong{Runaway}[by={The Kooks}]\label{song-367}
 \emptyv
 \cseq{\[Em] \[Hm] \[D] \[G]}\\
 \cl
@@ -13297,7 +13756,7 @@ I wanna run away
 \cl
 \endsong
 
-\beginsong{Runaway Train}[by={Soul Asylum}]\label{song-356}
+\beginsong{Runaway Train}[by={Soul Asylum}]\label{song-368}
 \emptyv
 \cseq{\[C] \[Em] \[Am] \[G]}\\
 \cl
@@ -13362,7 +13821,7 @@ Runaway~-- but it always seems the same
 \cl
 \endsong
 
-\beginsong{Růže z papíru}[by={Nedvědi}]\label{song-357}
+\beginsong{Růže z papíru}[by={Nedvědi}]\label{song-369}
 \num
 Do tvých \[Dm]{očí jsem} se zbláznil a teď \[E\hidx{7}]nemám, nemám \[Gm]klid
 \[Am]Hlava třeští, asi tě mám \[Dm]rád
@@ -13382,7 +13841,7 @@ Třeba z ní mou lásku vytušíš
 \repchorus{\rep{2}}
 \endsong
 
-\beginsong{Růžička}[by={Spirituál kvintet}]\label{song-358}
+\beginsong{Růžička}[by={Spirituál kvintet}]\label{song-370}
 \num
 \[F]Krásná růže v sadu \[C]kvetla \[F]{u besídky} ve chvo\[C]jí
 \[F]{Ta mé} \[Dm]milé \[G\hidx{7}]hlavu \[C]spletla, \[F]chtě\[C]la \[F]ji \[C]mít \[F]{v poko}\[C]ji
@@ -13403,7 +13862,31 @@ Ráno do bot rosa padla, posel dobré pohody
 \fin
 \endsong
 
-\beginsong{Sametová}[by={Žlutej pes}]\label{song-359}
+\beginsong{Řekněte mamce prokrista}[by={Balada pro banditu}]\label{song-371}
+\num
+\[G]Řekněte mamce prokrista, \[D]{ať mi} večeři \[G]nechystá
+\[C]Večeři ani snída\[D]ni, že já jsem \[C]zbitý, spouta\[G]ný  \[D]   \[G]
+\fin
+\chordsoff
+\num
+Řekněte mamce prokrista, ať mi pár košil přichystá
+Tu první tenkou, kmentovou, tu druhou lněnou, bělavou
+\fin
+\num
+V té první budu seděti, v té druhé budu viseti
+Nevěšte vy mě na duby, tam by mě snědli holubi
+\fin
+\num
+Nechte mě viset na jedli, kam chodí milá ke studni
+Až bude milá vodu brát, krkavce může odehnat
+\fin
+\num
+Hej hešů, hešů ptáčata, už je má hlava načatá
+Hej hešů, hešů krkavec, že jsem byl dobrý mládenec
+\fin
+\endsong
+
+\beginsong{Sametová}[by={Žlutej pes}]\label{song-372}
 \num
 \[G]Vzpomínám, když tehdá \[C]před léty \[G]začaly lítat \[C]rakety
 \[G]Zdál se to bejt \[C]docela dobrej \[D]nápad
@@ -13454,7 +13937,7 @@ Byla to taková krásná cela a byla celá~-- sametová
 \cl
 \endsong
 
-\beginsong{Samurajský meče}[by={Vypsaná fixa}]\label{song-360}
+\beginsong{Samurajský meče}[by={Vypsaná fixa}]\label{song-373}
 \emptyv
 \cseq{\[Hm] \[F\shrp{}] \[G] \[A] \[Hm] \[G] \[F\shrp{}]}\\
 \cl
@@ -13503,7 +13986,7 @@ Když \[G]samurajský meče visí \[F\shrp{}]{nad náma}
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Sáro!}[by={Traband}]\label{song-361}
+\beginsong{Sáro!}[by={Traband}]\label{song-374}
 \chorusi
 \[Am]Sáro, \[Em]Sáro, \[F]{v noci} se mi \[C]zdálo
 Že \[F]tři andělé \[C]Boží k nám \[F]přišli na o\[G]běd
@@ -13546,7 +14029,7 @@ A v poledne už možná bude jiný svět!
 \fin
 \endsong
 
-\beginsong{Sbohem galánečko}[by={Moravská lidová (Vlasta Redl)}]\label{song-362}
+\beginsong{Sbohem galánečko}[by={Moravská lidová (Vlasta Redl)}]\label{song-375}
 \num
 \[G]Sbohem, galá\[Em]nečko, \[Am]{já už} musím \[D]jí\[G]ti \[A\hidx{7}]
 \[D]Sbohem, galá\[Hm]nečko, \[Em]{já už} musím \[A]jí\[D]ti
@@ -13563,7 +14046,7 @@ A v poledne už možná bude jiný svět!
 \fin
 \endsong
 
-\beginsong{Scarborough Fair}[by={Paul Simon a Art Garfunkel}]\label{song-363}
+\beginsong{Scarborough Fair}[by={Paul Simon a Art Garfunkel}]\label{song-376}
 \num
 \[Dm]{Are you} going to \[C]Scarborough \[Dm]Fair
 \[F]Parsley, \[Dm]sage, rose\[F]ma\[G]ry and \[Dm]thyme
@@ -13587,7 +14070,7 @@ Then she'll be a true love of mine
 \fin
 \endsong
 
-\beginsong{Seaside}[by={The Kooks}]\label{song-364}
+\beginsong{Seaside}[by={The Kooks}]\label{song-377}
 \capo{1}
 \num
 \[Dm]{Do you} want to go to the \[F]seaside
@@ -13613,7 +14096,7 @@ But I fell in love on the \[F]seaside,\[B]{  on} the \[F]seaside,\[B]{  on} the 
 \cl
 \endsong
 
-\beginsong{Sedmnáct dnů}[by={Jiří Wabi Ryvola}]\label{song-365}
+\beginsong{Sedmnáct dnů}[by={Jiří Wabi Ryvola}]\label{song-378}
 \num
 Jak zavo\[Am]{láš, když} ti dávno v hrdle \[Em]vyschnul hlas,
 tvůj krk je připravenej \[H\hidx{7}]{na provaz,} kterej se houpá blíž a \[Em]blíž.
@@ -13639,7 +14122,7 @@ ať šerif ví, že máš furt úroveň, že v očích ještě ocel máš.
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Sen}[by={Lucie}]\label{song-366}
+\beginsong{Sen}[by={Lucie}]\label{song-379}
 \num
 Stíny \[D]dnů a snů se k obratníkům \[G]stáčí
 Ruce \[D]snů černejch se snaží zakrýt \[G]oči
@@ -13676,7 +14159,7 @@ A měsíc nový stíny vyplaší
 \cl
 \endsong
 
-\beginsong{Seňore}[by={Druhá tráva}]\label{song-367}
+\beginsong{Seňore}[by={Druhá tráva}]\label{song-380}
 \num
 Se\[Dm]ňor, se\[Am]ňor, víte \[B]vůbec, kam to \[F]jede
 Je to Arizona \[C]nebo Arma\[Dm]gedon
@@ -13723,7 +14206,7 @@ Tak na co kruci čekáme, seňor
 \fin
 \endsong
 
-\beginsong{Seventy-Four, Seventy-Five}[by={The Connels}]\label{song-368}
+\beginsong{Seventy-Four, Seventy-Five}[by={The Connels}]\label{song-381}
 \num
 \[F]Got no \[C]reason for \[F]coming to me
 Through the \[C]rain \[G]running \[F]down
@@ -13771,7 +14254,7 @@ Seventy-four, seventy-five
 \cl
 \endsong
 
-\beginsong{Skálo}[by={Svěrák a Uhlíř}]\label{song-369}
+\beginsong{Skálo}[by={Svěrák a Uhlíř}]\label{song-382}
 \chor
 \[C]Skálo, \[G]skálo, \[Am]skálo, \[F]proč je \[C]lásky \[G]málo?
 \[Am]Moře, \[G]moře, \[C]moře, \[F]proč je \[C]tolik \[G]ho\[C]ře?
@@ -13790,7 +14273,7 @@ Dej nožku, princezno, do třmenu, já si tě chci vzíti za ženu
 \repchorus{\rep{2}}
 \endsong
 
-\beginsong{Skládanka}[by={Nedvědi}]\label{song-370}
+\beginsong{Skládanka}[by={Nedvědi}]\label{song-383}
 \num
 Tak od dneška \[A]vím, jak zavíráš \[Hm]oči, když pusu ti \[A]dávám
 Jak otáčíš hlavu, všechno už v\[Hm]{íš, to,} co bych \[A]chtěl
@@ -13819,7 +14302,7 @@ Tak zase zítra, ty můj vánku milovaný
 \fin
 \endsong
 
-\beginsong{Slavíci z Madridu}[by={Waldemar Matuška}]\label{song-371}
+\beginsong{Slavíci z Madridu}[by={Waldemar Matuška}]\label{song-384}
 \bridge
 \cseq{\[Am] \[Em] \[H\hidx{7}] \[Em] \[Am] \[Em] \[H\hidx{7}] \[Em]}\\
 \cl
@@ -13859,7 +14342,7 @@ Kdo chce, ať mi závidí, já si dám sklenici vína
 \cl
 \endsong
 
-\beginsong{Smuteční marše}[by={Druhá tráva}]\label{song-372}
+\beginsong{Smuteční marše}[by={Druhá tráva}]\label{song-385}
 \num
 I ta \[G]nejkrásnější \[C]žen\[G]ská má \[C]někde hrubou \[G]ji\[C]zvu \[G]
 I ten poslední chlap \[C]{ze stá}\[G]je
@@ -13910,7 +14393,7 @@ Tam někde v kopcích Urartu v prastarý arše\ldots{} \fadeout
 \cl
 \endsong
 
-\beginsong{Smutné a lehké}[by={UDG}]\label{song-373}
+\beginsong{Smutné a lehké}[by={UDG}]\label{song-386}
 \emptyv
 \cseq{\[Em] \[C] \[G] \[D]}\\
 \cl
@@ -13937,7 +14420,7 @@ Byla to opravdu zvláštní noc, kdy se nespí
 \cl
 \endsong
 
-\beginsong{Snad jsem to zavinil já}[by={Olympic}]\label{song-374}
+\beginsong{Snad jsem to zavinil já}[by={Olympic}]\label{song-387}
 \num
 \[Am]{Zas jsi} tak \[C]smutná, kdo se \[D]{má na} to \[Dm]kou\[E]kat
 Nic \[Am]{jíst ti} ne\[C]chutná, v hlavě \[D]máš asi \[Dm]brouka
@@ -13959,7 +14442,7 @@ Tmou obarvenou na černo smutnou touhou
 \cl
 \endsong
 
-\beginsong{Somebody That I Used to Know}[by={Gotye}]\label{song-375}
+\beginsong{Somebody That I Used to Know}[by={Gotye}]\label{song-388}
 \capo{5}
 \intro\cseq{\[Am] \[G]}\\\cl
 \chordsoff
@@ -14005,7 +14488,7 @@ And I wouldn't catch you hung up on somebody that you used to know
 \cl
 \endsong
 
-\beginsong{Sound of Silence}[by={Paul Simon \& Art Garfunkel}]\label{song-376}
+\beginsong{Sound of Silence}[by={Paul Simon \& Art Garfunkel}]\label{song-389}
 \num
 \[Am]Hello, darkness, my old \[G]friend
 I've come to talk with you a\[Am]gain
@@ -14055,7 +14538,7 @@ And whispered in the \[G]sounds of \[Am]silence
 \fin
 \endsong
 
-\beginsong{Sovy v mazutu}[by={František Sahula}]\label{song-377}
+\beginsong{Sovy v mazutu}[by={František Sahula}]\label{song-390}
 \num
 \[G]Tak jsme byli včera \[D]na Portě \[C] \[D]
 \chordsoff
@@ -14078,7 +14561,7 @@ Jestli jsou to zmije, nebo schizofrenie
 \repchorus{\rep{2}}
 \endsong
 
-\beginsong{Spaste svoje duše}[by={Mňága a Žďorp}]\label{song-378}
+\beginsong{Spaste svoje duše}[by={Mňága a Žďorp}]\label{song-391}
 \num
 \[C]Promoklé duše \[F]{se vrací} z práce
 \[C]Autobus nikde, tak \[F]pohovoří krátce~-- na zastávce
@@ -14117,7 +14600,7 @@ Do \[C]noclehárny \[F]
 \cl
 \endsong
 
-\beginsong{Správná pětka}[by={Zvlášňý škola}]\label{song-379}
+\beginsong{Správná pětka}[by={Zvlášňý škola}]\label{song-392}
 \num
 \[C]{My jsme} Rychlý šípy, zapustíme řípy,
 odtrhnem se \[F]{od Foglara,} \[G]roztočíme \[C]pípy.
@@ -14163,7 +14646,7 @@ zajděte k nám do klubovny, zlejem se jak chrti.
 \fin
 \endsong
 
-\beginsong{Stánky}[by={Nedvědi}]\label{song-380}
+\beginsong{Stánky}[by={Nedvědi}]\label{song-393}
 \num
 \[D]{U stánků} \[G]{na levnou} krásu \[D]postávaj a \[Gm]smějou se času
 S \[D]cigaretou a \[A]holkou, co nemá kam \[D]jít
@@ -14188,7 +14671,7 @@ Poznávám, jak málo jsme jim stačili dát
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Star of the County Down}[by={Irská lidová (verze Irish Rovers)}]\label{song-381}
+\beginsong{Star of the County Down}[by={Irská lidová (verze Irish Rovers)}]\label{song-394}
 \num
 \[D]Near \[Em]Banbridge Town in the \[G]County \[D]Down
 One \[G]morning in \[Em]last Ju\[D]ly
@@ -14234,7 +14717,7 @@ Sits the Star of the County Down
 \fin
 \endsong
 
-\beginsong{Stará archa}[by={Spirituál kvintet}]\label{song-382}
+\beginsong{Stará archa}[by={Spirituál kvintet}]\label{song-395}
 \chor
 \reppart{\[D\hidx{7}]{Já mám} \[G]kocábku náram, \[D\hidx{7}]náram, \[G]náram
 Kocábku náram, \[D\hidx{7}]náram\[G]nou}
@@ -14272,7 +14755,7 @@ Ještě že tu starou dobrou archu měli \emph{(kocábku náram, náramnou)}
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Starosta}[by={No Name}]\label{song-383}
+\beginsong{Starosta}[by={No Name}]\label{song-396}
 \num
 \[C]Chcel by som nájsť takého \[G]človeka, \[Am]{čo tak} jak ja sa oblieka
 \[C]{Na prvý} pohľad by vedel, \[G]{či som} stál, či \[Am]sedel
@@ -14306,7 +14789,7 @@ Hlavy by sme mali čisté a duše cítili to isté
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Starý dům}[by={Listolet}]\label{song-384}
+\beginsong{Starý dům}[by={Listolet}]\label{song-397}
 \emptyv
 \cseq{\[Em] \[G] \[D] \[Em]}\\
 \cl
@@ -14355,7 +14838,7 @@ toho, \[C]co jsem \[D]nepro\[Am]žil
 \cl
 \endsong
 
-\beginsong{Starý muž}[by={Jaromír Nohavica}]\label{song-385}
+\beginsong{Starý muž}[by={Jaromír Nohavica}]\label{song-398}
 \capo{5}
 \num
 \[G]Až budu starým mužem, \[Hm]budu staré knihy \[Em]číst
@@ -14389,7 +14872,7 @@ starý muž
 \fin
 \endsong
 
-\beginsong{Starý příběh}[by={Spirituál kvintet}]\label{song-386}
+\beginsong{Starý příběh}[by={Spirituál kvintet}]\label{song-399}
 \num
 Řek \[C]Mojžíš jednou \[F\hidx{maj7}]{lidu svému~-} \[C]přišel \[F\hidx{maj7}]{čas}
 Dnes \[C]{v noci} tiše \[Em]vytratí se \[F]každý z \[G]vás
@@ -14422,7 +14905,7 @@ Mává, mává nám všem svobodná zem
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Statistika}[by={Zdeněk Svěrák a Jaromír Uhlíř}]\label{song-387}
+\beginsong{Statistika}[by={Zdeněk Svěrák a Jaromír Uhlíř}]\label{song-400}
 \num
 Je \[D]statisticky dokázáno, že \[Hm]slunce vyjde každé ráno
 A \[D]{i když} je tma jako v ranci, noc \[Hm]nemá celkem žádnou šanci
@@ -14438,7 +14921,7 @@ Když nepustí ji choutky dračí, tak bude o hlavičky kratší
 \fin
 \endsong
 
-\beginsong{Stejně jako já}[by={Chinaski}]\label{song-388}
+\beginsong{Stejně jako já}[by={Chinaski}]\label{song-401}
 \num
 Do práce \[C]nevstávám, svou ženu nemiluju
 Svinstva si \[F]nepíchám, budoucnost \[B]nemaluju
@@ -14470,7 +14953,7 @@ A já ti to vyčítám a ty\ldots{}
 \cl
 \endsong
 
-\beginsong{Sto kroků samoty}[by={Jarret}]\label{song-389}
+\beginsong{Sto kroků samoty}[by={Jarret}]\label{song-402}
 \intro
 \cseq{\[Am] \[G] \[F] \[Dm] \[Em] \[Am]} \rep{2}\\
 \cl
@@ -14519,7 +15002,7 @@ Proč se sebe \[G]{v tobě} zříkám, \[A]proč to nevydr\[D]žím
 \cl
 \endsong
 
-\beginsong{Stop Crying Your Heart Out}[by={Oasis}]\label{song-390}
+\beginsong{Stop Crying Your Heart Out}[by={Oasis}]\label{song-403}
 \begin{textblock}{1.5}(10,0)\noindent
   \gtab{A\didx{sus2}}{002200:002300}
   \gtab{E\hidx{sus4}}{022200:012300}
@@ -14554,7 +15037,7 @@ Where all of the stars\ldots{}
 \cl
 \endsong
 
-\beginsong{Stromy}[by={Wabi Daněk}]\label{song-391}
+\beginsong{Stromy}[by={Wabi Daněk}]\label{song-404}
 \num
 \[C]Dýmem výfukovým zamořenej svět
 Uprostřed šňůry vozů \[G\hidx{7}]pomaloučku vpřed \[C]
@@ -14588,7 +15071,7 @@ Popel a \[G]dým, kdo mi poví, co s \[C]tím.
 \cl
 \endsong
 
-\beginsong{Strýček Jack}[by={Americká lidová, text Jiří Voskovec a Jan Werich}]\label{song-392}
+\beginsong{Strýček Jack}[by={Americká lidová, text Jiří Voskovec a Jan Werich}]\label{song-405}
 \num
 Můj \[D]strýček Jack, když narodil se, to bylo slá\[A\hidx{7}]vy
 Pan starosta gratuloval, bučely krá\[D]vy
@@ -14630,7 +15113,7 @@ Původem z moravské vísky, měl pít sodovku a ne whisky
 \cl
 \endsong
 
-\beginsong{Střízlivý maturant}[by={Chemik}]\label{song-393}
+\beginsong{Střízlivý maturant}[by={Chemik}]\label{song-406}
 \musicnote{nehrát za střízliva}
 \num
 Už jsem tady osm \[G]let, asi jsem se tenkrát \[Em]splet
@@ -14650,7 +15133,7 @@ Jen aby mi to pak dali, až celý svaťák prochlastááám
 \repsec{3}{\emptyspace}
 \endsong
 
-\beginsong{Studený nohy}[by={Radůza}]\label{song-394}
+\beginsong{Studený nohy}[by={Radůza}]\label{song-407}
 \num
 \[Em]Prší, \[Hm] \[Am]choulím se \[Hm]{do svrchníku}
 \[Em]{Než se} \[Hm]otočím \[C]{na pod}\[D]patku
@@ -14696,7 +15179,7 @@ Jak světla na plese
 \cl
 \endsong
 
-\beginsong{Stýskání}[by={Bratři Ebenové}]\label{song-395}
+\beginsong{Stýskání}[by={Bratři Ebenové}]\label{song-408}
 \begin{textblock}{5}(10,-0.5) \gtab{G\hidx{maj7}}{320002:210003} \end{textblock}
 \num
 \[A]Stýská se \[D]mi, \[Em]černovlás\[Hm]ko \[F\shrp{}m]{po louče}\[Hm]ní, \[G]kdy jsi se \[A]mi
@@ -14732,7 +15215,7 @@ Inventura milování, černovlásko
 \cl
 \endsong
 
-\beginsong{Sunday, Bloody Sunday}[by={U2}]\label{song-396}
+\beginsong{Sunday, Bloody Sunday}[by={U2}]\label{song-409}
 \averse
 \[Hm]{I can't} be\[D]lieve the news to\[G]day
 \chordsoff
@@ -14788,7 +15271,37 @@ To claim the victory Jesus won
 \cl
 \endsong
 
-\beginsong{Svatební}[by={Jaromír Nohavica}]\label{song-397}
+\beginsong{Sundej z hodin závaží}[by={Michal Tučný a Fešáci}]\label{song-410}
+\num
+\[D]Brouzdej trávou za tratí v dlouhých letních hodi\[G]nách
+\[Em]{Vše se} v dobré obrá\[A]tí, \[A\hidx{7}]{já se} vrátím před tvůj \[D]prá\[D\didx{4}]{h}
+\fin
+\chordsoff
+\num
+Nikdy nevěř vteřinám, ty nám jenom překáží
+\chordson
+Je tu lék a já ho znám~\[A\hidx{7}]{- sundej} z hodin záva\[D]ží \[G]
+\fin
+\chor
+\chordson
+\[D]Pak se \[D\hidx{7}]času budem \[G]smát někde stranou od li\[D]dí
+Naše toulky ranní \[E]rosou ať nám všichni závi\[A]dí
+\cl
+\num
+Odjezd můj je blíž a blíž, vlak už houká v nádraží
+Já chci zůstat, ty to víš~-- sundej z hodin závaží
+\fin
+\solo\emptyspace\\ \cl
+\repchorus{\emptyspace}
+\repsec{3}{\emptyspace}
+\solo\emptyspace\\ \cl
+\num
+Hmm\ldots{}
+Já chci zůstat, ty to víš~-- sundej z hodin závaží.
+\fin
+\endsong
+
+\beginsong{Svatební}[by={Jaromír Nohavica}]\label{song-411}
 \emptyv
 \cseq{\[D] \[A] \[G] \[A]}
 \cl\chordsoff\num
@@ -14835,7 +15348,7 @@ Hou, hou, hou~-- Tvůj, zamilován
 \cl
 \endsong
 
-\beginsong{Sway}[by={The Kooks}]\label{song-398}
+\beginsong{Sway}[by={The Kooks}]\label{song-412}
 \capo{3}
 \emptyv
 \cseq{\[Bm] \[D] \[D\didx{sus4}] \[G] \[Em]}\\
@@ -14883,7 +15396,7 @@ I'll give it you all, I'll give it \[Em]{you all,} I'll give it!
 \cl
 \endsong
 
-\beginsong{Šestý smysl}[by={Anna K.}]\label{song-399}
+\beginsong{Šestý smysl}[by={Anna K.}]\label{song-413}
 \emptyv
 \cseq{\[D] \[A] \[G]}\\
 \cl
@@ -14923,7 +15436,7 @@ Potichu sílí, peklo je v přízemí
 \cl
 \endsong
 
-\beginsong{Šibenice}[by={Divokej Bill}]\label{song-400}
+\beginsong{Šibenice}[by={Divokej Bill}]\label{song-414}
 \num
 \[Em]{Jak je} to ještě dale\[D]ko, jak je to ještě dale\[C]{ko k} šibe\[D]nici
 \chordsoff
@@ -14966,7 +15479,7 @@ Stát se mi na zemi\ldots{}
 \cl
 \endsong
 
-\beginsong{Šípková Růženka}[by={Jiří Schelinger}]\label{song-401}
+\beginsong{Šípková Růženka}[by={Jiří Schelinger}]\label{song-415}
 \num
 Ještě \[Am]{spí a} spí a spí zámek \[G]šípkový
 \[Am]Žádný princ tam v lesích \[Em]ptáky neloví
@@ -14998,7 +15511,7 @@ Nesmíš \[C]věřit pohád\[F]kám
 \cl
 \endsong
 
-\beginsong{Škoda 1000 MB}[by={Slávek Janoušek}]\label{song-402}
+\beginsong{Škoda 1000 MB}[by={Slávek Janoušek}]\label{song-416}
 \num
 \[G]Vždycky, když \[G/F\shrp{}]nasedám \[Em]{do svého} auta
 \[Am\hidx{7}]{Už zase} trnu, \[C]{co mě} \[D]čeká
@@ -15080,7 +15593,7 @@ a \[G]zas to jede, furt to jede, \[Hm]{zas to} jede, furt to jede,
 \cl
 \endsong
 
-\beginsong{Šnečí blues}[by={Jaromír Nohavica}]\label{song-403}
+\beginsong{Šnečí blues}[by={Jaromír Nohavica}]\label{song-417}
 \num
 \[G]Jednou \[C]jeden \[G]šnek\[D]  \[G]šíle\[C]{ně se} \[G]lek' \[D]
 \[G]Nikdo už dnes \[G\hidx{7}]neví, \[C]{z čeho} se tak \[Cm]zjevil
@@ -15109,7 +15622,7 @@ Smutné šnečí blues :]
 \fin
 \endsong
 
-\beginsong{Šrouby do hlavy}[by={Lucie}]\label{song-404}
+\beginsong{Šrouby do hlavy}[by={Lucie}]\label{song-418}
 \num
 \[C]{V řádce} temnejch domů \[Hm]{jen tvý} okno svítí
 \[Em]Celý město šlo už \[A]dávno spát
@@ -15145,7 +15658,7 @@ Já tu ve tmě házím zapálený sirky do trávy
 \cl
 \endsong
 
-\beginsong{Tabáček}[by={Chinaski}]\label{song-405}
+\beginsong{Tabáček}[by={Chinaski}]\label{song-419}
 \averse
 Ha\[D]ló, kdo je tam, po zaznění tónu
 Mi \[G]zanechte zprávy \[A]{a buďte} zdrávi
@@ -15206,7 +15719,7 @@ A pokuste se tvářit nešťastně\ldots{}
 \cl
 \endsong
 
-\beginsong{Table for One}[by={Passenger}]\label{song-406}
+\beginsong{Table for One}[by={Passenger}]\label{song-420}
 \num
 So I \[G]sit on this \[C\didx{add9}]{table for} \[G]one
 \[G]Pour me a \[C\didx{add9}]{drink that'll} \[G]last
@@ -15255,7 +15768,7 @@ When dreams are all they can be?
 \fin
 \endsong
 
-\beginsong{Tajný plán}[by={Mňága a Žďorp}]\label{song-407}
+\beginsong{Tajný plán}[by={Mňága a Žďorp}]\label{song-421}
 \emptyv
 \cseq{\[Am] \[C] \[G] \[D\didx{sus2}]}\\
 \cl
@@ -15294,7 +15807,7 @@ svobodu neocení
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Tak už mi má holka mává}\label{song-408}
+\beginsong{Tak už mi má holka mává}\label{song-422}
 \num
 \[Em]Posledních \[D]pár minut \[C]zbejvá \[Em]jen, máš teplou \[D]dlaň, už se \[A]stmí\[Em]vá
 Těžký je \[D]říct, že se \[C]končí \[Em]den, vlak posle\[D]dní vagón \[A]mí\[C]vá\[E]
@@ -15320,7 +15833,7 @@ Zmizela holka jak loňskej sníh a světla měst v dálce svítí
 \fin
 \endsong
 
-\beginsong{Taking Pictures of You}[by={The Kooks}]\label{song-409}
+\beginsong{Taking Pictures of You}[by={The Kooks}]\label{song-423}
 \capo{3}
 \emptyv
 \cseq{\[G] \[Em] \[Hm]}\\
@@ -15362,7 +15875,7 @@ Ex\[G]quisite visions \[Em]{fill up} my \[D]mind
 \cl
 \endsong
 
-\beginsong{Tereza}[by={Hoboes}]\label{song-410}
+\beginsong{Tereza}[by={Hoboes}]\label{song-424}
 \num
 Ten \[C]den, co vítr \[D]listí z města \[G]svál
 Můj \[C]džíp se vracel, \[D]jako by se \[Em]bál
@@ -15401,7 +15914,7 @@ A osamělý město mlčící
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Těšínská}[by={Jaromír Nohavica}]\label{song-411}
+\beginsong{Těšínská}[by={Jaromír Nohavica}]\label{song-425}
 \num
 \[Am]Kdybych se narodil \[Dm]před sto léty \[F]v \[E]tomhle \[Am]městě \[Dm] \[F] \[E] \[Am]
 U Larischů na zahradě \[Dm]trhal bych květy \[F]
@@ -15440,7 +15953,7 @@ Ještě že člověk nikdy neví, co ho čeká
 \fin
 \endsong
 
-\beginsong{The Biplane Evermore}[by={The Irish Rovers}]\label{song-412}
+\beginsong{The Biplane Evermore}[by={The Irish Rovers}]\label{song-426}
 \intro
 \cseq{\[C] \[Am] \[C] \[Am]}\\
 \cl
@@ -15488,7 +16001,7 @@ Remember Evermore and set your sights upon the skies
 \cl
 \endsong
 
-\beginsong{Tichý muž}[by={Traband}]\label{song-413}
+\beginsong{Tichý muž}[by={Traband}]\label{song-427}
 \musicnote{sloky rapovat}
 \chor
 \[Am]{Žil tichý} muž v tichém domě v tichém městě v tiché zemi
@@ -15534,7 +16047,7 @@ Jó, ty jsi velkým bláznem mezi malými blázny :]
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Times They Are A-Changing}[by={Bob Dylan}]\label{song-414}
+\beginsong{Times They Are A-Changing}[by={Bob Dylan}]\label{song-428}
 \num
 Come \[G]gather round \[Em]people whe\[C]rever you \[G]roam
 And admit that the \[C]waters a\[D]round you have grown
@@ -15578,7 +16091,7 @@ For the times they are a-changing
 \fin
 \endsong
 
-\beginsong{Tisíc dnů mezi námi}[by={Nerez}]\label{song-415}
+\beginsong{Tisíc dnů mezi námi}[by={Nerez}]\label{song-429}
 \averse
 \[Hm]Ocelově \[Em]modrou masku \[Hm\hidx{9}]máš, \[F\shrp{}m\hidx{7}]pátý \[C\shrp{}m\hidx{7}]{týden se} ti \[Hm\hidx{7}]bráním
 \[Hm]Den za dnem si \[Em]{na nit} navlé\[Hm\hidx{9}]káš \[F\shrp{}m\hidx{7}]korálky s \[C\shrp{}m\hidx{7}]{vůní našich} \[Hm\hidx{7}]dlaní
@@ -15615,7 +16128,7 @@ V hlavě mám z tebe galimaty\[G\hidx{maj7}]áš
 \cl
 \endsong
 
-\beginsong{To tá Heľpa}[by={Slovenská}]\label{song-416}
+\beginsong{To tá Heľpa}[by={Slovenská}]\label{song-430}
 \num
 \[Am]{To tá} \[Dm]Heľpa, \[Am]{to tá} \[Dm]Heľpa, \[Am]{to je} \[E]pekné \[Am]mesto
 \[Am]{A v tej} \[Dm]Heľpe, \[Am]{a v tej} \[Dm]Heľpe \[Am]švárnych \[E]chlapcov \[Am]{je sto}
@@ -15631,7 +16144,7 @@ Len za jednym, len za jednym potešenie moje}
 \fin
 \endsong
 
-\beginsong{Tomáš}[by={Kamelot}]\label{song-417}
+\beginsong{Tomáš}[by={Kamelot}]\label{song-431}
 \num
 \[G]Přišel jsi \[C]{na svět} \[G]{v tropickým} \[C]horku
 \[G]Uprostřed \[C]znamení \[G]lvů \[C]
@@ -15664,7 +16177,7 @@ A dal jí lásku velikou
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Toulavej}[by={Vojta Tomáško}]\label{song-418}
+\beginsong{Toulavej}[by={Vojta Tomáško}]\label{song-432}
 \num
 Někdo z \[Am]{vás, kdo} chutnal \[G]dálku, jeden z \[Am]těch, co rozu\[E\hidx{7}]měj
 Ať vám \[Am]poví, proč mi \[G]říkaj, proč mi \[F]říkaj' Toula\[Am]vej
@@ -15705,7 +16218,7 @@ Vzpomenu rád
 \repsec{1}{\emptyspace}
 \endsong
 
-\beginsong{Trubadúrská}[by={Karel Plíhal}]\label{song-419}
+\beginsong{Trubadúrská}[by={Karel Plíhal}]\label{song-433}
 \capo{2}
 \num
 \[Am]{Od hradu} \[Em]{ke hradu} \[Am]putujem, \[C]zpíváme \[G]{a holky} \[E\hidx{7}]muchlujem
@@ -15744,7 +16257,7 @@ A v hospodě znuděně čekat
 \cl
 \endsong
 
-\beginsong{Tři čuníci}[by={Jaromír Nohavica}]\label{song-420}
+\beginsong{Tři čuníci}[by={Jaromír Nohavica}]\label{song-434}
 \num
 V \[C]řadě za sebou tři čuníci jdou
 Ťápají si v blátě cestou, neces\[Am]tou
@@ -15784,7 +16297,7 @@ Pojďme s nima zazpívat si jejich píseň veselou~-- oui oui oui oui\ldots{}
 \fin
 \endsong
 
-\beginsong{Tři kříže}[by={Hop trop}]\label{song-421}
+\beginsong{Tři kříže}[by={Hop trop}]\label{song-435}
 \num
 \[Dm]Dávám sbohem těm \[C]břehům prokla\[Am]tejm
 který \[Dm]{v drápech} má \[Am]ďábel \[Dm]sám
@@ -15825,7 +16338,7 @@ lodní deník a v něm, co jsem psal
 \cl
 \endsong
 
-\beginsong{Tři sudičky}[by={Jaromír Nohavica}]\label{song-422}
+\beginsong{Tři sudičky}[by={Jaromír Nohavica}]\label{song-436}
 \emptyv
 \cseq{\[G] \[D] \[C] \[D] \[G]}\\
 \cl
@@ -15870,7 +16383,7 @@ Aby nezdrhali za kopečky~-- hoj hoj~-- nožičky
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Tulácký ráno}[by={Nedvědi}]\label{song-423}
+\beginsong{Tulácký ráno}[by={Nedvědi}]\label{song-437}
 \num
 \[Dm]Posvátný je mi každý ráno, \[Am]{když ze} sna budí šumící \[Dm]les
 \chordsoff
@@ -15897,7 +16410,7 @@ Kolik v tom pravdy, však kdo nám ji dá?
 \cl
 \endsong
 
-\beginsong{Ukolébavka pro Kubu a Lenku}[by={Jaromír Nohavica}]\label{song-424}
+\beginsong{Ukolébavka pro Kubu a Lenku}[by={Jaromír Nohavica}]\label{song-438}
 \averse
 \[C]Den už se seše\[G/F\shrp{}]řil, \[Em\hidx{7}]{už jste} si dost u\[D/F\shrp{}]ži\[G]li,
 tak \[Am]hajdy do pe\[C]{řin, a} \[D\hidx{7}/F\shrp{}]{ne abyste} tam moc řá\[Am/G]di\[D\hidx{7}/A]li. \[G]
@@ -15919,7 +16432,7 @@ nebojte, já spím na dosah, když mě zavoláte, zbiju zlé duchy.
 \repchorus{\ldots a spát, a spát, a spát.}
 \endsong
 
-\beginsong{Ukolíbafka}[by={Hm}]\label{song-425}
+\beginsong{Ukolíbafka}[by={Hm}]\label{song-439}
 \num
 Spi \[Dm\didx{add9}]klidně, broučku
 \[D\didx{add9}]Vždyť už i mravene\[Dm\didx{add9}]{ček na} víč\[D\didx{add9}]kách závažíčko \[Dm\didx{add9}]nosí
@@ -15955,7 +16468,7 @@ Nejlepší cesta ze zármutka
 \cl
 \endsong
 
-\beginsong{Už to nenapravím}[by={Jaroslav Samson Lenk}]\label{song-426}
+\beginsong{Už to nenapravím}[by={Jaroslav Samson Lenk}]\label{song-440}
 \capo{1}
 \chordsoff\chor
 Vap tada dap\ldots
@@ -15991,7 +16504,7 @@ Už to nenapravím, už to nenapravím
 \repchorus{Vap tada dap\ldots}
 \endsong
 
-\beginsong{V moři je místa dost}[by={Jaromír Nohavica}]\label{song-427}
+\beginsong{V moři je místa dost}[by={Jaromír Nohavica}]\label{song-441}
 \chor
 \[D]{V moři} je místa dost, \[G]{v moři} je místa \[A\hidx{7}]dost
 \[D]{v moři} je místa, \[Hm]místa, ach, místa, \[G]{v moři} je \[A\hidx{7}]místa \[D]dost
@@ -16024,7 +16537,7 @@ Aby se nesrazily ryby s rybama
 \fin
 \endsong
 
-\beginsong{V myčce}[by={Hm}]\label{song-428}
+\beginsong{V myčce}[by={Hm}]\label{song-442}
 \intro
 \reppart{\[F]Óóó\[Cm]{\ldots{}}\[D\shrp{}]{  }}
 \cl
@@ -16077,7 +16590,7 @@ Miláčku vždyť se vůbec nic neděje, nádobí se ušpiní a pak se umeje \em
 \cl
 \endsong
 
-\beginsong{V pořádku}[by={Nerez}]\label{song-429}
+\beginsong{V pořádku}[by={Nerez}]\label{song-443}
 \emptyv
 \cseq{\[C] \[G] \[Am] \[E] \[F] \[C] \[G] \[C]}
 \cl\chordsoff\num
@@ -16111,7 +16624,7 @@ Projel jsi poslední finále, konečně spadla klec
 \repchorus{\ldots \reppart{hledáme lásku na míru a nikdy nenajdem}}
 \endsong
 
-\beginsong{Valčík na rozloučenou}[by={Taxmeni}]\label{song-430}
+\beginsong{Valčík na rozloučenou}[by={Taxmeni}]\label{song-444}
 \num
 Kon\[C]{čí ten} \[Am]{čas, jenž} \[Dm]{byl pl}\[G\hidx{7}]{ný nejhez}\[C]čích no\[C\shrp{}\didx{dim}]{cí a } \[Dm]dní  \[G\hidx{7}]
 Po\[C]slouchej, \[Am]{jak ti}\[Fm]{chý val}\[G\hidx{7}]{čík na} ro\[C]zlouče\[G\hidx{7}]{nou nám} \[C]zní \[G\hidx{7}]
@@ -16141,7 +16654,7 @@ Jsme pevně v kruhu spojeni a sejdeme se zas
 \fin
 \endsong
 
-\beginsong{Válečná}[by={Tomáš Klus}]\label{song-431}
+\beginsong{Válečná}[by={Tomáš Klus}]\label{song-445}
 \emptyv
 \cseq{\[Hm] \[A] \[G] \[F\shrp{}]}\\
 \cl
@@ -16178,7 +16691,7 @@ Vyšlo slunce
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Válka růží}[by={Spirituál kvintet}]\label{song-432}
+\beginsong{Válka růží}[by={Spirituál kvintet}]\label{song-446}
 \emptyv
 \cseq{\[Dm] \[Gm] \[A] \[Dm] \[B] \[A] \[Dm]}
 \cl\num
@@ -16205,7 +16718,7 @@ Je válka růží, derry, derry, derry down, hej down
 \fin
 \endsong
 
-\beginsong{Vandrovní}[by={Jaroslav Samson Lenk}]\label{song-433}
+\beginsong{Vandrovní}[by={Jaroslav Samson Lenk}]\label{song-447}
 \num
 \[A]Svět byl krásnej, umytej
 Jak pěkná holka, co má \[Hm]dvacet
@@ -16241,7 +16754,7 @@ Jen smutek, že už musím domů
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Variace na renesanční téma}[by={Vladimír Mišík}]\label{song-434}
+\beginsong{Variace na renesanční téma}[by={Vladimír Mišík}]\label{song-448}
 \emptyv
 \cseq{\[Am] \[F] \[G] \[Am]}
 \cl\chordsoff\num
@@ -16265,7 +16778,7 @@ Láska je jako večernice plující černou oblohou
 \repsec{\nbridge}{\emptyspace}
 \endsong
 
-\beginsong{Včelín}[by={Čechomor}]\label{song-435}
+\beginsong{Včelín}[by={Čechomor}]\label{song-449}
 \num
 \reppart{\[Am]Sousedovic \[G]Věra má \[Am]jako žádná \[G]jiná
 \[Am]Viděl jsem ji \[G]včera máchat \[Am]dole \[Em]{u vče}\[Am]lína}
@@ -16287,7 +16800,7 @@ Abys jednou tancovala, jak já budu pískat
 \fin
 \endsong
 
-\beginsong{Ve 4 ráno}[by={Mňága a Žďorp}]\label{song-436}
+\beginsong{Ve 4 ráno}[by={Mňága a Žďorp}]\label{song-450}
 \num
 \[F]{Ve 4} ráno \[Dm]hudba \[C]končí \[B]  \[Dm]   \[C]
 \chordsoff
@@ -16325,7 +16838,7 @@ A nevrátil, a zabloudil, a poztrácel
 \cl
 \endsong
 
-\beginsong{Ve skříni}[by={Karel Plíhal}]\label{song-437}
+\beginsong{Ve skříni}[by={Karel Plíhal}]\label{song-451}
 % \capo{3}
 \num
 Kdesi \[G]dole v babiččině \[D]skříni
@@ -16350,7 +16863,7 @@ Touží po o\[G]áze, \[C]po \[Am]tvém \[D]klí\[G]ně
 \fin
 \endsong
 
-\beginsong{Večerky}[by={Mňága a Žďorp}]\label{song-438}
+\beginsong{Večerky}[by={Mňága a Žďorp}]\label{song-452}
 \num
 \[Dm]Přespával jsem \[C]{v propálených} křeslech
 \[Dm]{Sám se} svým \[C]dohořívajícím brčkem
@@ -16401,7 +16914,7 @@ Vždyť i Michael Jackson má modrou knížku
 \repchorusii{\emptyspace}
 \endsong
 
-\beginsong{Večerní}[by={Karel Plíhal a Jaromír Nohavica}]\label{song-439}
+\beginsong{Večerní}[by={Karel Plíhal a Jaromír Nohavica}]\label{song-453}
 \num
 \[D]Každý večer \[Em]stejně znova \[D]ža\[A\hidx{7}]sne\[D]me
 Kam se světlo \[Em]schová vždy, když \[D]zha\[A\hidx{7}]sne\[D]me
@@ -16453,7 +16966,7 @@ Teďka aby zase někdo čistil vlak
 \fin
 \endsong
 
-\beginsong{Veď mě dál, cesto má}[by={Pavel Bobek}]\label{song-440}
+\beginsong{Veď mě dál, cesto má}[by={Pavel Bobek}]\label{song-454}
 \num
 \[G]Někde v dálce \[Em]cesty končí
 \[D]Každá prý však \[C]cíl svůj \[G]skrývá
@@ -16483,7 +16996,7 @@ Plná žáru bývá, hned zas samý chlad
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Veličenstvo Kat}[by={Karel Kryl}]\label{song-441}
+\beginsong{Veličenstvo Kat}[by={Karel Kryl}]\label{song-455}
 \num
 V \[Dm]ponurém osvětlení \[C]gotického \[Dm]sálu
 \[F]Kupčíci vyděšení h\[Gm]{ledí do} mi\[A]sálů
@@ -16536,7 +17049,7 @@ Jen motýl smrtihlav se nad tou zemí vznáší
 \fin
 \endsong
 
-\beginsong{Velká voda}[by={Jaromír Nohavica}]\label{song-442}
+\beginsong{Velká voda}[by={Jaromír Nohavica}]\label{song-456}
 \emptyv
 \cseq{\[Am] \[C] \[Dm] \[E]}\\
 \cl
@@ -16590,7 +17103,7 @@ Někdy příště
 \fin
 \endsong
 
-\beginsong{Velrybářská výprava}[by={Pacifik}]\label{song-443}
+\beginsong{Velrybářská výprava}[by={Pacifik}]\label{song-457}
 \num
 \[C]Jednou plác mě \[F]přes rameno \[G\hidx{7}]Johnny, zvanej \[C]Knecht
 \[Am]{Mám pro} tebe, \[Dm]hochu, v pácu \[G\hidx{7}]{moc fajnovej} \[C]kšeft
@@ -16626,7 +17139,7 @@ Máme velryb plný zuby, na to vezmi jed
 \fin
 \endsong
 
-\beginsong{Venku zuří jaro}[by={Jarret}]\label{song-444}
+\beginsong{Venku zuří jaro}[by={Jarret}]\label{song-458}
 \num
 \[E]Sleduju, jak jeden pán u okýnka usíná
 \[F\shrp{}m]Klimbá a slintá, něco se mu \[E]zdá
@@ -16661,7 +17174,7 @@ Týdyjada\ldots
 \cl
 \endsong
 
-\beginsong{VeSmíru}[by={Tomáš Klus}]\label{song-445}
+\beginsong{VeSmíru}[by={Tomáš Klus}]\label{song-459}
 \num
 Do \[C]řádků Tvých \[G]řas Ti \[Am]pozpátku napíšu ze snů \[F]vzkaz
 Do všech Tvých \[C]částí, do pe\[G]řin
@@ -16695,7 +17208,7 @@ Na půl cesty k Tobě křičím do ticha
 \cl
 \endsong
 
-\beginsong{Větříček}[by={Čechomor}]\label{song-446}
+\beginsong{Větříček}[by={Čechomor}]\label{song-460}
 \averse
 \[Am]Věj, větříčku z Dunaje, věj, větříčku z Dunaje 
 \chordsoff
@@ -16725,7 +17238,7 @@ Věj, větříčku z Dunaje, řekni mně, kde milá je
 \cl
 \endsong
 
-\beginsong{Vínečko bílé}[by={Moravská lidová}]\label{song-447}
+\beginsong{Vínečko bílé}[by={Moravská lidová}]\label{song-461}
 \num
 \[A]Vínečko \[E]bí\[A]lé, \[A]jsi od mej \[D]mi\[E]lej
 \reppart{\[A]Budu ťa pít, \[D]co budu \[E]žít, \[A]vínečko \[E]bí\[A]lé} 
@@ -16738,7 +17251,7 @@ Vínečka obě, frajárky moje
 \fin
 \endsong
 
-\beginsong{Vizovice}[by={Fleret}]\label{song-448}
+\beginsong{Vizovice}[by={Fleret}]\label{song-462}
 \averse
 Když se \[G]{s vínem} \[D]probouzí \[G]den
 Jen \[C]{já a} to \[G]víno tu \[D]jsem
@@ -16773,7 +17286,7 @@ Kde jsou známí a ne pijavice
 \cl
 \endsong
 
-\beginsong{Vlakem na Kolín}[by={Neřež}]\label{song-449}
+\beginsong{Vlakem na Kolín}[by={Neřež}]\label{song-463}
 \num
 Vlakem na \[A]Kolín z nádraží \[C\shrp{}\hidx{7}]Střed
 Sám \[F\shrp{}]ráno po pátý, utíkám Bůh ví kam
@@ -16806,7 +17319,7 @@ Cestu vlakem na Kolín
 \fin
 \endsong
 
-\beginsong{Vlaštovko, leť}[by={Jaromír Nohavica}]\label{song-450}
+\beginsong{Vlaštovko, leť}[by={Jaromír Nohavica}]\label{song-464}
 \pick{PIMAMI}
 \num
 \[C]Vlaštovko, leť~-- \[Am]přes Čínskou zeď
@@ -16838,7 +17351,7 @@ Vlaštovko, leť, nás, chudé, veď\ldots{}
 \fin
 \endsong
 
-\beginsong{Vlaštovky}[by={Traband}]\label{song-451}
+\beginsong{Vlaštovky}[by={Traband}]\label{song-465}
 \num
 \[Dm]Každé jaro \[Am]{z velké} dáli \[B]vlaštovky k nám \[F]přilétaly
 \[Dm]Někdy až \[C]dovnitř do stave\[Am]{ní}
@@ -16880,7 +17393,7 @@ Na cestách domů, v korunách stromů, kde je možné odpočinout
 \repsec{6}{\emptyspace}
 \endsong
 
-\beginsong{Voda živá}[by={Aneta Langerová}]\label{song-452}
+\beginsong{Voda živá}[by={Aneta Langerová}]\label{song-466}
 \intro
 \cseq{\[G] \[D] \[G] \[D]}\\
 \cl
@@ -16921,7 +17434,7 @@ Jenže čím dál tím víc
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Vodácká holka}[by={Jaroslav Samson Lenk}]\label{song-453}
+\beginsong{Vodácká holka}[by={Jaroslav Samson Lenk}]\label{song-467}
 \averse
 Když \[D]vlny se \[Em]valí a \[G]peřeje \[A]řvou
 A š\[D]utry z nich \[Em]civí jak \[G]sů\[A]vy
@@ -16958,7 +17471,7 @@ Svý holce dej pusu a řekni~-- jdem dál a na pádlo polož jí růži
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Vstávej, holka}[by={Karel Plíhal}]\label{song-454}
+\beginsong{Vstávej, holka}[by={Karel Plíhal}]\label{song-468}
 \num
 Vs\[G]távej, holka, \[Am]bude \[Hm]ráno \[Am]kalný jako \[D]Metu\[G]je
 Zahraju ti \[Am]{na pi}\[Hm]áno, \[Am]{jen co} zjistím, k\[D]{de tu} \[G]je
@@ -16986,7 +17499,7 @@ jsme tu spolu z nerozumu, tak co by nás mrzelo
 \fin
 \endsong
 
-\beginsong{Výhledově}[by={Mňága a Žďorp}]\label{song-455}
+\beginsong{Výhledově}[by={Mňága a Žďorp}]\label{song-469}
 \emptyv
 \cseq{\[G] \[C] \[Em] \[D]}\\
 \cl
@@ -17024,7 +17537,7 @@ Asi ne, asi ne, asi ne, asi ne\ldots{}
 \fin
 \endsong
 
-\beginsong{Vyšla luna bílá}[by={Francouzská lidová}] \label{song-456}
+\beginsong{Vyšla luna bílá}[by={Francouzská lidová}] \label{song-470}
 \num
 \[F]Vyšla lu\[C]na \[F]bí\[C]lá, \[B]ne\[Bmaj]dá \[C\hidx{4}]li\[C]dem \[F]spát
 \[F]Otevři \[C]má \[F]mi\[C]lá, \[B]roz\[Bmaj]třá\[C\hidx{4}]sl \[C]mě \[F]chlad
@@ -17043,7 +17556,7 @@ Ale nemysli si, že máš milého
 \fin
 \endsong
 
-\beginsong{What Shall We Do With the Drunken Sailor}[by={Irská lidová (verze Irish Rovers)}]\label{song-457}
+\beginsong{What Shall We Do With the Drunken Sailor}[by={Irská lidová (verze Irish Rovers)}]\label{song-471}
 \num
 \[Dm]What shall we do with a drunken sailor
 \[C]What shall we do with a drunken sailor
@@ -17088,7 +17601,7 @@ That's what we do with the drunken sailors\ldots{}
 \fin
 \endsong
 
-\beginsong{What You're Thinking}[by={Passenger}]\label{song-458}
+\beginsong{What You're Thinking}[by={Passenger}]\label{song-472}
 \capo{3}
 \emptyv
 \cseq{\[Em] \[C] \[G] \[D]}\\
@@ -17135,7 +17648,7 @@ I know I can't reach that far\ldots{}
 \cl
 \endsong
 
-\beginsong{Wind of Change}[by={Scorpions}]\label{song-459}
+\beginsong{Wind of Change}[by={Scorpions}]\label{song-473}
 \capo{4}
 \intro
 \cseq{\[F] \[Dm] \[F] \[Dm] \[F] \[Am] \[Dm] \[C] \[G]}\\
@@ -17185,7 +17698,7 @@ So let your balalaika \[Dm]sing what my guitar wants to \[E]say  \[E\hidx{7}]
 \repchorusi{\emptyspace}
 \endsong
 
-\beginsong{Wish You Were Here}[by={Pink Floyd}]\label{song-460}
+\beginsong{Wish You Were Here}[by={Pink Floyd}]\label{song-474}
 \capo{3}
 \intro\emptyspace\\ \cl
 \chordsoff
@@ -17216,7 +17729,7 @@ The same old \[Am]fears~-- wish you were \[G]here!
 \cl
 \endsong
 
-\beginsong{Wonderwall}[by={Oasis}]\label{song-461}
+\beginsong{Wonderwall}[by={Oasis}]\label{song-475}
 \intro
 \cseq{\[Em\hidx{7}] \[G] \[D\didx{sus4}] \[A\didx{sus4}]}\\
 \cl
@@ -17282,7 +17795,7 @@ You're gonna be the one that saves me
 \cl
 \endsong
 
-\beginsong{Yesterday}[by={Beatles}]\label{song-462}
+\beginsong{Yesterday}[by={Beatles}]\label{song-476}
 \num
 \[F]Yesterday, \[Em\hidx{7}]{all my} \[A\hidx{7}]troubles seemed so \[Dm]{far away} \[Dm\hidx{7}]
 \[B]Now it \[C]looks as \[C\hidx{7}]though they're \[F]here to stay
@@ -17312,7 +17825,7 @@ Hm\ldots{} \[Dm]   \[G\hidx{7}]   \[B]   \[F]
 \cl
 \endsong
 
-\beginsong{Your Song}[by={Elton John}]\label{song-463}
+\beginsong{Your Song}[by={Elton John}]\label{song-477}
 \capo{3}
 \begin{textblock}{1.5}(10.5,0)\noindent 
   \gtab{G/B}{X20033:010034}
@@ -17369,7 +17882,7 @@ I hope you\ldots{}
 \cl
 \endsong
 
-\beginsong{Za svou pravdou stát}[by={Spirituál kvintet}]\label{song-464}
+\beginsong{Za svou pravdou stát}[by={Spirituál kvintet}]\label{song-478}
 \num
 Máš \[Hm]všechny trumfy mládí a \[A]ruce čistý \[Hm]máš
 Jen \[Em]{na tobě} teď \[Hm]záleží, na \[F\shrp{}\hidx{7}]jakou hru se \[Hm]dáš
@@ -17410,7 +17923,7 @@ Musíš za svou pravdou stát\ldots{}
 \cl
 \endsong
 
-\beginsong{Zafúkané}[by={Fleret}]\label{song-465}
+\beginsong{Zafúkané}[by={Fleret}]\label{song-479}
 \begin{textblock}{5}(9,-0.5) \gtab{A\hidx{sus2}}{002200:002300} \end{textblock}
 \num
 \[Am]Větr sněh \[A\hidx{sus2}]zanésl \[Am]{z hor do} po\[A\hidx{sus2}]lí,
@@ -17446,7 +17959,7 @@ mé stopy k tobě sú zafúkané.}
 \cl
 \endsong
 
-\beginsong{Zahrada ticha}[by={Pavel Roth}]\label{song-466}
+\beginsong{Zahrada ticha}[by={Pavel Roth}]\label{song-480}
 \num
 Je tam brána zdob\[C]ená, cestu oteví\[Dm]rá
 Zahradu zele\[B]nou, \[F]všechno připom\[C]íná
@@ -17482,7 +17995,7 @@ Vstupuješ do ticha cestou vyvolených
 \fin
 \endsong
 
-\beginsong{Zahrádka}[by={Epy de Mye}]\label{song-467}
+\beginsong{Zahrádka}[by={Epy de Mye}]\label{song-481}
 \num
 \[E]Na jedné \[A]zahrádce \[C\shrp{}m]uprostřed \[H]Čech \[A]někdo si \[H]nepustil \[E]zprávy
 \[A]A proto \[C\shrp{}m]udiven \[F\shrp{}m]napíná \[H]slech \[A]{a pak} se \[H]koukne do \[E]trávy
@@ -17510,7 +18023,7 @@ A potom ze strachu zacpal si slech, aby už neslyšel zprávy
 \fin
 \endsong
 
-\beginsong{Zachraňte koně}[by={Kamelot}]\label{song-468}
+\beginsong{Zachraňte koně}[by={Kamelot}]\label{song-482}
 \intro
 \cseq{\[Em] \[Am\hidx{7}] \[C] \[D] \[G] \[C] \[H\hidx{7}]}
 \cl
@@ -17547,7 +18060,7 @@ Zachraňte koně\ldots{}
 \cl
 \endsong
 
-\beginsong{Zajíci}[by={Jaromír Nohavica}]\label{song-469}
+\beginsong{Zajíci}[by={Jaromír Nohavica}]\label{song-483}
 \num
 \[G]Podzimní bílá mlha \[C]válí se \[G]na mechu
 \[C]Myslivci \[D]vstali už \[G]ráno
@@ -17574,7 +18087,7 @@ A teď, zajíci, hurá na ně
 \repchorus{\ldots}
 \endsong
 
-\beginsong{Zanedbaný sex}[by={Elán}]\label{song-470}
+\beginsong{Zanedbaný sex}[by={Elán}]\label{song-484}
 \emptyv
 \cseq{\[C] \[Dm] \[F] \[G]}\\
 \cl
@@ -17622,7 +18135,7 @@ A tou je~-- a tou je~-- a tou je zanedbaný sex
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Zatanči}[by={Jaromír Nohavica}]\label{song-471}
+\beginsong{Zatanči}[by={Jaromír Nohavica}]\label{song-485}
 \emptyv
 \cseq{\[Em] \[G] \[D] \[Em]}\\
 \cl
@@ -17656,7 +18169,7 @@ Zatanči a já budu ti hrát
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Zatímco se koupeš}[by={Jaromír Nohavica}]\label{song-472}
+\beginsong{Zatímco se koupeš}[by={Jaromír Nohavica}]\label{song-486}
 \begin{textblock}{5}(8,-0.5) \gtab{G\didx{dim\hidx{7}}}{002323:001324} \gtab{F\didx{dim}}{000101:000102} \end{textblock}
 \num
 Zatímco se \[Hm]koupeš, \[D]umýváš si záda
@@ -17685,7 +18198,7 @@ Všechny peníze dal bych za odvahu
 \repchorus{\ldots \[G]nebylo a \[D]není, \[Em]zatím\[A\hidx{7}]{co se} \[D]koupeš} 
 \endsong
 
-\beginsong{Zatracenej život}[by={Greenhorns}]\label{song-473}
+\beginsong{Zatracenej život}[by={Greenhorns}]\label{song-487}
 \num
 \[G]{To bylo} v Dakotě \[C]{po vejpla}\[G]tě, whisky jsem tam pašo\[D]val
 \[G]{S že} jsem byl sám ja\[C]{ko kůl} v plo\[G]tě, s holkou jsem \[D]tam špáso\[G]val
@@ -17720,7 +18233,7 @@ Udělal jsem přemet, jako tur řval, do dáli upaloval
 \cl
 \endsong
 
-\beginsong{Zdá sa, že to stačí}[by={Zuzana Smatanová}]\label{song-474}
+\beginsong{Zdá sa, že to stačí}[by={Zuzana Smatanová}]\label{song-488}
 \intro
 \cseq{\[G] \[C] \[G] \[C]}\\
 \cl
@@ -17765,7 +18278,7 @@ Kto bude potom za ňu kráčať vedľa nás
 \cl
 \endsong
 
-\beginsong{Zdálo sa ně zdálo}[by={Čechomor}]\label{song-475}
+\beginsong{Zdálo sa ně zdálo}[by={Čechomor}]\label{song-489}
 \intro
 \cseq{\[Am] \[G] \[D]}
 \cl\num
@@ -17783,7 +18296,7 @@ A to sa šohajek s miló milovali}
 \fin
 \endsong
 
-\beginsong{Zejtra mám}[by={Ready Kirken}]\label{song-476}
+\beginsong{Zejtra mám}[by={Ready Kirken}]\label{song-490}
 %\capo{3} at g
 \num
 Zejtra \[C]mám, zejtra \[Em]{mám svůj} \[Am]den \[G]
@@ -17820,7 +18333,7 @@ A pak už nikdy nebudu sám
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Země antilop}[by={Kamelot}]\label{song-477}
+\beginsong{Země antilop}[by={Kamelot}]\label{song-491}
 \intro
 \cseq{\[Dm] \[C] \[Am] \[G] \[Dm] \[C] \[Am] \[Dm]}
 \cl\num
@@ -17842,7 +18355,7 @@ A jako na drátech havrani tady trčet nemusím
 \repchorus{Stejně prachy nemám\ldots}
 \endsong
 
-\beginsong{Zítra ráno v pět}[by={Jaromír Nohavica}]\label{song-478}
+\beginsong{Zítra ráno v pět}[by={Jaromír Nohavica}]\label{song-492}
 \num
 Až mě \[Am]zítra ráno v pět \[C]ke zdi postaví
 Je\[F]ště si napo\[G\hidx{7}]sled dám \[C]vodku na zdra\[Am]ví
@@ -17870,7 +18383,7 @@ Prosím, nezapomeň~-- a žij
 \fin
 \endsong
 
-\beginsong{Zmrzlinář}[by={Marsyas}]\label{song-479}
+\beginsong{Zmrzlinář}[by={Marsyas}]\label{song-493}
 \begin{textblock}{5}(8,-0.5) \gtab{C\hidx{add9}/B}{020010:020010} \gtab{F\hidx{maj7}}{003210:003210} \end{textblock}
 \averse
 Ani \[C]nejtenčí vlásek, \[C/H]{co v kartáči} \[Am]mám \[C\hidx{add9}/B]
@@ -17906,7 +18419,56 @@ Vedle v domě bydlel starej pán, kampak zmizel, asi někam jel
 \repsec{\nbverse}{Vláčí mě městem\ldots}
 \endsong
 
-\beginsong{Zůstat tam, kde jsem}[by={Slávek Janoušek}]\label{song-480}
+\beginsong{Zpod větrných mlýnů}[by={Marien}]\label{song-494}
+\capo{2}
+% \intro
+% \cseq{\[F] \[C] \[Em] \[F] \[C] \[Em] \[F] \[G]}\\
+% \cl
+\chordsoff
+\num
+\chordson
+\[Am]{Víc nežli} dřív se \[Dm]díváš ke hvěz\[Em]dám
+\[Am]Vesmír není všechno a \[Dm]{ty v něm} nejsi \[G]sám
+\[C]Říjnový večer \[G]listím zdobe\[Em]{ný zašep}\[F]tá
+To \[Dm]dobrý vítr \[G]větve pohla\[C]dil
+Stejný vítr jinde \[G]mlýny pora\[Em]{zil, co} bys \[F]chtěl
+Co \[Dm]mocnějšího \[G]člověk vymy\[Am]slel
+\fin
+\num
+Naštěstí~-- a taky na zdraví
+Kdo ukrývá svůj smutek, se ho jen tak nezbaví
+Co bude zítra, ti hvězdy neřeknou, dál se ptej
+Karet nebo vlastních dlaní
+Anebo zpívej, žij a zanech ptaní s každou tmou
+\chordson
+Vždyť \[Dm]nemáš nebe \[G]{na svých} rame\[F]nou
+\fin
+\chorusi
+\chordson
+\[C]Hádej, kam se \[G]Země otáčí, 
+Kde se \[Dm]slunce s mořem setká, kde ti \[F]vítr strhnout \[G]křídla nesta\[C]čí
+\[C]Vstávej, měl bys \[G]kopí pozvednout
+Vždyť i \[Dm]Rosinanta čeká a \[F]mlýnů je, \[G]{že nelze} dohléd\[F]nout
+\cl
+\num
+Než skončí den, než se svalí do peřin
+Dostanem se dál, snad dojdem ke dveřím
+Za nimi nová bílá čára startovní a kalendář
+Který má zas všechny listy
+Proto nestůj, běž, vzduch je čistý a najednou
+Nemusíš svým mlýnům podlehnout
+\fin
+\repchorusi{\emptyspace}
+\chorusii
+Vstávej, práskni dveřma za sebou
+Ať všechno listí spadne, ať jsme zase jen pod čistou oblohou
+Vstávej, práskni dveřma za sebou
+Ať všechny hvězdy spadnou, ať jsme zase jednou pevní v kolenou
+Vstávej!
+\cl
+\endsong
+
+\beginsong{Zůstat tam, kde jsem}[by={Slávek Janoušek}]\label{song-495}
 \num
 \[G]Stalo se mi to jednou v noci, \[Em]{za přehradou} štěkali psi
 \[Am\hidx{7}]Nikdy nezapomenu na ten pocit
@@ -17940,7 +18502,7 @@ A že už jsem neměl kdy a proč říci jí to
 Protože \[B]láska jinak zmizí \[C]{\ldots} \[G]}
 \endsong
 
-\beginsong{Zvědavá}[by={UDG}]\label{song-481}
+\beginsong{Zvědavá}[by={UDG}]\label{song-496}
 \transpose{-2}
 \num
 \[A]Holka zvědavá, co o \[E]světě všechno ví
@@ -17981,7 +18543,7 @@ Potlouká se, noc je bezhvězdná
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Zvěrokruh}[by={Jarret}]\label{song-482}
+\beginsong{Zvěrokruh}[by={Jarret}]\label{song-497}
 \num
 \[D]Dnešní noc tu \[A]přespí s námi \[D]Lev
 Těžká mračna, \[A]nad obzorem \[D]krev
@@ -18019,7 +18581,7 @@ Ten, kdo krouží dál
 \cl
 \endsong
 
-\beginsong{Želva}[by={Olympic}]\label{song-483}
+\beginsong{Želva}[by={Olympic}]\label{song-498}
 \num
 \[D]{Ne moc} \[G]snadno se \[D]želva \[G]{po dně} ho\[D]ní \[G]  \[D]  \[G]
 \[D]Velmi \[G]radno je \[D]plavat \[G]{na dno} za \[D]ní \[G]  \[D]
@@ -18047,7 +18609,7 @@ Má se nebát želv a spousty vodní
 \repchorus{\emptyspace}
 \endsong
 
-\beginsong{Ženy mužů}[by={Epy de Mye}]\label{song-484}
+\beginsong{Ženy mužů}[by={Epy de Mye}]\label{song-499}
 \capo{5}
 \num
 \[C]Svěřit se křídlům \[F]falešným a \[C]silou neči\[G]stou se vznést
@@ -18085,7 +18647,7 @@ Co ještě všechno musí snést ženy mužů ztracených
 \fin
 \endsong
 
-\beginsong{Žily}[by={No Name}]\label{song-485}
+\beginsong{Žily}[by={No Name}]\label{song-500}
 \num
 \[C\shrp{}m]{Od januára} cez leto a s celým ro\[F\shrp{}m]kom
 \[F\shrp{}m]{Ja blázon} ľúbil som ťa a zostal len otrokom
@@ -18112,26 +18674,22 @@ Neskoro došlo mi, že vôbec nestálo to za to
 \repchorus{Nepoznávam seba \ldots}
 \endsong
 
-\beginsong{Život a čas}[by={Mňága a Žďorp}]\label{song-486}
+\beginsong{Život a čas}[by={Mňága a Žďorp}]\label{song-501}
 \emptyv
 \cseq{\[Em] \[G] \[C] \[D]}\\
 \cl
 \chordsoff
 \freev
-Život a čas jdou někam spolu
-Život a čas a nebo naopak
-Život a čas v tichým rozhovoru
-Život a čas a nebo naopak
+Život a čas jdou někam spolu, život a čas -- a nebo naopak
+Život a čas v tichým rozhovoru, život a čas -- a nebo naopak
 \cl
 \freev
-Život a čas, nic je nerozdělí
-Život a čas a nebo naopak
-Život a čas, no, a to je celý
-Život a čas a nebo naopak
+Život a čas, nic je nerozdělí, život a čas -- a nebo naopak
+Život a čas, no, a to je celý, život a čas -- a nebo naopak
 \cl
 \endsong
 
-\beginsong{Žízeň}[by={Spirituál kvintet}]\label{song-487}
+\beginsong{Žízeň}[by={Spirituál kvintet}]\label{song-502}
 \num
 Když \[C]kapky deště buší na \[F]rozpá\[Am]len\[G]ou \[C]zem
 Já toužím celou duší dát \[F]živou vodu \[C]všem
