@@ -10,4 +10,4 @@ na simbera.jan@gmail.com.
 
 Zpěvník lze přímo [stáhnout v PDF](https://github.com/simberaj/zpevnik/raw/master/zpevnik.pdf).
 
-Pokud ti ve zpěvníku něco chybí, kontaktuj autora na simbera.jan@gmail.com.
+Pokud ti ve zpěvníku něco chybí, kontaktuj autora na <simbera.jan@gmail.com>.
