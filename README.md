@@ -1,5 +1,5 @@
 # zpevnik
-Zpěvník (převážně) českých písní všeho druhu, bez garance správnosti akordů.
+Zpěvník (převážně) českých písní všeho druhu, bez garance správnosti akordů. [PDF zde](https://github.com/simberaj/zpevnik/raw/master/zpevnik.pdf).
 
 Vhodný pro tisk a vazbu do formátu A5. Generováno z textových souborů stažených převážně z velkyzpevnik.cz.
 Sazba prográmkem [akordy](https://github.com/simberaj/akordy) za pomoci LaTeX balíku songs.
