@@ -1,0 +1,149 @@
+\documentclass[a5paper,10pt]{book}
+\usepackage[chorded]{songs}
+\usepackage[czech]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{fullpage}
+\usepackage{ifthen}
+\usepackage{textpos}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[unicode=true,hidelinks]{hyperref}
+
+\def \nempty {999}
+\def \nchorus {1000}
+\def \nchorusi {1001}
+\def \nchorusii {1002}
+\def \naverse {1101}
+\def \nbverse {1102}
+\def \ncverse {1103}
+\def \nintro {1201}
+\def \nsolo {1202}
+\def \nbridge {1203}
+\def \nrecite {1204}
+\newcounter{oldversenum}
+\newindex{titleidx}{titleidx}
+\newauthorindex{authidx}{authidx}
+\songcolumns{1}
+\songpos{3}
+\setlength{\versenumwidth}{0.75cm}
+\addtolength{\hoffset}{-15pt}
+\addtolength{\voffset}{-35pt}
+\addtolength{\textheight}{100pt}
+\addtolength{\textwidth}{35pt}
+\setlength{\sbarheight}{1pt}
+\setlength{\versesep}{10pt plus 8pt minus 2pt}
+\pagestyle{empty}
+\renewcommand{\printversenum}[1]{\ifthenelse{\equal{\theversenum}{\nempty}}{}{\small\sffamily\ifthenelse{\equal{\theversenum}{\nchorus}}{R.}{\ifthenelse{\equal{\theversenum}{\nchorusi}}{R1.}{\ifthenelse{\equal{\theversenum}{\nchorusii}}{R2.}{\ifthenelse{\equal{\theversenum}{\naverse}}{A.}{\ifthenelse{\equal{\theversenum}{\nbverse}}{B.}{\ifthenelse{\equal{\theversenum}{\ncverse}}{C.}{\ifthenelse{\equal{\theversenum}{\nintro}}{Intro }{\ifthenelse{\equal{\theversenum}{\nsolo}}{Solo }{\ifthenelse{\equal{\theversenum}{\nbridge}}{M.}{\ifthenelse{\equal{\theversenum}{\nrecite}}{Rec.}{\theversenum.}}}}}}}}}}}\ }
+\renewcommand{\printchord}[1]{\bf\sffamily#1}
+\renewcommand\musicnote[1]{\ifchorded\vspace{-5pt}\textnote{#1}\vspace{-5pt}\fi}
+
+\afterpreludeskip=0pt plus 5pt
+\beforepostludeskip=0pt plus 5pt
+\baselineadj=2pt plus 1pt minus 2pt
+\renewcommand{\clineparams}{
+  \baselineskip=10pt
+  \lineskiplimit=1pt
+  \lineskip=1pt
+}
+
+
+\renewcommand{\capo}[1]{\iftranscapos\transpose{#1}\else\musicnote{\sffamily{}Capo #1\normalfont}\fi}
+
+\newcommand{\musicblock}[1]{\ifchorded #1 \fi}
+% \newcommand{\ctabblock}[1]{\begin{textblock}{10}(5,-0.5)#1\end{textblock}}
+
+\renewcommand{\idxtitlefont}{\small\normalfont}
+\renewcommand{\idxlyricfont}{\small\normalfont}
+\renewcommand{\idxauthfont}{\small\normalfont}
+\newcommand{\authfont}{\itshape\sffamily}
+\renewcommand{\stitlefont}{\bf\Large\sffamily}
+%\renewcommand{\printsongnum}[1]{\bf\LARGE\sffamily#1}
+\renewcommand{\printsongnum}[1]{}
+\renewcommand{\snumbgcolor}{white}
+\renewcommand{\extendprelude}{\vspace{2pt}\footnotesize\showauthors\showrefs}
+\newcommand{\fadeout}{\footnotesize\sffamily to fade out \normalfont\normalsize}
+
+\makeatletter
+
+\renewcommand\showauthors{%
+  \setbox\SB@box\hbox{\authfont\sfcode`.\@m\songauthors\normalfont}%
+  \ifdim\wd\SB@box>\z@\unhbox\SB@box\par\fi%
+}
+
+% \newcommand\textsubscript[1]{\@textsubscript{\selectfont#1}}
+% \def\@textsubscript#1{{\m@th\ensuremath{_{\mbox{\fontsize\sf@size\z@#1}}}}}
+% \newcommand\textbothscript[2]{%
+  % \@textbothscript{\selectfont#1}{\selectfont#2}}
+% \def\@textbothscript#1#2{%
+  % {\m@th\ensuremath{%
+    % ^{\mbox{\fontsize\sf@size\z@#1}}%
+    % _{\mbox{\fontsize\sf@size\z@#2}}}}}
+% \def\@super{^}\def\@sub{_}
+
+% \catcode`^\active\catcode`_\active
+% \def\@super@sub#1_#2{\textbothscript{#1}{#2}}
+% \def\@sub@super#1^#2{\textbothscript{#2}{#1}}
+% \def\@@super#1{\@ifnextchar_{\@super@sub{#1}}{\textsuperscript{#1}}}
+% \def\@@sub#1{\@ifnextchar^{\@sub@super{#1}}{\textsubscript{#1}}}
+% \def^{\let\@next\relax\ifmmode\@super\else\let\@next\@@super\fi\@next}
+% \def_{\let\@next\relax\ifmmode\@sub\else\let\@next\@@sub\fi\@next}
+
+\makeatother
+
+\newcommand{\reppart}[1]{[: #1 :]}
+\newcommand{\pick}[1]{\musicnote{\sffamily\MakeUppercase{#1}\normalfont}}
+\newcommand{\num}{\beginverse}
+\newcommand{\fin}{\endverse}
+\newcommand{\start}[1]{\setcounter{oldversenum}{\value{versenum}}\setcounter{versenum}{#1}\beginverse}
+\newcommand{\cl}{\endverse\setcounter{versenum}{\value{oldversenum}}}
+\newcommand{\repsec}[2]{\start{#1} #2\\ \cl}
+\newcommand{\emptyv}{\start{\nempty}}
+%\newcommand{\emptyv}{\vspace{-\versesep}\start{\nempty}}
+\newcommand{\freev}{\start{\nempty}}
+\newcommand{\emptyspace}{\hspace{1pt}}
+\newcommand{\chor}{\start{\nchorus}}
+\newcommand{\intro}{\start{\nintro}}
+\newcommand{\solo}{\start{\nsolo}}
+\newcommand{\bridge}{\start{\nbridge}}
+\newcommand{\chorusi}{\start{\nchorusi}}
+\newcommand{\chorusii}{\start{\nchorusii}}
+\newcommand{\averse}{\start{\naverse}}
+\newcommand{\bverse}{\start{\nbverse}}
+\newcommand{\cverse}{\start{\ncverse}}
+\newcommand{\recite}{\start{\nrecite}}
+\newcommand{\repchorus}[1]{\repsec{\nchorus}{#1}}
+\newcommand{\repchorusi}[1]{\repsec{\nchorusi}{#1}}
+\newcommand{\repchorusii}[1]{\repsec{\nchorusii}{#1}}
+\newcommand{\chords}{\beginverse*}
+% \newcommand{\repchorusadd}[1]{\beginchorus #1\\ \endchorus}
+\newcommand{\cseq}[1]{\vspace{-\versesep}{\nolyrics #1}}
+\newcommand{\ctab}[3]{\flushright\gtab{#1}{#2}{#3}}
+\newcommand{\hidx}[1]{\textsuperscript{#1}}
+\newcommand{\didx}[1]{\textsubscript{#1}}
+\renewcommand{\rep}[1]{\sffamily\footnotesize($\times$#1)\normalsize\normalfont}
+% \newcommand{\hidx}[1]{$^{\mathrm{#1}}$}
+% \newcommand{\didx}[1]{$_{\mathrm{#1}}$}
+% \authsepword{ a }
+
+% \usepackage[pdftex]{hyperref}
+% \hypersetup{colorlinks=false}
+
+\begin{document}
+\sffamily
+~\vspace{\stretch{1}}
+\begin{center}
+\Huge{}\textbf{Superzpěvník}\normalsize\\[5ex]
+cokoliv sebrané odkudkoliv\\[1ex]
+bez garance správnosti\\[1.5ex]
+\copyright~Jan Šimbera - Prófa, simbera.jan@gmail.com\\[1.5ex]
+volně šiřitelné pod licencí Creative Commons BY-NC-SA
+\normalfont
+\end{center}
+\vspace{\stretch{2}}
+\rmfamily
+\newpage
+\showindex[2]{Písně podle názvu}{titleidx}
+\newpage
+\showindex[2]{Písně podle autora}{authidx}
+\newpage
+\begin{songs}{}
