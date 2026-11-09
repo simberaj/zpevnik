@@ -1,10 +1,10 @@
 \documentclass[a5paper,10pt]{book}
-\usepackage{ifpdf}
 \usepackage[chorded]{songs}
 \usepackage[czech]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{fullpage}
 \usepackage{ifthen}
+\usepackage{ifpdf}
 \usepackage{textpos}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
@@ -3790,13 +3790,15 @@ Ten bude v pekle bubnovat
 
 \beginsong{Čmelák}[by={Divokej Bill}]
 \chordsoff
-\freev
-\chordson\cseq{\[C] \[G] \[F] \[G]}\\
+\intro
+\chordson\cseq{\[Am] \[C] \[G] \[F] \[G] \[Am] \[C] \[G] \[F] \[G] \[Am]}\\
 \cl
 \num
-Žiju si jako v pohádce, když nechci, nejdu do práce\\
+\chordson
+\[C]Žiju si jako v pohád\[G]ce, \[F]když nechci, nejdu do prá\[C]{ce\qquad}\\
+\chordsoff
 Venku se pasou ovce, dělá si každá co chce\\
-Pošeptáš mi co Tě láká a to je pro čmeláka\\
+Pošeptáš mi co tě láká, a to je pro čmeláka\\
 Co broukal si v klidu svůj part, najednou malá louka a start
 \fin
 \num
@@ -3807,15 +3809,16 @@ Co broukal v klidu svůj part~-- malá louka a
 \fin
 \chor
 \chordson
-\[C]Sta\[G]rt, \[F]pro všechny první tř\[C]ídu\\
-\[C]Sta\[G]rt, \[F]pro všechny první tř\[C]ídu  \[Am]\\
+\[C]Start, \[G] \[F]pro všechny první \[C]třídu\\
+\[C]Start, \[G] \[F]pro všechny první \[C]třídu  \[Am]\\
 Ať se \[F]propadnu, \[G]jestli \[C] \[Am]nemám prav\[F]du, tak dám \[G]fant\\
-\[C]Slunce ti \[Am]{pihy na} \[F]tváři \[G]kreslí a co \[C]{já~--} \[Am]{já nic,} \[F]{já muzi}\[G]kant
+\[C]Slunce ti \[Am]{pihy} \[F]{na tváři} \[G]kreslí a co \[C]{já~--} \[Am]{já nic,} \[F]{já muzi}\[G]kant
 \cl
+\bridge\emptyspace\\\cl
 \num
-Poslední dobou v lese nikdo neví kde jsme\\
-venku se pasou kozy, dělá si taky každá co chce\\
-Pošeptáš mi co Tě láká, a to je pro čmeláka,\\
+Poslední dobou v lese nikdo neví, kde jsme\\
+venku se pasou kozy, dělá si taky každá, co chce\\
+Pošeptáš mi, co tě láká, a to je pro čmeláka,\\
 co broukal si v klidu svůj part, najednou malá louka a
 \fin
 \repchorus{\emptyspace}
@@ -5089,13 +5092,14 @@ To aby lépe se mi přemýšlelo, to abych věděl co psát
 \beginsong{Doprdele prace}[by={Jaromír Nohavica}]
 \chordsoff
 \freev
-\chordson\cseq{\[Dm] \[G] \[B] \[A] \[Dm] \[A]}\\
+\chordson\cseq{\[Dm] \[Gm] \[B] \[A] \[Dm] \[A]}\\
 \cl
 \freev
-Koupil jsem kozu, nemam kozu\\
-Včera mi pošla na virozu\\
-Kdybych koupil kozla, taky by mi chcip~-- takovy su cyp\\
-Doprdele prace
+\chordson
+\[A]Koupil jsem \[Dm]kozu, nemam kozu\\
+Včera mi \[Gm]pošla na virozu\\
+Kdybych koupil \[B]kozla, taky by mi \[A]chcip~-- takovy su \[Dm]{cyp\qquad}\\
+\[A]Doprdele prace
 \cl
 \freev
 Třešeň v rohu zahrady roky mi nesla\\
@@ -6080,10 +6084,10 @@ If my dreams get real bizarre\\
 \[G]Desítka vleze se, \[Am]{pak ještě} \[E]jedna\\
 \[Am]{Co čumíš frajere,} \[C]chceš do ciferníku?\\
 \[G]Jestli mě dožereš, \[Am]hele, jsem \[E]bedna\\
-\[Dm]Tribuna na stání, \[Am]necpi se, vřede\\
+\[F]Tribuna na stání, \[Am]necpi se, vřede\\
 \[F]Hadráři \[Dm]Sparťani, \[E]Ostrava jedem\\
-\[Am]{Už to má správný var,} \[Dm]{jen počkej až tě}\\
-\[E]Dobrý den, sportu zdar, fotbalu \[Am]zvláště
+\[Am]{Už to má správný var,} \[C]jen počkej až tě\\
+\[G]Dobrý den, sportu zdar, \[Am]fotbalu \[E]zvláště
 \fin
 \num
 Tři nula na rohy a jinak šul-nul\\
@@ -7241,13 +7245,14 @@ Proč, má milá, dnes pasete z večera do rána?\\
 \endsong
 
 \beginsong{Hudsonské šífy}[by={Wabi Daněk}]
+\capo{3}
 \chordsoff
 \num
 \chordson
 Ten, kdo \[Am]nezná hukot vody lopat\[C]kama vířený\\
 Jako \[G]já, jako \[Am]{já\qquad}\\
 Kdo hudsonský slapy nezná sírou \[G]pekla sířený\\
-Ať se \[Am]{na hudsonský} \[G]šífy najmout \[Am]{dá,} \[G]{jo} \[G\shrp{}]{ho} \[Am]{ho\qquad}\\
+Ať se \[Am]{na hudsonský} \[G]šífy najmout \[Am]{dá,} \[G]{jo ho} \[Am]{ho\qquad}\\
 \chordsoff
 Ten, kdo nepřekládal uhlí, šíf když na mělčinu vjel\\
 Málo zná, málo zná\\
@@ -7257,7 +7262,7 @@ Ať se na hudsonský šífy najmout dá, jo ho ho
 \chor
 \chordson
 A\[F]hoj, páru tam \[Am]{hoď, ať} \[G]{do pekla se dříve} \[Am]dohrabem\\
-\[G]{Jo} \[G\shrp{}]{ho} \[Am]{ho,} \[G]{jo} \[G\shrp{}]{ho} \[Am]{ho}
+\[G]{Jo ho} \[Am]{ho,} \[G]{jo ho} \[Am]{ho}
 \cl
 \num
 Ten, kdo nezná noční spěvy zarostenejch lodníků\\
@@ -8376,6 +8381,34 @@ Já jsem ten, kdo tohle nejlíp ví\\
 Já vím, každý trápení své má\\
 Ale nejsmutnější na světě jsem já!
 \cl
+\endsong
+
+\beginsong{Jantarová země}[by={Pavel Lohonka Žalman}]
+\chordsoff
+\num
+\chordson
+\[Am]{Do splašenejch} \[C]koní už zase lovci \[Am]střílí,\\
+ulicí je \[C]ženou dolů k ohra\[Em]{dám,\qquad}\\
+zítra jako \[Dm]vloni, hra je pro ně dohra\[Am]{ná,\qquad}\\
+bujný hlavy \[Dm]skloní někam do trá\[Am]{vy.}
+\fin
+\chor
+\chordson
+\[Dm]{Krá, až si kabát} \[Am]změní,\\
+\[Dm]{krá, bílé vrány odle}\[Am]{tí,\qquad}\\
+\[Dm]{krá, v jantarový} \[Am]{zemi\qquad}\\
+přista\[F]nou v jiném stole\[Em]{tí.}
+\cl
+\bridge
+\chordson\cseq{\[Dm] \[Am] \[Dm] \[Am]}\\
+\cl
+\num
+Zamčený jsou stáje, kat už hřívy stříhá,\\
+lovčí král je v kapli postý korunován,\\
+sníh pomalu taje, těla stromů se probouzí,\\
+v jantarový zemi bude zas co pít.
+\fin
+\repchorus{\emptyspace}
 \endsong
 
 \beginsong{Japonečka}[by={Taxmeni}]
@@ -10523,6 +10556,43 @@ Ze všech je nejhezčí~-- tiše, už dost
 \cl
 \endsong
 
+\beginsong{Kytky stále ještě voní}[by={Pavel Lohonka Žalman}]
+\chordsoff
+\num
+\chordson
+\[C]Mám blízko do lesů a \[Dm\hidx{7}]{do strání,\qquad}\\
+\[Em]{do trávy,} \[Dm\hidx{7}]{kde večer} \[G]sestra rosa bre\[C]čí,\\
+na starou boudu slunce \[Dm\hidx{7}]{zaklepe\qquad}\\
+a \[Em]vypráví, \[Dm\hidx{7}]{proč léto} \[G]každoročně kon\[C]čí.
+\fin
+\num
+Zavřu svý oči na petlici\\
+a nestojím o žádný fráze, hloupý řeči,\\
+koukám, děti trhají kytici\\
+do sklenice, za které jsi včera pil sám.
+\fin
+\chor
+\chordson
+\[C]Kytky stále \[Am]ještě voní, \[Dm\hidx{7}]{bílé mraky~--} \[G]stáda koní\\
+\[C]brodí se modrou oblo\[F\hidx{maj7}]{hou,\qquad}\\
+\[C]zavři oči \[C\hidx{maj7}]{na petlici,} \[Dm\hidx{7}]{holka zapálí ti svíci}\\
+\[Em]{a cigaretu fajno}\[F]vou.\[C\hidx{maj7}]
+\cl
+\num
+Když mozek v mojí hlavě rezaví,\\
+tak udělám z okna dveře, utíkám ven,\\
+ve chvíli se tahle nemoc zastaví\\
+a nastaví mi svoji nohu za týden.
+\fin
+\num
+Mám blízko do kopců a do nebe,\\
+tam nezebe, tam večer sestra rosa brečí,\\
+když slunce na mou hlavu zabuší,\\
+tak netuší, že nerad býváš v létě sám.
+\fin
+\repchorus{Kytky stále ještě voní\ldots{}}
+\endsong
+
 \beginsong{L.A.G. Song}[by={Horkýže Slíže}]
 \chordsoff
 \num
@@ -10600,6 +10670,7 @@ To bolí, to je to laciný víno
 \endsong
 
 \beginsong{Lachtani}[by={Jaromír Nohavica}]
+\capo{3}
 \chordsoff
 \chorusi
 \chordson
@@ -11834,7 +11905,7 @@ Noci dlouhý \[B]jsou, plný \[C]touhy a \[Dm]lásky nás tří
 \[C]{V náprsní kapse nosím} \[G/H]Ventinol na potíže\\
 \[Am]{Jak to tak vidím, asi těžko projdu} \[Am/H]{uchem jehly}\\
 \[F]{A lesem běhám tak, a}\[C]{by mě vlci nedoběhli}\\
-\[Dm]{A kdyby se někdo z vás na anděla ptal}\\
+\[Dm]{A kdyby se někdo z vás} \[F]{na anděla ptal}\\
 Tak \[C]mám jizvu na rtu, \[G]když při mně stál \[G/H] \[C] \[G]
 \fin
 \num
@@ -16332,13 +16403,13 @@ Prostež od Boha pomoci a úfajte v něho
 \beginsong{Pohoda}[by={Kabát}]
 \chordsoff
 \intro
-\chordson\cseq{\[D] \[A] \[E] \[Hm]}\\
+\chordson\cseq{\[F] \[C] \[G] \[Dm] \[F] \[C] \[Dm]}\\
 \cl
 \num
 \chordson
-\[F\shrp{}m]{Vezmu tě má milá} \[C\shrp{}m]{rovnou k nám\qquad}\\
-\[F\shrp{}m]{Kolem louky, lesy,} \[C\shrp{}m]{hejna vran\qquad}\\
-\[F\shrp{}m]{Všude samá} \[E]kráva, samej \[H]vůl\\
+\[Am]Vezmu tě má milá \[Em]rovnou k nám\\
+\[Am]Kolem louky, lesy, \[Em]hejna vran\\
+\[Am]Všude samá \[G]kráva, samej \[D]vůl\\
 \chordsoff
 Máme kino, máme hospodu\\
 V obci všeobecnou pohodu\\
@@ -16346,9 +16417,9 @@ Máme hujer, žito, chléb i sůl
 \fin
 \chor
 \chordson
-\[D]Když se u nás chlapi \[A]poperou\\
-Tak jenom \[E]nožem anebo \[Hm]sekerou\\
-V zimě tam \[D]dlouhý noci \[A]jsou a tuhej \[Hm]{mráz}
+\[F]Když se u nás chlapi \[C]poperou\\
+Tak jenom \[G]nožem anebo \[Dm]sekerou\\
+V zimě tam \[F]dlouhý noci \[C]jsou a tuhej \[Dm]{mráz}
 \cl
 \freev
 Jak jsou naše cesty zavátý\\
@@ -16901,6 +16972,9 @@ A já chovám doma takovú udičku\\
 Co na ni ulovím kdejakú rybičku\\
 A ty musíš býti má lebo mi tě Pán Bůh dá
 \fin
+\bridge
+\chordson\cseq{\[Am] \[Am] \[F] \[C] \[F] \[C] \[G] \[G]}\\
+\cl
 \num
 A já sa udělám tú velikú vranú\\
 A já ti uletím na uherskú stranu\\
@@ -17819,6 +17893,7 @@ Hej hešů, hešů krkavec, že jsem byl dobrý mládenec
 \endsong
 
 \beginsong{Řiditel autobusu}[by={The Tap Tap}]
+\musicnote{též v Gismoll s capo 5}
 \chordsoff
 \num
 \chordson
@@ -21682,8 +21757,8 @@ Vyšlo slunce
 \cl
 \num
 \chordson
-\[Dm]{Už} \[Dm]rozplynul se \[G]hustý dým, \[Dm]derry down, hej, \[A]down-a-down\\
-Nad \[Dm]ztichlým polem \[Gm]válečným, derry \[Dm]{down} \[A]\\
+\[Dm]{Už} \[Dm]rozplynul se \[Gm]hustý dým, \[Dm]derry down, hej, \[A]down-a-down\\
+Nad \[Dm]ztichlým polem \[C]válečným, derry \[Dm]{down} \[A]\\
 Jen \[F]ticho stojí \[C]kolko\[A]lem a \[Dm]vítěz \[Dm/C]{plení} \[B]vlastní \[A]zem\\
 Je válka \[Dm]růží, \[Gm]derry, derry, \[A]derry down, hej \[Dm]{down}
 \fin
@@ -23350,6 +23425,7 @@ Dokud v Koločavě živý chlap zůstane
 \endsong
 
 \beginsong{Zafúkané}[by={Fleret}]
+\capo{2}
 \showchordtab{A\hidx{sus2}}{002200:002300}{5.0}{9.0}{-0.5}
 \chordsoff
 \num
@@ -23357,14 +23433,14 @@ Dokud v Koločavě živý chlap zůstane
 \[Am]{Větr sněh} \[A\hidx{sus2}]{zanésl} \[Am]{z hor do po}\[A\hidx{sus2}]{lí,\qquad}\\
 \[Am]{já idu} \[C]přes kopce, \[G]přes údo\[Am]{lí,\qquad}\\
 \[C]idu k tvej \[G]dědině zatúla\[C]nej,\\
-\[F]cestičky \[C]sněhem sú \[E]zafúka\[Am]{né.}
+\[F]cestičky \[C]sněhem sú \[E]zafúka\[Am]{né.} \[F\hidx{maj7}] \[Am] \[E\hidx{7}]
 \fin
 \chor
 \chordson
 \[Am]Zafúka\[C]né, \[G]zafúka\[C]né,\\
 \[F]kolem mňa \[C]všecko je \[Dm]zafúka\[E]{né\qquad}\\
 \[Am]Zafúka\[C]né, \[G]zafúka\[C]né,\\
-\[F]kolem mňa \[Dm]všecko je \[E]zafúka\[Am]{né.}
+\[F]kolem mňa \[Dm]všecko je \[E]zafúka\[Am]{né.} \[A\hidx{sus2}] \[Am] \[A\hidx{sus2}]
 \cl
 \num
 Už vašu chalupu z dálky vidím,\\
